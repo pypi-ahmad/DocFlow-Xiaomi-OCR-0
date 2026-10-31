@@ -16,3 +16,7 @@ docs/security-audit/run-1/agents/**/scratch/
 .archify/**/*.delivery.json
 .archify/**/*.finalize.json
 .archify/**/*.finalize-summary.json
+.ua/.trash-*/
+.ua/tmp/
+.ua/intermediate/*
+!.ua/intermediate/scan-result.json
