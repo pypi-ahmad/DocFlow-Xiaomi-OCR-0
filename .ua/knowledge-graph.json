@@ -1,0 +1,3613 @@
+{
+  "version": "1.0.0",
+  "project": {
+    "name": "docflow-xiaomi-ocr-0",
+    "languages": [
+      "batch",
+      "json",
+      "markdown",
+      "powershell",
+      "python",
+      "toml",
+      "txt",
+      "unknown"
+    ],
+    "frameworks": [
+      "Streamlit",
+      "Gradio",
+      "Pytest"
+    ],
+    "description": "Local Windows Streamlit and separate Gradio applications for document parsing using Xiaomi-OCR-0 and PP-DocLayoutV3.",
+    "analyzedAt": "2026-10-31T09:31:21.052104+00:00",
+    "gitCommitHash": "94fc06f21c3d7b32254caaec624cba833764d727"
+  },
+  "nodes": [
+    {
+      "id": "file:docflow/__init__.py",
+      "type": "file",
+      "name": "__init__.py",
+      "filePath": "docflow/__init__.py",
+      "summary": "Defines the DocFlow Python package.",
+      "tags": [
+        "python",
+        "document-processing",
+        "application"
+      ],
+      "complexity": "simple"
+    },
+    {
+      "id": "file:docflow/conversion.py",
+      "type": "file",
+      "name": "conversion.py",
+      "filePath": "docflow/conversion.py",
+      "summary": "Validates selected pages, renders PDFs and images, invokes a page parser, and writes cached document exports and annotations.",
+      "tags": [
+        "python",
+        "document-processing",
+        "application"
+      ],
+      "complexity": "moderate"
+    },
+    {
+      "id": "function:docflow/conversion.py:_page_indexes",
+      "type": "function",
+      "name": "_page_indexes",
+      "filePath": "docflow/conversion.py",
+      "lineRange": [
+        21,
+        26
+      ],
+      "summary": "Validates page selection and yields zero-based indices.",
+      "tags": [
+        "python",
+        "document-processing",
+        "application"
+      ],
+      "complexity": "simple"
+    },
+    {
+      "id": "function:docflow/conversion.py:page_count",
+      "type": "function",
+      "name": "page_count",
+      "filePath": "docflow/conversion.py",
+      "lineRange": [
+        29,
+        41
+      ],
+      "summary": "Reads document page or frame count without rasterizing pages.",
+      "tags": [
+        "python",
+        "document-processing",
+        "application"
+      ],
+      "complexity": "simple"
+    },
+    {
+      "id": "function:docflow/conversion.py:page_images",
+      "type": "function",
+      "name": "page_images",
+      "filePath": "docflow/conversion.py",
+      "lineRange": [
+        44,
+        69
+      ],
+      "summary": "Renders only selected PDF pages or image frames at bounded dimensions.",
+      "tags": [
+        "python",
+        "document-processing",
+        "application"
+      ],
+      "complexity": "simple"
+    },
+    {
+      "id": "function:docflow/conversion.py:convert",
+      "type": "function",
+      "name": "convert",
+      "filePath": "docflow/conversion.py",
+      "lineRange": [
+        72,
+        176
+      ],
+      "summary": "Runs selected pages through the supplied parser and writes or reuses document artifacts.",
+      "tags": [
+        "python",
+        "document-processing",
+        "application"
+      ],
+      "complexity": "moderate"
+    },
+    {
+      "id": "file:docflow/image_limits.py",
+      "type": "file",
+      "name": "image_limits.py",
+      "filePath": "docflow/image_limits.py",
+      "summary": "Rejects invalid image dimensions and images exceeding the 40-megapixel limit.",
+      "tags": [
+        "python",
+        "document-processing",
+        "application"
+      ],
+      "complexity": "simple"
+    },
+    {
+      "id": "function:docflow/image_limits.py:check_image_size",
+      "type": "function",
+      "name": "check_image_size",
+      "filePath": "docflow/image_limits.py",
+      "lineRange": [
+        6,
+        10
+      ],
+      "summary": "Enforces valid dimensions and the image pixel limit.",
+      "tags": [
+        "python",
+        "document-processing",
+        "application"
+      ],
+      "complexity": "simple"
+    },
+    {
+      "id": "file:docflow/streamlit_ui.py",
+      "type": "file",
+      "name": "streamlit_ui.py",
+      "filePath": "docflow/streamlit_ui.py",
+      "summary": "Provides sanitized presentation, in-memory legacy exports, ZIP packaging, and selected-page previews for Streamlit.",
+      "tags": [
+        "python",
+        "document-processing",
+        "application"
+      ],
+      "complexity": "moderate"
+    },
+    {
+      "id": "function:docflow/streamlit_ui.py:safe_html",
+      "type": "function",
+      "name": "safe_html",
+      "filePath": "docflow/streamlit_ui.py",
+      "lineRange": [
+        39,
+        40
+      ],
+      "summary": "Sanitizes document HTML with the allowed tag and attribute set.",
+      "tags": [
+        "python",
+        "document-processing",
+        "application"
+      ],
+      "complexity": "simple"
+    },
+    {
+      "id": "function:docflow/streamlit_ui.py:markdown_text",
+      "type": "function",
+      "name": "markdown_text",
+      "filePath": "docflow/streamlit_ui.py",
+      "lineRange": [
+        43,
+        44
+      ],
+      "summary": "Combines page Markdown with page separators.",
+      "tags": [
+        "python",
+        "document-processing",
+        "application"
+      ],
+      "complexity": "simple"
+    },
+    {
+      "id": "function:docflow/streamlit_ui.py:artifacts",
+      "type": "function",
+      "name": "artifacts",
+      "filePath": "docflow/streamlit_ui.py",
+      "lineRange": [
+        47,
+        66
+      ],
+      "summary": "Reconstructs displayable exports in memory, including missing legacy artifacts.",
+      "tags": [
+        "python",
+        "document-processing",
+        "application"
+      ],
+      "complexity": "simple"
+    },
+    {
+      "id": "function:docflow/streamlit_ui.py:archive_bytes",
+      "type": "function",
+      "name": "archive_bytes",
+      "filePath": "docflow/streamlit_ui.py",
+      "lineRange": [
+        69,
+        78
+      ],
+      "summary": "Builds a ZIP with unique generated output entries and saved files.",
+      "tags": [
+        "python",
+        "document-processing",
+        "application"
+      ],
+      "complexity": "simple"
+    },
+    {
+      "id": "function:docflow/streamlit_ui.py:preview_bytes",
+      "type": "function",
+      "name": "preview_bytes",
+      "filePath": "docflow/streamlit_ui.py",
+      "lineRange": [
+        81,
+        89
+      ],
+      "summary": "Renders the chosen page to PNG bytes without model inference.",
+      "tags": [
+        "python",
+        "document-processing",
+        "application"
+      ],
+      "complexity": "simple"
+    },
+    {
+      "id": "file:streamlit_app.py",
+      "type": "file",
+      "name": "streamlit_app.py",
+      "filePath": "streamlit_app.py",
+      "summary": "Implements the local Streamlit workbench, document selection, cached GPU engine, saved results, and output tabs.",
+      "tags": [
+        "python",
+        "document-processing",
+        "application",
+        "tested"
+      ],
+      "complexity": "complex"
+    },
+    {
+      "id": "function:streamlit_app.py:local_engine",
+      "type": "function",
+      "name": "local_engine",
+      "filePath": "streamlit_app.py",
+      "lineRange": [
+        31,
+        34
+      ],
+      "summary": "Caches the local-only GPU model engine across Streamlit reruns.",
+      "tags": [
+        "python",
+        "document-processing",
+        "application"
+      ],
+      "complexity": "simple"
+    },
+    {
+      "id": "file:tests/test_document_limits.py",
+      "type": "file",
+      "name": "test_document_limits.py",
+      "filePath": "tests/test_document_limits.py",
+      "summary": "Tests document metadata, page selection and original page numbering, image size bounds, and TIFF frame handling.",
+      "tags": [
+        "test",
+        "validation",
+        "python"
+      ],
+      "complexity": "moderate"
+    },
+    {
+      "id": "class:tests/test_document_limits.py:DocumentLimitTests",
+      "type": "class",
+      "name": "DocumentLimitTests",
+      "filePath": "tests/test_document_limits.py",
+      "lineRange": [
+        14,
+        103
+      ],
+      "summary": "Exercises document loading, selected-page rendering and image size boundaries.",
+      "tags": [
+        "test",
+        "validation",
+        "python"
+      ],
+      "complexity": "moderate"
+    },
+    {
+      "id": "file:tests/test_streamlit_workbench.py",
+      "type": "file",
+      "name": "test_streamlit_workbench.py",
+      "filePath": "tests/test_streamlit_workbench.py",
+      "summary": "Exercises legacy export safety, frame preview, saved results and model-free Streamlit navigation.",
+      "tags": [
+        "test",
+        "validation",
+        "python"
+      ],
+      "complexity": "moderate"
+    },
+    {
+      "id": "function:tests/test_streamlit_workbench.py:test_legacy_exports_are_safe_and_unique",
+      "type": "function",
+      "name": "test_legacy_exports_are_safe_and_unique",
+      "filePath": "tests/test_streamlit_workbench.py",
+      "lineRange": [
+        10,
+        25
+      ],
+      "summary": "Tests legacy exports are safe and unique.",
+      "tags": [
+        "test",
+        "validation",
+        "python"
+      ],
+      "complexity": "simple"
+    },
+    {
+      "id": "function:tests/test_streamlit_workbench.py:test_preview_selected_frame_only",
+      "type": "function",
+      "name": "test_preview_selected_frame_only",
+      "filePath": "tests/test_streamlit_workbench.py",
+      "lineRange": [
+        28,
+        39
+      ],
+      "summary": "Tests preview selected frame only.",
+      "tags": [
+        "test",
+        "validation",
+        "python"
+      ],
+      "complexity": "simple"
+    },
+    {
+      "id": "function:tests/test_streamlit_workbench.py:test_saved_result_tabs_and_selection_do_not_load_models",
+      "type": "function",
+      "name": "test_saved_result_tabs_and_selection_do_not_load_models",
+      "filePath": "tests/test_streamlit_workbench.py",
+      "lineRange": [
+        42,
+        73
+      ],
+      "summary": "Tests saved result tabs and selection do not load models.",
+      "tags": [
+        "test",
+        "validation",
+        "python"
+      ],
+      "complexity": "simple"
+    },
+    {
+      "id": "file:app.py",
+      "type": "file",
+      "name": "app.py",
+      "filePath": "app.py",
+      "summary": "Starts the Gradio Space with a shared model engine and dispatches preflighted batches through a ZeroGPU event.",
+      "tags": [
+        "python",
+        "document-processing",
+        "application",
+        "tested"
+      ],
+      "complexity": "simple"
+    },
+    {
+      "id": "function:app.py:preflight",
+      "type": "function",
+      "name": "preflight",
+      "filePath": "app.py",
+      "lineRange": [
+        14,
+        19
+      ],
+      "summary": "Validates the Space workload and converts failures to Gradio errors.",
+      "tags": [
+        "python",
+        "document-processing",
+        "application"
+      ],
+      "complexity": "simple"
+    },
+    {
+      "id": "function:app.py:convert_batch",
+      "type": "function",
+      "name": "convert_batch",
+      "filePath": "app.py",
+      "lineRange": [
+        22,
+        44
+      ],
+      "summary": "Converts prepared documents and assembles session state and download results.",
+      "tags": [
+        "python",
+        "document-processing",
+        "application"
+      ],
+      "complexity": "simple"
+    },
+    {
+      "id": "function:app.py:run_gpu",
+      "type": "function",
+      "name": "run_gpu",
+      "filePath": "app.py",
+      "lineRange": [
+        48,
+        49
+      ],
+      "summary": "Dispatches Space batch conversion within a ZeroGPU event.",
+      "tags": [
+        "python",
+        "document-processing",
+        "application"
+      ],
+      "complexity": "simple"
+    },
+    {
+      "id": "file:docflow/space_ui.py",
+      "type": "file",
+      "name": "space_ui.py",
+      "filePath": "docflow/space_ui.py",
+      "summary": "Validates Space uploads and page limits, isolates session files, bundles documents and presents results.",
+      "tags": [
+        "python",
+        "document-processing",
+        "application"
+      ],
+      "complexity": "moderate"
+    },
+    {
+      "id": "function:docflow/space_ui.py:cleanup",
+      "type": "function",
+      "name": "cleanup",
+      "filePath": "docflow/space_ui.py",
+      "lineRange": [
+        14,
+        17
+      ],
+      "summary": "Deletes the session-owned temporary directory.",
+      "tags": [
+        "python",
+        "document-processing",
+        "application"
+      ],
+      "complexity": "simple"
+    },
+    {
+      "id": "function:docflow/space_ui.py:prepare",
+      "type": "function",
+      "name": "prepare",
+      "filePath": "docflow/space_ui.py",
+      "lineRange": [
+        20,
+        47
+      ],
+      "summary": "Validates file and page limits and creates session job metadata.",
+      "tags": [
+        "python",
+        "document-processing",
+        "application"
+      ],
+      "complexity": "simple"
+    },
+    {
+      "id": "function:docflow/space_ui.py:bundle",
+      "type": "function",
+      "name": "bundle",
+      "filePath": "docflow/space_ui.py",
+      "lineRange": [
+        50,
+        57
+      ],
+      "summary": "Packages each result in a distinct numbered directory.",
+      "tags": [
+        "python",
+        "document-processing",
+        "application"
+      ],
+      "complexity": "simple"
+    },
+    {
+      "id": "function:docflow/space_ui.py:view",
+      "type": "function",
+      "name": "view",
+      "filePath": "docflow/space_ui.py",
+      "lineRange": [
+        60,
+        70
+      ],
+      "summary": "Builds review state and file paths for a selected result.",
+      "tags": [
+        "python",
+        "document-processing",
+        "application"
+      ],
+      "complexity": "simple"
+    },
+    {
+      "id": "file:gradio_ui.py",
+      "type": "file",
+      "name": "gradio_ui.py",
+      "filePath": "gradio_ui.py",
+      "summary": "Defines the Gradio upload, review, layout, structured result and cleanup interface independently of model loading.",
+      "tags": [
+        "python",
+        "document-processing",
+        "application"
+      ],
+      "complexity": "moderate"
+    },
+    {
+      "id": "function:gradio_ui.py:upload_panel",
+      "type": "function",
+      "name": "upload_panel",
+      "filePath": "gradio_ui.py",
+      "lineRange": [
+        70,
+        121
+      ],
+      "summary": "Constructs the Gradio uploader, page controls and parse buttons.",
+      "tags": [
+        "python",
+        "document-processing",
+        "application"
+      ],
+      "complexity": "moderate"
+    },
+    {
+      "id": "function:gradio_ui.py:build_demo",
+      "type": "function",
+      "name": "build_demo",
+      "filePath": "gradio_ui.py",
+      "lineRange": [
+        124,
+        274
+      ],
+      "summary": "Constructs the Gradio workbench and connects conversion, preview and cleanup events.",
+      "tags": [
+        "python",
+        "document-processing",
+        "application"
+      ],
+      "complexity": "moderate"
+    },
+    {
+      "id": "file:scripts/preview_ui.py",
+      "type": "file",
+      "name": "preview_ui.py",
+      "filePath": "scripts/preview_ui.py",
+      "summary": "Builds local Gradio preview and synthetic upload scenarios without running model inference.",
+      "tags": [
+        "python",
+        "document-processing",
+        "application"
+      ],
+      "complexity": "moderate"
+    },
+    {
+      "id": "function:scripts/preview_ui.py:preview_only",
+      "type": "function",
+      "name": "preview_only",
+      "filePath": "scripts/preview_ui.py",
+      "lineRange": [
+        20,
+        24
+      ],
+      "summary": "Returns a UI-only preview without model inference.",
+      "tags": [
+        "python",
+        "document-processing",
+        "application"
+      ],
+      "complexity": "simple"
+    },
+    {
+      "id": "file:tests/test_space.py",
+      "type": "file",
+      "name": "test_space.py",
+      "filePath": "tests/test_space.py",
+      "summary": "Checks Space upload limits, session isolation and archive naming for duplicate documents.",
+      "tags": [
+        "test",
+        "validation",
+        "python"
+      ],
+      "complexity": "simple"
+    },
+    {
+      "id": "function:tests/test_space.py:test_limit_and_session_isolation",
+      "type": "function",
+      "name": "test_limit_and_session_isolation",
+      "filePath": "tests/test_space.py",
+      "lineRange": [
+        9,
+        22
+      ],
+      "summary": "Tests limit and session isolation.",
+      "tags": [
+        "test",
+        "validation",
+        "python"
+      ],
+      "complexity": "simple"
+    },
+    {
+      "id": "function:tests/test_space.py:test_duplicate_archive_names",
+      "type": "function",
+      "name": "test_duplicate_archive_names",
+      "filePath": "tests/test_space.py",
+      "lineRange": [
+        25,
+        35
+      ],
+      "summary": "Tests duplicate archive names.",
+      "tags": [
+        "test",
+        "validation",
+        "python"
+      ],
+      "complexity": "simple"
+    },
+    {
+      "id": "file:docflow/xiaomi.py",
+      "type": "file",
+      "name": "xiaomi.py",
+      "filePath": "docflow/xiaomi.py",
+      "summary": "Loads pinned Xiaomi-OCR-0 and PP-DocLayoutV3 models, detects page regions, recognizes crops and reports partial results.",
+      "tags": [
+        "python",
+        "document-processing",
+        "application"
+      ],
+      "complexity": "moderate"
+    },
+    {
+      "id": "class:docflow/xiaomi.py:PageResult",
+      "type": "class",
+      "name": "PageResult",
+      "filePath": "docflow/xiaomi.py",
+      "lineRange": [
+        16,
+        26
+      ],
+      "summary": "Carries generated content, blocks, warnings, token usage and page completion status.",
+      "tags": [
+        "python",
+        "document-processing",
+        "application"
+      ],
+      "complexity": "simple"
+    },
+    {
+      "id": "class:docflow/xiaomi.py:Engine",
+      "type": "class",
+      "name": "Engine",
+      "filePath": "docflow/xiaomi.py",
+      "lineRange": [
+        29,
+        127
+      ],
+      "summary": "Owns the pinned GPU layout detector and OCR model; serializes page inference and assembles region results.",
+      "tags": [
+        "python",
+        "document-processing",
+        "application"
+      ],
+      "complexity": "moderate"
+    },
+    {
+      "id": "file:runtime/probe_local.py",
+      "type": "file",
+      "name": "probe_local.py",
+      "filePath": "runtime/probe_local.py",
+      "summary": "Provides a compatibility entry point to the native GPU smoke check.",
+      "tags": [
+        "python",
+        "document-processing",
+        "application"
+      ],
+      "complexity": "simple"
+    },
+    {
+      "id": "file:scripts/setup-models.py",
+      "type": "file",
+      "name": "setup-models.py",
+      "filePath": "scripts/setup-models.py",
+      "summary": "Downloads the pinned OCR and layout model snapshots into the project cache.",
+      "tags": [
+        "python",
+        "document-processing",
+        "application"
+      ],
+      "complexity": "simple"
+    },
+    {
+      "id": "file:scripts/smoke_xiaomi.py",
+      "type": "file",
+      "name": "smoke_xiaomi.py",
+      "filePath": "scripts/smoke_xiaomi.py",
+      "summary": "Runs a synthetic invoice through the local GPU engine and reports completion, timing and memory.",
+      "tags": [
+        "python",
+        "document-processing",
+        "application"
+      ],
+      "complexity": "simple"
+    },
+    {
+      "id": "function:scripts/smoke_xiaomi.py:main",
+      "type": "function",
+      "name": "main",
+      "filePath": "scripts/smoke_xiaomi.py",
+      "lineRange": [
+        10,
+        22
+      ],
+      "summary": "Runs a generated invoice through the native GPU model pipeline.",
+      "tags": [
+        "python",
+        "document-processing",
+        "application"
+      ],
+      "complexity": "simple"
+    },
+    {
+      "id": "file:tests/test_xiaomi_pipeline.py",
+      "type": "file",
+      "name": "test_xiaomi_pipeline.py",
+      "filePath": "tests/test_xiaomi_pipeline.py",
+      "summary": "Tests detection ordering, prompt routing, coordinate bounds and page fallback without GPU inference.",
+      "tags": [
+        "test",
+        "validation",
+        "python"
+      ],
+      "complexity": "simple"
+    },
+    {
+      "id": "function:tests/test_xiaomi_pipeline.py:test_layout_order_category_routing_and_partial_result",
+      "type": "function",
+      "name": "test_layout_order_category_routing_and_partial_result",
+      "filePath": "tests/test_xiaomi_pipeline.py",
+      "lineRange": [
+        10,
+        28
+      ],
+      "summary": "Tests layout order category routing and partial result.",
+      "tags": [
+        "test",
+        "validation",
+        "python"
+      ],
+      "complexity": "simple"
+    },
+    {
+      "id": "function:tests/test_xiaomi_pipeline.py:test_empty_layout_uses_explicit_page_fallback",
+      "type": "function",
+      "name": "test_empty_layout_uses_explicit_page_fallback",
+      "filePath": "tests/test_xiaomi_pipeline.py",
+      "lineRange": [
+        31,
+        40
+      ],
+      "summary": "Tests empty layout uses explicit page fallback.",
+      "tags": [
+        "test",
+        "validation",
+        "python"
+      ],
+      "complexity": "simple"
+    },
+    {
+      "id": "function:docflow/xiaomi.py:Engine.__init__",
+      "type": "function",
+      "name": "Engine.__init__",
+      "filePath": "docflow/xiaomi.py",
+      "lineRange": [
+        30,
+        51
+      ],
+      "summary": "Loads pinned OCR and layout models and processors on CUDA.",
+      "tags": [
+        "python",
+        "inference",
+        "ocr"
+      ],
+      "complexity": "simple"
+    },
+    {
+      "id": "function:docflow/xiaomi.py:Engine.recognize",
+      "type": "function",
+      "name": "Engine.recognize",
+      "filePath": "docflow/xiaomi.py",
+      "lineRange": [
+        53,
+        64
+      ],
+      "summary": "Prompts the OCR model and decodes newly generated tokens.",
+      "tags": [
+        "python",
+        "inference",
+        "ocr"
+      ],
+      "complexity": "simple"
+    },
+    {
+      "id": "function:docflow/xiaomi.py:Engine.__call__",
+      "type": "function",
+      "name": "Engine.__call__",
+      "filePath": "docflow/xiaomi.py",
+      "lineRange": [
+        66,
+        68
+      ],
+      "summary": "Serializes inference and runs page parsing in inference mode.",
+      "tags": [
+        "python",
+        "inference",
+        "ocr"
+      ],
+      "complexity": "simple"
+    },
+    {
+      "id": "function:docflow/xiaomi.py:Engine.parse",
+      "type": "function",
+      "name": "Engine.parse",
+      "filePath": "docflow/xiaomi.py",
+      "lineRange": [
+        70,
+        127
+      ],
+      "summary": "Detects page regions and sequentially recognizes crops, preserving page-level fallback and partial status.",
+      "tags": [
+        "python",
+        "inference",
+        "ocr"
+      ],
+      "complexity": "moderate"
+    },
+    {
+      "id": "file:docflow/xiaomi_postprocess/document.py",
+      "type": "file",
+      "name": "document.py",
+      "filePath": "docflow/xiaomi_postprocess/document.py",
+      "summary": "Normalizes formula delimiters, converts OTSL table blocks and trims repeated tails in generated Markdown.",
+      "tags": [
+        "python",
+        "document-processing",
+        "application"
+      ],
+      "complexity": "moderate"
+    },
+    {
+      "id": "function:docflow/xiaomi_postprocess/document.py:postprocess_math_delimiters",
+      "type": "function",
+      "name": "postprocess_math_delimiters",
+      "filePath": "docflow/xiaomi_postprocess/document.py",
+      "lineRange": [
+        8,
+        37
+      ],
+      "summary": "Normalizes LaTeX delimiters into Markdown math delimiters.",
+      "tags": [
+        "python",
+        "document-processing",
+        "application"
+      ],
+      "complexity": "simple"
+    },
+    {
+      "id": "function:docflow/xiaomi_postprocess/document.py:_split_markdown_blocks",
+      "type": "function",
+      "name": "_split_markdown_blocks",
+      "filePath": "docflow/xiaomi_postprocess/document.py",
+      "lineRange": [
+        40,
+        47
+      ],
+      "summary": "Splits Markdown into blocks while preserving text for postprocessing.",
+      "tags": [
+        "python",
+        "document-processing",
+        "application"
+      ],
+      "complexity": "simple"
+    },
+    {
+      "id": "function:docflow/xiaomi_postprocess/document.py:postprocess_otsl_tables",
+      "type": "function",
+      "name": "postprocess_otsl_tables",
+      "filePath": "docflow/xiaomi_postprocess/document.py",
+      "lineRange": [
+        50,
+        74
+      ],
+      "summary": "Converts recognized OTSL table sequences to HTML where possible.",
+      "tags": [
+        "python",
+        "document-processing",
+        "application"
+      ],
+      "complexity": "simple"
+    },
+    {
+      "id": "function:docflow/xiaomi_postprocess/document.py:postprocess_e2e_markdown",
+      "type": "function",
+      "name": "postprocess_e2e_markdown",
+      "filePath": "docflow/xiaomi_postprocess/document.py",
+      "lineRange": [
+        77,
+        81
+      ],
+      "summary": "Applies text, formula and table normalization to OCR output.",
+      "tags": [
+        "python",
+        "document-processing",
+        "application"
+      ],
+      "complexity": "simple"
+    },
+    {
+      "id": "function:docflow/xiaomi_postprocess/document.py:_clean_truncated_repeats",
+      "type": "function",
+      "name": "_clean_truncated_repeats",
+      "filePath": "docflow/xiaomi_postprocess/document.py",
+      "lineRange": [
+        84,
+        119
+      ],
+      "summary": "Removes long periodic repeated tails from generated text.",
+      "tags": [
+        "python",
+        "document-processing",
+        "application"
+      ],
+      "complexity": "simple"
+    },
+    {
+      "id": "function:docflow/xiaomi_postprocess/document.py:finalize_document",
+      "type": "function",
+      "name": "finalize_document",
+      "filePath": "docflow/xiaomi_postprocess/document.py",
+      "lineRange": [
+        122,
+        123
+      ],
+      "summary": "Finalizes generated content and converts OTSL tables.",
+      "tags": [
+        "python",
+        "document-processing",
+        "application"
+      ],
+      "complexity": "simple"
+    },
+    {
+      "id": "file:docflow/xiaomi_postprocess/otsl.py",
+      "type": "file",
+      "name": "otsl.py",
+      "filePath": "docflow/xiaomi_postprocess/otsl.py",
+      "summary": "Parses OTSL table tokens, resolves cell spans and renders escaped HTML table markup.",
+      "tags": [
+        "python",
+        "document-processing",
+        "application"
+      ],
+      "complexity": "complex"
+    },
+    {
+      "id": "class:docflow/xiaomi_postprocess/otsl.py:Cell",
+      "type": "class",
+      "name": "Cell",
+      "filePath": "docflow/xiaomi_postprocess/otsl.py",
+      "lineRange": [
+        38,
+        45
+      ],
+      "summary": "Stores a resolved table cell position, text and spans.",
+      "tags": [
+        "python",
+        "document-processing",
+        "application"
+      ],
+      "complexity": "simple"
+    },
+    {
+      "id": "function:docflow/xiaomi_postprocess/otsl.py:_tag_of",
+      "type": "function",
+      "name": "_tag_of",
+      "filePath": "docflow/xiaomi_postprocess/otsl.py",
+      "lineRange": [
+        48,
+        50
+      ],
+      "summary": "Determines the OTSL tag associated with a token.",
+      "tags": [
+        "python",
+        "document-processing",
+        "application"
+      ],
+      "complexity": "simple"
+    },
+    {
+      "id": "function:docflow/xiaomi_postprocess/otsl.py:_split_chunks",
+      "type": "function",
+      "name": "_split_chunks",
+      "filePath": "docflow/xiaomi_postprocess/otsl.py",
+      "lineRange": [
+        53,
+        57
+      ],
+      "summary": "Separates OTSL tag tokens and cell text.",
+      "tags": [
+        "python",
+        "document-processing",
+        "application"
+      ],
+      "complexity": "simple"
+    },
+    {
+      "id": "function:docflow/xiaomi_postprocess/otsl.py:_required_width",
+      "type": "function",
+      "name": "_required_width",
+      "filePath": "docflow/xiaomi_postprocess/otsl.py",
+      "lineRange": [
+        60,
+        66
+      ],
+      "summary": "Finds the minimum width needed to preserve a row.",
+      "tags": [
+        "python",
+        "document-processing",
+        "application"
+      ],
+      "complexity": "simple"
+    },
+    {
+      "id": "function:docflow/xiaomi_postprocess/otsl.py:_target_width",
+      "type": "function",
+      "name": "_target_width",
+      "filePath": "docflow/xiaomi_postprocess/otsl.py",
+      "lineRange": [
+        69,
+        84
+      ],
+      "summary": "Chooses a target table width from parsed rows.",
+      "tags": [
+        "python",
+        "document-processing",
+        "application"
+      ],
+      "complexity": "simple"
+    },
+    {
+      "id": "function:docflow/xiaomi_postprocess/otsl.py:pad_rows",
+      "type": "function",
+      "name": "pad_rows",
+      "filePath": "docflow/xiaomi_postprocess/otsl.py",
+      "lineRange": [
+        87,
+        107
+      ],
+      "summary": "Pads or truncates parsed rows to a common table width.",
+      "tags": [
+        "python",
+        "document-processing",
+        "application"
+      ],
+      "complexity": "simple"
+    },
+    {
+      "id": "function:docflow/xiaomi_postprocess/otsl.py:parse_grid",
+      "type": "function",
+      "name": "parse_grid",
+      "filePath": "docflow/xiaomi_postprocess/otsl.py",
+      "lineRange": [
+        110,
+        132
+      ],
+      "summary": "Parses OTSL tags and text into row data.",
+      "tags": [
+        "python",
+        "document-processing",
+        "application"
+      ],
+      "complexity": "simple"
+    },
+    {
+      "id": "function:docflow/xiaomi_postprocess/otsl.py:resolve_cells",
+      "type": "function",
+      "name": "resolve_cells",
+      "filePath": "docflow/xiaomi_postprocess/otsl.py",
+      "lineRange": [
+        135,
+        172
+      ],
+      "summary": "Resolves cell ownership, row spans and column spans.",
+      "tags": [
+        "python",
+        "document-processing",
+        "application"
+      ],
+      "complexity": "simple"
+    },
+    {
+      "id": "function:docflow/xiaomi_postprocess/otsl.py:render_html",
+      "type": "function",
+      "name": "render_html",
+      "filePath": "docflow/xiaomi_postprocess/otsl.py",
+      "lineRange": [
+        175,
+        240
+      ],
+      "summary": "Renders resolved cells as an HTML table with escaped content.",
+      "tags": [
+        "python",
+        "document-processing",
+        "application"
+      ],
+      "complexity": "moderate"
+    },
+    {
+      "id": "function:docflow/xiaomi_postprocess/otsl.py:convert_otsl_to_html",
+      "type": "function",
+      "name": "convert_otsl_to_html",
+      "filePath": "docflow/xiaomi_postprocess/otsl.py",
+      "lineRange": [
+        243,
+        252
+      ],
+      "summary": "Parses and renders OTSL markup as an HTML table.",
+      "tags": [
+        "python",
+        "document-processing",
+        "application"
+      ],
+      "complexity": "simple"
+    },
+    {
+      "id": "file:tests/test_xiaomi_postprocess.py",
+      "type": "file",
+      "name": "test_xiaomi_postprocess.py",
+      "filePath": "tests/test_xiaomi_postprocess.py",
+      "summary": "Checks that table cell HTML is escaped and text and formulas remain available.",
+      "tags": [
+        "test",
+        "validation",
+        "python"
+      ],
+      "complexity": "simple"
+    },
+    {
+      "id": "function:tests/test_xiaomi_postprocess.py:test_table_cells_escape_html",
+      "type": "function",
+      "name": "test_table_cells_escape_html",
+      "filePath": "tests/test_xiaomi_postprocess.py",
+      "lineRange": [
+        4,
+        8
+      ],
+      "summary": "Tests table cells escape html.",
+      "tags": [
+        "test",
+        "validation",
+        "python"
+      ],
+      "complexity": "simple"
+    },
+    {
+      "id": "function:tests/test_xiaomi_postprocess.py:test_math_and_plain_text_survive",
+      "type": "function",
+      "name": "test_math_and_plain_text_survive",
+      "filePath": "tests/test_xiaomi_postprocess.py",
+      "lineRange": [
+        11,
+        13
+      ],
+      "summary": "Tests math and plain text survive.",
+      "tags": [
+        "test",
+        "validation",
+        "python"
+      ],
+      "complexity": "simple"
+    },
+    {
+      "id": "document:.agents/skills/huggingface-local-models/references/hardware.md",
+      "type": "document",
+      "name": "hardware.md",
+      "filePath": ".agents/skills/huggingface-local-models/references/hardware.md",
+      "summary": "Reference for llama.cpp acceleration on Apple Metal, NVIDIA CUDA, and AMD ROCm devices.",
+      "tags": [
+        "documentation",
+        "hugging-face",
+        "reference"
+      ],
+      "complexity": "simple"
+    },
+    {
+      "id": "document:.agents/skills/huggingface-local-models/references/hub-discovery.md",
+      "type": "document",
+      "name": "hub-discovery.md",
+      "filePath": ".agents/skills/huggingface-local-models/references/hub-discovery.md",
+      "summary": "Explains how to discover llama.cpp-compatible models and exact GGUF files on the Hugging Face Hub.",
+      "tags": [
+        "documentation",
+        "hugging-face",
+        "reference"
+      ],
+      "complexity": "moderate"
+    },
+    {
+      "id": "document:.agents/skills/huggingface-local-models/references/quantization.md",
+      "type": "document",
+      "name": "quantization.md",
+      "filePath": ".agents/skills/huggingface-local-models/references/quantization.md",
+      "summary": "Explains GGUF quantization formats, model-file selection, and practical size tradeoffs.",
+      "tags": [
+        "documentation",
+        "hugging-face",
+        "reference"
+      ],
+      "complexity": "moderate"
+    },
+    {
+      "id": "document:.agents/skills/huggingface-spaces/references/3d-cuda-extensions.md",
+      "type": "document",
+      "name": "3d-cuda-extensions.md",
+      "filePath": ".agents/skills/huggingface-spaces/references/3d-cuda-extensions.md",
+      "summary": "Describes prebuilt CUDA extension strategies for 3D ZeroGPU Spaces without a runtime compiler.",
+      "tags": [
+        "documentation",
+        "hugging-face",
+        "reference"
+      ],
+      "complexity": "moderate"
+    },
+    {
+      "id": "document:.agents/skills/huggingface-spaces/references/3d-generation.md",
+      "type": "document",
+      "name": "3d-generation.md",
+      "filePath": ".agents/skills/huggingface-spaces/references/3d-generation.md",
+      "summary": "Introduces 3D generation demos, model choices, resources, and supporting reference guides.",
+      "tags": [
+        "documentation",
+        "hugging-face",
+        "reference"
+      ],
+      "complexity": "moderate"
+    },
+    {
+      "id": "document:.agents/skills/huggingface-spaces/references/3d-gsplat.md",
+      "type": "document",
+      "name": "3d-gsplat.md",
+      "filePath": ".agents/skills/huggingface-spaces/references/3d-gsplat.md",
+      "summary": "Explains Gaussian-splat rendering options, viewers, and output handling in 3D Spaces.",
+      "tags": [
+        "documentation",
+        "hugging-face",
+        "reference"
+      ],
+      "complexity": "simple"
+    },
+    {
+      "id": "document:.agents/skills/huggingface-spaces/references/3d-models.md",
+      "type": "document",
+      "name": "3d-models.md",
+      "filePath": ".agents/skills/huggingface-spaces/references/3d-models.md",
+      "summary": "Compares 3D generation model families and their Space installation and inference recipes.",
+      "tags": [
+        "documentation",
+        "hugging-face",
+        "reference"
+      ],
+      "complexity": "moderate"
+    },
+    {
+      "id": "document:.agents/skills/huggingface-spaces/references/3d-outputs.md",
+      "type": "document",
+      "name": "3d-outputs.md",
+      "filePath": ".agents/skills/huggingface-spaces/references/3d-outputs.md",
+      "summary": "Describes mesh formats, orientations, viewers, and preprocessing for generated 3D assets.",
+      "tags": [
+        "documentation",
+        "hugging-face",
+        "reference"
+      ],
+      "complexity": "moderate"
+    },
+    {
+      "id": "document:.agents/skills/huggingface-spaces/references/buckets.md",
+      "type": "document",
+      "name": "buckets.md",
+      "filePath": ".agents/skills/huggingface-spaces/references/buckets.md",
+      "summary": "Explains creating and attaching Hugging Face Buckets for persistent Space storage.",
+      "tags": [
+        "documentation",
+        "hugging-face",
+        "reference"
+      ],
+      "complexity": "moderate"
+    },
+    {
+      "id": "document:.agents/skills/huggingface-spaces/references/debugging.md",
+      "type": "document",
+      "name": "debugging.md",
+      "filePath": ".agents/skills/huggingface-spaces/references/debugging.md",
+      "summary": "Covers iterative Space debugging, hot reload, common failure modes, and inspection methods.",
+      "tags": [
+        "documentation",
+        "hugging-face",
+        "reference"
+      ],
+      "complexity": "moderate"
+    },
+    {
+      "id": "document:.agents/skills/huggingface-spaces/references/gradio.md",
+      "type": "document",
+      "name": "gradio.md",
+      "filePath": ".agents/skills/huggingface-spaces/references/gradio.md",
+      "summary": "Documents Gradio layout, themes, component choices, and interaction patterns for Spaces.",
+      "tags": [
+        "documentation",
+        "hugging-face",
+        "reference"
+      ],
+      "complexity": "moderate"
+    },
+    {
+      "id": "document:.agents/skills/huggingface-spaces/references/grants.md",
+      "type": "document",
+      "name": "grants.md",
+      "filePath": ".agents/skills/huggingface-spaces/references/grants.md",
+      "summary": "Describes eligibility and the application flow for community GPU grants.",
+      "tags": [
+        "documentation",
+        "hugging-face",
+        "reference"
+      ],
+      "complexity": "simple"
+    },
+    {
+      "id": "document:.agents/skills/huggingface-spaces/references/inference-providers.md",
+      "type": "document",
+      "name": "inference-providers.md",
+      "filePath": ".agents/skills/huggingface-spaces/references/inference-providers.md",
+      "summary": "Explains hosted inference provider patterns and billing choices for Space demos.",
+      "tags": [
+        "documentation",
+        "hugging-face",
+        "reference"
+      ],
+      "complexity": "moderate"
+    },
+    {
+      "id": "document:.agents/skills/huggingface-spaces/references/known-errors.md",
+      "type": "document",
+      "name": "known-errors.md",
+      "filePath": ".agents/skills/huggingface-spaces/references/known-errors.md",
+      "summary": "Catalogs common Space build, dependency, ZeroGPU, and runtime errors with remedies.",
+      "tags": [
+        "documentation",
+        "hugging-face",
+        "reference"
+      ],
+      "complexity": "moderate"
+    },
+    {
+      "id": "document:.agents/skills/huggingface-spaces/references/requirements.md",
+      "type": "document",
+      "name": "requirements.md",
+      "filePath": ".agents/skills/huggingface-spaces/references/requirements.md",
+      "summary": "Explains which dependencies and version pins belong in a Hugging Face Space requirements file.",
+      "tags": [
+        "documentation",
+        "hugging-face",
+        "reference"
+      ],
+      "complexity": "moderate"
+    },
+    {
+      "id": "document:.agents/skills/huggingface-spaces/references/zerogpu.md",
+      "type": "document",
+      "name": "zerogpu.md",
+      "filePath": ".agents/skills/huggingface-spaces/references/zerogpu.md",
+      "summary": "Documents ZeroGPU model loading, GPU reservation, supported dependencies, and execution constraints.",
+      "tags": [
+        "documentation",
+        "hugging-face",
+        "reference"
+      ],
+      "complexity": "complex"
+    },
+    {
+      "id": "document:.agents/skills/huggingface-zerogpu/references/concurrency.md",
+      "type": "document",
+      "name": "concurrency.md",
+      "filePath": ".agents/skills/huggingface-zerogpu/references/concurrency.md",
+      "summary": "Explains safe concurrent ZeroGPU execution and isolation of mutable state and generated files.",
+      "tags": [
+        "documentation",
+        "hugging-face",
+        "reference"
+      ],
+      "complexity": "moderate"
+    },
+    {
+      "id": "document:.agents/skills/huggingface-zerogpu/references/cuda-and-deps.md",
+      "type": "document",
+      "name": "cuda-and-deps.md",
+      "filePath": ".agents/skills/huggingface-zerogpu/references/cuda-and-deps.md",
+      "summary": "Explains ZeroGPU CUDA wheel selection and dependency strategies for packages with native extensions.",
+      "tags": [
+        "documentation",
+        "hugging-face",
+        "reference"
+      ],
+      "complexity": "simple"
+    },
+    {
+      "id": "document:.agents/skills/huggingface-zerogpu/references/how-quota-works.md",
+      "type": "document",
+      "name": "how-quota-works.md",
+      "filePath": ".agents/skills/huggingface-zerogpu/references/how-quota-works.md",
+      "summary": "Explains how ZeroGPU duration requests, quota checks, and scheduling errors interact.",
+      "tags": [
+        "documentation",
+        "hugging-face",
+        "reference"
+      ],
+      "complexity": "simple"
+    },
+    {
+      "id": "document:.agents/skills/huggingface-zerogpu/references/how-zerogpu-works.md",
+      "type": "document",
+      "name": "how-zerogpu-works.md",
+      "filePath": ".agents/skills/huggingface-zerogpu/references/how-zerogpu-works.md",
+      "summary": "Describes ZeroGPU worker isolation, CUDA emulation, model transfer, and allocation lifecycle.",
+      "tags": [
+        "documentation",
+        "hugging-face",
+        "reference"
+      ],
+      "complexity": "simple"
+    },
+    {
+      "id": "document:AGENTS.md",
+      "type": "document",
+      "name": "AGENTS.md",
+      "filePath": "AGENTS.md",
+      "summary": "Documents project scope, development commands, testing practices, security and contribution rules.",
+      "tags": [
+        "documentation",
+        "project-guidelines",
+        "development"
+      ],
+      "complexity": "simple"
+    },
+    {
+      "id": "document:README.md",
+      "type": "document",
+      "name": "README.md",
+      "filePath": "README.md",
+      "summary": "Introduces the Xiaomi OCR application, local Windows setup, Streamlit workbench, Space status and architecture.",
+      "tags": [
+        "documentation",
+        "entry-point",
+        "overview"
+      ],
+      "complexity": "moderate"
+    },
+    {
+      "id": "file:launch.cmd",
+      "type": "file",
+      "name": "launch.cmd",
+      "filePath": "launch.cmd",
+      "summary": "Starts the local Streamlit app on 127.0.0.1:8472 using the installed uv environment without network synchronization.",
+      "tags": [
+        "launcher",
+        "streamlit",
+        "offline"
+      ],
+      "complexity": "simple"
+    },
+    {
+      "id": "config:pyproject.toml",
+      "type": "config",
+      "name": "pyproject.toml",
+      "filePath": "pyproject.toml",
+      "summary": "Defines the Python 3.12 project dependencies, development tools, pytest discovery and PyTorch CUDA package index.",
+      "tags": [
+        "configuration",
+        "dependencies",
+        "cuda",
+        "python"
+      ],
+      "complexity": "simple"
+    },
+    {
+      "id": "document:requirements.txt",
+      "type": "document",
+      "name": "requirements.txt",
+      "filePath": "requirements.txt",
+      "summary": "Pins Space runtime dependencies including PyTorch, torchvision and Transformers versions.",
+      "tags": [
+        "documentation",
+        "dependencies",
+        "space",
+        "deployment"
+      ],
+      "complexity": "simple"
+    },
+    {
+      "id": "config:skills-lock.json",
+      "type": "config",
+      "name": "skills-lock.json",
+      "filePath": "skills-lock.json",
+      "summary": "Records source repositories, paths and hashes for the installed Hugging Face skills.",
+      "tags": [
+        "configuration",
+        "skills",
+        "provenance"
+      ],
+      "complexity": "simple"
+    },
+    {
+      "id": "document:docs/codebase-research-2026-10-28.md",
+      "type": "document",
+      "name": "codebase-research-2026-10-28.md",
+      "filePath": "docs/codebase-research-2026-10-28.md",
+      "summary": "Historical source research and conversion walkthrough of the neighboring DocLayout repository, including architecture, review observations and validation limits.",
+      "tags": [
+        "documentation",
+        "research",
+        "doclayout",
+        "historical"
+      ],
+      "complexity": "moderate"
+    },
+    {
+      "id": "document:docs/developer-guide.md",
+      "type": "document",
+      "name": "developer-guide.md",
+      "filePath": "docs/developer-guide.md",
+      "summary": "Describes DocFlow runtime modules, model pipeline, output caching, developer checks and the unpublished Space deployment.",
+      "tags": [
+        "documentation",
+        "architecture",
+        "development",
+        "deployment"
+      ],
+      "complexity": "simple"
+    },
+    {
+      "id": "document:docs/grok-build-install-skills.md",
+      "type": "document",
+      "name": "grok-build-install-skills.md",
+      "filePath": "docs/grok-build-install-skills.md",
+      "summary": "Historical research on Grok Build skill discovery, plugin installation paths, configuration and verification.",
+      "tags": [
+        "documentation",
+        "research",
+        "skills",
+        "historical"
+      ],
+      "complexity": "moderate"
+    },
+    {
+      "id": "document:docs/linkedin-project-and-post.md",
+      "type": "document",
+      "name": "linkedin-project-and-post.md",
+      "filePath": "docs/linkedin-project-and-post.md",
+      "summary": "Contains draft project and social post text describing the local Xiaomi OCR workbench and pending Space.",
+      "tags": [
+        "documentation",
+        "project-summary",
+        "draft"
+      ],
+      "complexity": "simple"
+    },
+    {
+      "id": "document:docs/models.md",
+      "type": "document",
+      "name": "models.md",
+      "filePath": "docs/models.md",
+      "summary": "Explains the official Xiaomi OCR and PP-DocLayoutV3 model roles, pinned revisions and the application’s crop-recognition pipeline.",
+      "tags": [
+        "documentation",
+        "models",
+        "ocr",
+        "layout"
+      ],
+      "complexity": "simple"
+    },
+    {
+      "id": "document:docs/nemotron-3.5-parse-research.md",
+      "type": "document",
+      "name": "nemotron-3.5-parse-research.md",
+      "filePath": "docs/nemotron-3.5-parse-research.md",
+      "summary": "Historical research on NVIDIA Nemotron 3.5 Parse capabilities, deployment options, limitations and DocLayout fit.",
+      "tags": [
+        "documentation",
+        "research",
+        "nemotron",
+        "historical"
+      ],
+      "complexity": "moderate"
+    },
+    {
+      "id": "document:docs/pp-doclayoutv4-access-research.md",
+      "type": "document",
+      "name": "pp-doclayoutv4-access-research.md",
+      "filePath": "docs/pp-doclayoutv4-access-research.md",
+      "summary": "Records an earlier investigation into PP-DocLayoutV4 checkpoint availability and access, noting the later V3 choice.",
+      "tags": [
+        "documentation",
+        "research",
+        "layout",
+        "historical"
+      ],
+      "complexity": "simple"
+    },
+    {
+      "id": "document:docs/ui-verification.md",
+      "type": "document",
+      "name": "ui-verification.md",
+      "filePath": "docs/ui-verification.md",
+      "summary": "Historical UI verification notes covering layout, accessibility, checks and unverified browser scenarios.",
+      "tags": [
+        "documentation",
+        "verification",
+        "ui",
+        "historical"
+      ],
+      "complexity": "simple"
+    },
+    {
+      "id": "document:docs/user-guide.md",
+      "type": "document",
+      "name": "user-guide.md",
+      "filePath": "docs/user-guide.md",
+      "summary": "Explains native Windows setup, document conversion, output review, troubleshooting and the separate unpublished Space.",
+      "tags": [
+        "documentation",
+        "user-guide",
+        "setup",
+        "streamlit"
+      ],
+      "complexity": "simple"
+    },
+    {
+      "id": "document:docs/xiaomi-migration-validation.md",
+      "type": "document",
+      "name": "xiaomi-migration-validation.md",
+      "filePath": "docs/xiaomi-migration-validation.md",
+      "summary": "Records dated synthetic GPU, offline, test and type-check results along with the Space creation blocker.",
+      "tags": [
+        "documentation",
+        "validation",
+        "gpu",
+        "historical"
+      ],
+      "complexity": "simple"
+    },
+    {
+      "id": "document:docs/xiaomi-ocr-0-research.md",
+      "type": "document",
+      "name": "xiaomi-ocr-0-research.md",
+      "filePath": "docs/xiaomi-ocr-0-research.md",
+      "summary": "Researches Xiaomi OCR model usage, output formats, benchmark scope, resources and current project integration.",
+      "tags": [
+        "documentation",
+        "research",
+        "ocr",
+        "models"
+      ],
+      "complexity": "simple"
+    },
+    {
+      "id": "document:docs/security-audit/run-1/FINDINGS-DETAIL.md",
+      "type": "document",
+      "name": "FINDINGS-DETAIL.md",
+      "filePath": "docs/security-audit/run-1/FINDINGS-DETAIL.md",
+      "summary": "Historical audit note describing the disposition and evidence for reviewed security leads.",
+      "tags": [
+        "documentation",
+        "security",
+        "audit",
+        "findings"
+      ],
+      "complexity": "simple"
+    },
+    {
+      "id": "document:docs/security-audit/run-1/NEEDS-VALIDATION.md",
+      "type": "document",
+      "name": "NEEDS-VALIDATION.md",
+      "filePath": "docs/security-audit/run-1/NEEDS-VALIDATION.md",
+      "summary": "Lists historical audit coverage gaps and follow-up validation areas for the previous Nemotron implementation.",
+      "tags": [
+        "documentation",
+        "security",
+        "audit",
+        "validation"
+      ],
+      "complexity": "simple"
+    },
+    {
+      "id": "document:docs/security-audit/run-1/REPORT.md",
+      "type": "document",
+      "name": "REPORT.md",
+      "filePath": "docs/security-audit/run-1/REPORT.md",
+      "summary": "Summarizes the earlier Nemotron security review, corrective changes, observed checks and remaining verification limits.",
+      "tags": [
+        "documentation",
+        "security",
+        "audit",
+        "historical"
+      ],
+      "complexity": "simple"
+    },
+    {
+      "id": "document:docs/security-audit/run-1/architecture.md",
+      "type": "document",
+      "name": "architecture.md",
+      "filePath": "docs/security-audit/run-1/architecture.md",
+      "summary": "Describes the historical Nemotron application architecture and the resumed corrective review scope.",
+      "tags": [
+        "documentation",
+        "security",
+        "architecture",
+        "historical"
+      ],
+      "complexity": "simple"
+    },
+    {
+      "id": "config:docs/security-audit/run-1/coverage-ledger.json",
+      "type": "config",
+      "name": "coverage-ledger.json",
+      "filePath": "docs/security-audit/run-1/coverage-ledger.json",
+      "summary": "Stores structured historical security audit coverage entries, scope and status evidence.",
+      "tags": [
+        "configuration",
+        "security",
+        "audit",
+        "coverage"
+      ],
+      "complexity": "complex"
+    },
+    {
+      "id": "config:docs/security-audit/run-1/findings.json",
+      "type": "config",
+      "name": "findings.json",
+      "filePath": "docs/security-audit/run-1/findings.json",
+      "summary": "Stores structured findings and dispositions from the historical security review.",
+      "tags": [
+        "configuration",
+        "security",
+        "audit",
+        "findings"
+      ],
+      "complexity": "moderate"
+    },
+    {
+      "id": "document:docs/security-audit/run-1/hunt_local-prompt.md",
+      "type": "document",
+      "name": "hunt_local-prompt.md",
+      "filePath": "docs/security-audit/run-1/hunt_local-prompt.md",
+      "summary": "Preserves the historical security hunter prompt for local application attack surfaces.",
+      "tags": [
+        "documentation",
+        "security",
+        "audit",
+        "local"
+      ],
+      "complexity": "complex"
+    },
+    {
+      "id": "document:docs/security-audit/run-1/hunt_public-prompt.md",
+      "type": "document",
+      "name": "hunt_public-prompt.md",
+      "filePath": "docs/security-audit/run-1/hunt_public-prompt.md",
+      "summary": "Preserves the historical security hunter prompt for public-facing application attack surfaces.",
+      "tags": [
+        "documentation",
+        "security",
+        "audit",
+        "public"
+      ],
+      "complexity": "complex"
+    },
+    {
+      "id": "document:docs/security-audit/run-1/hunt_render-prompt.md",
+      "type": "document",
+      "name": "hunt_render-prompt.md",
+      "filePath": "docs/security-audit/run-1/hunt_render-prompt.md",
+      "summary": "Preserves the historical security hunter prompt focused on rendering and client-side risks.",
+      "tags": [
+        "documentation",
+        "security",
+        "audit",
+        "rendering"
+      ],
+      "complexity": "complex"
+    },
+    {
+      "id": "document:docs/security-audit/run-1/hunt_resource-prompt.md",
+      "type": "document",
+      "name": "hunt_resource-prompt.md",
+      "filePath": "docs/security-audit/run-1/hunt_resource-prompt.md",
+      "summary": "Preserves the historical security hunter prompt focused on resource-handling risks.",
+      "tags": [
+        "documentation",
+        "security",
+        "audit",
+        "resources"
+      ],
+      "complexity": "complex"
+    },
+    {
+      "id": "document:docs/security-audit/run-1/hunt_supply-prompt.md",
+      "type": "document",
+      "name": "hunt_supply-prompt.md",
+      "filePath": "docs/security-audit/run-1/hunt_supply-prompt.md",
+      "summary": "Preserves the historical security hunter prompt focused on dependency and supply-chain risks.",
+      "tags": [
+        "documentation",
+        "security",
+        "audit",
+        "supply-chain"
+      ],
+      "complexity": "complex"
+    },
+    {
+      "id": "config:docs/security-audit/run-1/pending-candidates.json",
+      "type": "config",
+      "name": "pending-candidates.json",
+      "filePath": "docs/security-audit/run-1/pending-candidates.json",
+      "summary": "Records security lead candidates and their historical review state.",
+      "tags": [
+        "configuration",
+        "security",
+        "audit",
+        "candidates"
+      ],
+      "complexity": "moderate"
+    },
+    {
+      "id": "config:docs/security-audit/run-1/run-metadata.json",
+      "type": "config",
+      "name": "run-metadata.json",
+      "filePath": "docs/security-audit/run-1/run-metadata.json",
+      "summary": "Records the historical security audit profile, scope, source identity and execution metadata.",
+      "tags": [
+        "configuration",
+        "security",
+        "audit",
+        "metadata"
+      ],
+      "complexity": "moderate"
+    },
+    {
+      "id": "file:docs/security-audit/run-1/run-validator.ps1",
+      "type": "file",
+      "name": "run-validator.ps1",
+      "filePath": "docs/security-audit/run-1/run-validator.ps1",
+      "summary": "Runs the historical audit coverage or findings validator inside a constrained local Docker container.",
+      "tags": [
+        "script",
+        "security",
+        "audit",
+        "validation"
+      ],
+      "complexity": "simple"
+    },
+    {
+      "id": "config:docs/security-audit/run-1/verification-results.json",
+      "type": "config",
+      "name": "verification-results.json",
+      "filePath": "docs/security-audit/run-1/verification-results.json",
+      "summary": "Stores historical security candidate, fix-verification and post-review outcomes.",
+      "tags": [
+        "configuration",
+        "security",
+        "audit",
+        "verification"
+      ],
+      "complexity": "simple"
+    },
+    {
+      "id": "document:docs/security-audit/run-1/verify_candidate_1-prompt.md",
+      "type": "document",
+      "name": "verify_candidate_1-prompt.md",
+      "filePath": "docs/security-audit/run-1/verify_candidate_1-prompt.md",
+      "summary": "Contains a historical candidate-verifier prompt for an initial security lead.",
+      "tags": [
+        "documentation",
+        "security",
+        "audit",
+        "verification"
+      ],
+      "complexity": "complex"
+    },
+    {
+      "id": "document:docs/security-audit/run-1/verify_candidate_2-prompt.md",
+      "type": "document",
+      "name": "verify_candidate_2-prompt.md",
+      "filePath": "docs/security-audit/run-1/verify_candidate_2-prompt.md",
+      "summary": "Contains a historical candidate-verifier prompt for a second security lead.",
+      "tags": [
+        "documentation",
+        "security",
+        "audit",
+        "verification"
+      ],
+      "complexity": "complex"
+    },
+    {
+      "id": "document:docs/security-audit/run-1/verify_fix_1-prompt.md",
+      "type": "document",
+      "name": "verify_fix_1-prompt.md",
+      "filePath": "docs/security-audit/run-1/verify_fix_1-prompt.md",
+      "summary": "Contains a historical independent verification prompt for a first corrective change.",
+      "tags": [
+        "documentation",
+        "security",
+        "audit",
+        "verification"
+      ],
+      "complexity": "complex"
+    },
+    {
+      "id": "document:docs/security-audit/run-1/verify_fix_2-prompt.md",
+      "type": "document",
+      "name": "verify_fix_2-prompt.md",
+      "filePath": "docs/security-audit/run-1/verify_fix_2-prompt.md",
+      "summary": "Contains a historical independent verification prompt for a second corrective change.",
+      "tags": [
+        "documentation",
+        "security",
+        "audit",
+        "verification"
+      ],
+      "complexity": "complex"
+    },
+    {
+      "id": "document:.agents/skills/hf-cli/SKILL.md",
+      "type": "document",
+      "name": "SKILL.md",
+      "filePath": ".agents/skills/hf-cli/SKILL.md",
+      "summary": "Reference for Hugging Face CLI authentication, repository operations, model assets, Spaces, and related Hub commands.",
+      "tags": [
+        "documentation",
+        "hugging-face",
+        "reference"
+      ],
+      "complexity": "moderate"
+    },
+    {
+      "id": "document:.agents/skills/huggingface-best/SKILL.md",
+      "type": "document",
+      "name": "SKILL.md",
+      "filePath": ".agents/skills/huggingface-best/SKILL.md",
+      "summary": "Workflow for finding and comparing models using task requirements, benchmarks, hardware and model cards.",
+      "tags": [
+        "documentation",
+        "hugging-face",
+        "reference"
+      ],
+      "complexity": "moderate"
+    },
+    {
+      "id": "document:.agents/skills/huggingface-datasets/SKILL.md",
+      "type": "document",
+      "name": "SKILL.md",
+      "filePath": ".agents/skills/huggingface-datasets/SKILL.md",
+      "summary": "Workflow for querying Dataset Viewer metadata, rows, splits, filters and statistics.",
+      "tags": [
+        "documentation",
+        "hugging-face",
+        "reference"
+      ],
+      "complexity": "moderate"
+    },
+    {
+      "id": "document:.agents/skills/huggingface-gradio/SKILL.md",
+      "type": "document",
+      "name": "SKILL.md",
+      "filePath": ".agents/skills/huggingface-gradio/SKILL.md",
+      "summary": "Guide to building Gradio components, layouts, event handlers and interactive demos.",
+      "tags": [
+        "documentation",
+        "hugging-face",
+        "reference"
+      ],
+      "complexity": "complex"
+    },
+    {
+      "id": "document:.agents/skills/huggingface-gradio/examples.md",
+      "type": "document",
+      "name": "examples.md",
+      "filePath": ".agents/skills/huggingface-gradio/examples.md",
+      "summary": "Collection of Gradio component and event-handler examples for the bundled Gradio skill.",
+      "tags": [
+        "documentation",
+        "hugging-face",
+        "reference"
+      ],
+      "complexity": "complex"
+    },
+    {
+      "id": "document:.agents/skills/huggingface-local-models/SKILL.md",
+      "type": "document",
+      "name": "SKILL.md",
+      "filePath": ".agents/skills/huggingface-local-models/SKILL.md",
+      "summary": "Guide to selecting and serving local GGUF models using llama.cpp and hardware-appropriate quantization.",
+      "tags": [
+        "documentation",
+        "hugging-face",
+        "reference"
+      ],
+      "complexity": "moderate"
+    },
+    {
+      "id": "document:.agents/skills/huggingface-spaces/README.md",
+      "type": "document",
+      "name": "README.md",
+      "filePath": ".agents/skills/huggingface-spaces/README.md",
+      "summary": "Index of the bundled Hugging Face Spaces skill and its reference materials.",
+      "tags": [
+        "documentation",
+        "hugging-face",
+        "reference"
+      ],
+      "complexity": "simple"
+    },
+    {
+      "id": "document:.agents/skills/huggingface-spaces/SKILL.md",
+      "type": "document",
+      "name": "SKILL.md",
+      "filePath": ".agents/skills/huggingface-spaces/SKILL.md",
+      "summary": "Guide to building, configuring, debugging and deploying Hugging Face Spaces.",
+      "tags": [
+        "documentation",
+        "hugging-face",
+        "reference"
+      ],
+      "complexity": "moderate"
+    },
+    {
+      "id": "document:.agents/skills/huggingface-zerogpu/SKILL.md",
+      "type": "document",
+      "name": "SKILL.md",
+      "filePath": ".agents/skills/huggingface-zerogpu/SKILL.md",
+      "summary": "Guide to ZeroGPU model loading, GPU functions, quotas, worker isolation and supported dependencies.",
+      "tags": [
+        "documentation",
+        "hugging-face",
+        "reference"
+      ],
+      "complexity": "moderate"
+    },
+    {
+      "id": "file:.python-version",
+      "type": "file",
+      "name": ".python-version",
+      "filePath": ".python-version",
+      "summary": "Pins the project interpreter selection to Python 3.12 for uv.",
+      "tags": [
+        "configuration",
+        "python",
+        "project"
+      ],
+      "complexity": "simple"
+    },
+    {
+      "id": "config:.ua/config.json",
+      "type": "config",
+      "name": "config.json",
+      "filePath": ".ua/config.json",
+      "summary": "Stores the Understand Anything output-language setting for this local analysis.",
+      "tags": [
+        "configuration",
+        "analysis",
+        "settings"
+      ],
+      "complexity": "simple"
+    },
+    {
+      "id": "file:docflow/xiaomi_postprocess/NOTICE",
+      "type": "file",
+      "name": "NOTICE",
+      "filePath": "docflow/xiaomi_postprocess/NOTICE",
+      "summary": "Attributes the adapted Xiaomi OCR postprocessing code and notes local changes.",
+      "tags": [
+        "license",
+        "attribution",
+        "postprocessing"
+      ],
+      "complexity": "simple"
+    },
+    {
+      "id": "file:docs/security-audit/run-1/finalize_incomplete.py",
+      "type": "file",
+      "name": "finalize_incomplete.py",
+      "filePath": "docs/security-audit/run-1/finalize_incomplete.py",
+      "summary": "Historical audit helper that assembles a report and coverage records for an incomplete review.",
+      "tags": [
+        "python",
+        "security-audit",
+        "historical"
+      ],
+      "complexity": "moderate"
+    },
+    {
+      "id": "file:docs/security-audit/run-1/finalize_resumed.py",
+      "type": "file",
+      "name": "finalize_resumed.py",
+      "filePath": "docs/security-audit/run-1/finalize_resumed.py",
+      "summary": "Historical audit helper that updates verification records and generates the resumed review report.",
+      "tags": [
+        "python",
+        "security-audit",
+        "historical"
+      ],
+      "complexity": "moderate"
+    },
+    {
+      "id": "file:docs/security-audit/run-1/setup_audit.py",
+      "type": "file",
+      "name": "setup_audit.py",
+      "filePath": "docs/security-audit/run-1/setup_audit.py",
+      "summary": "Historical audit setup script that builds architecture and investigator inputs for the prior Nemotron review.",
+      "tags": [
+        "python",
+        "security-audit",
+        "historical"
+      ],
+      "complexity": "simple"
+    },
+    {
+      "id": "file:tests/test_exports.py",
+      "type": "file",
+      "name": "test_exports.py",
+      "filePath": "tests/test_exports.py",
+      "summary": "Tests that exporting a saved document as a ZIP does not duplicate its Markdown entry.",
+      "tags": [
+        "test",
+        "streamlit",
+        "export"
+      ],
+      "complexity": "simple"
+    },
+    {
+      "id": "function:tests/test_exports.py:test_zip_does_not_duplicate_saved_markdown",
+      "type": "function",
+      "name": "test_zip_does_not_duplicate_saved_markdown",
+      "filePath": "tests/test_exports.py",
+      "lineRange": [
+        7,
+        20
+      ],
+      "summary": "Checks that the ZIP download does not duplicate a saved Markdown file.",
+      "tags": [
+        "test",
+        "validation",
+        "export"
+      ],
+      "complexity": "simple"
+    },
+    {
+      "id": "file:tests/test_visitor_keys.py",
+      "type": "file",
+      "name": "test_visitor_keys.py",
+      "filePath": "tests/test_visitor_keys.py",
+      "summary": "Checks that the Space binds its GPU handler directly and has no legacy NVIDIA key dispatcher.",
+      "tags": [
+        "test",
+        "gradio",
+        "gpu"
+      ],
+      "complexity": "simple"
+    }
+  ],
+  "edges": [
+    {
+      "source": "file:docflow/conversion.py",
+      "target": "function:docflow/conversion.py:_page_indexes",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1.0
+    },
+    {
+      "source": "file:docflow/conversion.py",
+      "target": "function:docflow/conversion.py:page_count",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1.0
+    },
+    {
+      "source": "file:docflow/conversion.py",
+      "target": "function:docflow/conversion.py:page_images",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1.0
+    },
+    {
+      "source": "file:docflow/conversion.py",
+      "target": "function:docflow/conversion.py:convert",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1.0
+    },
+    {
+      "source": "file:docflow/conversion.py",
+      "target": "file:docflow/image_limits.py",
+      "type": "imports",
+      "direction": "forward",
+      "weight": 0.7
+    },
+    {
+      "source": "file:docflow/conversion.py",
+      "target": "file:docflow/xiaomi.py",
+      "type": "imports",
+      "direction": "forward",
+      "weight": 0.7
+    },
+    {
+      "source": "file:docflow/image_limits.py",
+      "target": "function:docflow/image_limits.py:check_image_size",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1.0
+    },
+    {
+      "source": "file:docflow/streamlit_ui.py",
+      "target": "function:docflow/streamlit_ui.py:safe_html",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1.0
+    },
+    {
+      "source": "file:docflow/streamlit_ui.py",
+      "target": "function:docflow/streamlit_ui.py:markdown_text",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1.0
+    },
+    {
+      "source": "file:docflow/streamlit_ui.py",
+      "target": "function:docflow/streamlit_ui.py:artifacts",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1.0
+    },
+    {
+      "source": "file:docflow/streamlit_ui.py",
+      "target": "function:docflow/streamlit_ui.py:archive_bytes",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1.0
+    },
+    {
+      "source": "file:docflow/streamlit_ui.py",
+      "target": "function:docflow/streamlit_ui.py:preview_bytes",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1.0
+    },
+    {
+      "source": "file:docflow/streamlit_ui.py",
+      "target": "file:docflow/conversion.py",
+      "type": "imports",
+      "direction": "forward",
+      "weight": 0.7
+    },
+    {
+      "source": "file:streamlit_app.py",
+      "target": "function:streamlit_app.py:local_engine",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1.0
+    },
+    {
+      "source": "file:streamlit_app.py",
+      "target": "file:docflow/conversion.py",
+      "type": "imports",
+      "direction": "forward",
+      "weight": 0.7
+    },
+    {
+      "source": "file:streamlit_app.py",
+      "target": "file:docflow/streamlit_ui.py",
+      "type": "imports",
+      "direction": "forward",
+      "weight": 0.7
+    },
+    {
+      "source": "file:tests/test_document_limits.py",
+      "target": "class:tests/test_document_limits.py:DocumentLimitTests",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1.0
+    },
+    {
+      "source": "file:tests/test_document_limits.py",
+      "target": "file:docflow/__init__.py",
+      "type": "imports",
+      "direction": "forward",
+      "weight": 0.7
+    },
+    {
+      "source": "file:tests/test_document_limits.py",
+      "target": "file:docflow/conversion.py",
+      "type": "imports",
+      "direction": "forward",
+      "weight": 0.7
+    },
+    {
+      "source": "file:tests/test_document_limits.py",
+      "target": "file:docflow/image_limits.py",
+      "type": "imports",
+      "direction": "forward",
+      "weight": 0.7
+    },
+    {
+      "source": "file:tests/test_document_limits.py",
+      "target": "file:docflow/space_ui.py",
+      "type": "imports",
+      "direction": "forward",
+      "weight": 0.7
+    },
+    {
+      "source": "file:tests/test_streamlit_workbench.py",
+      "target": "function:tests/test_streamlit_workbench.py:test_legacy_exports_are_safe_and_unique",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1.0
+    },
+    {
+      "source": "file:tests/test_streamlit_workbench.py",
+      "target": "function:tests/test_streamlit_workbench.py:test_preview_selected_frame_only",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1.0
+    },
+    {
+      "source": "file:tests/test_streamlit_workbench.py",
+      "target": "function:tests/test_streamlit_workbench.py:test_saved_result_tabs_and_selection_do_not_load_models",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1.0
+    },
+    {
+      "source": "file:tests/test_streamlit_workbench.py",
+      "target": "file:docflow/streamlit_ui.py",
+      "type": "imports",
+      "direction": "forward",
+      "weight": 0.7
+    },
+    {
+      "source": "function:docflow/conversion.py:convert",
+      "target": "function:docflow/conversion.py:page_images",
+      "type": "calls",
+      "direction": "forward",
+      "weight": 0.8
+    },
+    {
+      "source": "function:docflow/streamlit_ui.py:preview_bytes",
+      "target": "function:docflow/conversion.py:page_images",
+      "type": "calls",
+      "direction": "forward",
+      "weight": 0.8
+    },
+    {
+      "source": "function:docflow/streamlit_ui.py:archive_bytes",
+      "target": "function:docflow/streamlit_ui.py:artifacts",
+      "type": "calls",
+      "direction": "forward",
+      "weight": 0.8
+    },
+    {
+      "source": "function:streamlit_app.py:local_engine",
+      "target": "class:docflow/xiaomi.py:Engine",
+      "type": "calls",
+      "direction": "forward",
+      "weight": 0.8
+    },
+    {
+      "source": "file:app.py",
+      "target": "function:app.py:preflight",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1.0
+    },
+    {
+      "source": "file:app.py",
+      "target": "function:app.py:convert_batch",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1.0
+    },
+    {
+      "source": "file:app.py",
+      "target": "function:app.py:run_gpu",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1.0
+    },
+    {
+      "source": "file:app.py",
+      "target": "file:docflow/conversion.py",
+      "type": "imports",
+      "direction": "forward",
+      "weight": 0.7
+    },
+    {
+      "source": "file:app.py",
+      "target": "file:docflow/space_ui.py",
+      "type": "imports",
+      "direction": "forward",
+      "weight": 0.7
+    },
+    {
+      "source": "file:app.py",
+      "target": "file:docflow/xiaomi.py",
+      "type": "imports",
+      "direction": "forward",
+      "weight": 0.7
+    },
+    {
+      "source": "file:app.py",
+      "target": "file:gradio_ui.py",
+      "type": "imports",
+      "direction": "forward",
+      "weight": 0.7
+    },
+    {
+      "source": "file:docflow/space_ui.py",
+      "target": "function:docflow/space_ui.py:cleanup",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1.0
+    },
+    {
+      "source": "file:docflow/space_ui.py",
+      "target": "function:docflow/space_ui.py:prepare",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1.0
+    },
+    {
+      "source": "file:docflow/space_ui.py",
+      "target": "function:docflow/space_ui.py:bundle",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1.0
+    },
+    {
+      "source": "file:docflow/space_ui.py",
+      "target": "function:docflow/space_ui.py:view",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1.0
+    },
+    {
+      "source": "file:docflow/space_ui.py",
+      "target": "file:docflow/conversion.py",
+      "type": "imports",
+      "direction": "forward",
+      "weight": 0.7
+    },
+    {
+      "source": "file:gradio_ui.py",
+      "target": "function:gradio_ui.py:upload_panel",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1.0
+    },
+    {
+      "source": "file:gradio_ui.py",
+      "target": "function:gradio_ui.py:build_demo",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1.0
+    },
+    {
+      "source": "file:gradio_ui.py",
+      "target": "file:docflow/space_ui.py",
+      "type": "imports",
+      "direction": "forward",
+      "weight": 0.7
+    },
+    {
+      "source": "file:scripts/preview_ui.py",
+      "target": "function:scripts/preview_ui.py:preview_only",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1.0
+    },
+    {
+      "source": "file:scripts/preview_ui.py",
+      "target": "file:docflow/space_ui.py",
+      "type": "imports",
+      "direction": "forward",
+      "weight": 0.7
+    },
+    {
+      "source": "file:scripts/preview_ui.py",
+      "target": "file:gradio_ui.py",
+      "type": "imports",
+      "direction": "forward",
+      "weight": 0.7
+    },
+    {
+      "source": "file:tests/test_space.py",
+      "target": "function:tests/test_space.py:test_limit_and_session_isolation",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1.0
+    },
+    {
+      "source": "file:tests/test_space.py",
+      "target": "function:tests/test_space.py:test_duplicate_archive_names",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1.0
+    },
+    {
+      "source": "file:tests/test_space.py",
+      "target": "file:docflow/space_ui.py",
+      "type": "imports",
+      "direction": "forward",
+      "weight": 0.7
+    },
+    {
+      "source": "function:app.py:preflight",
+      "target": "function:docflow/space_ui.py:prepare",
+      "type": "calls",
+      "direction": "forward",
+      "weight": 0.8
+    },
+    {
+      "source": "function:app.py:convert_batch",
+      "target": "function:docflow/conversion.py:convert",
+      "type": "calls",
+      "direction": "forward",
+      "weight": 0.8
+    },
+    {
+      "source": "function:app.py:convert_batch",
+      "target": "function:docflow/space_ui.py:bundle",
+      "type": "calls",
+      "direction": "forward",
+      "weight": 0.8
+    },
+    {
+      "source": "function:app.py:convert_batch",
+      "target": "function:docflow/space_ui.py:view",
+      "type": "calls",
+      "direction": "forward",
+      "weight": 0.8
+    },
+    {
+      "source": "function:app.py:run_gpu",
+      "target": "function:app.py:convert_batch",
+      "type": "calls",
+      "direction": "forward",
+      "weight": 0.8
+    },
+    {
+      "source": "function:gradio_ui.py:build_demo",
+      "target": "function:gradio_ui.py:upload_panel",
+      "type": "calls",
+      "direction": "forward",
+      "weight": 0.8
+    },
+    {
+      "source": "function:docflow/space_ui.py:prepare",
+      "target": "function:docflow/conversion.py:page_count",
+      "type": "calls",
+      "direction": "forward",
+      "weight": 0.8
+    },
+    {
+      "source": "file:docflow/xiaomi.py",
+      "target": "class:docflow/xiaomi.py:PageResult",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1.0
+    },
+    {
+      "source": "file:docflow/xiaomi.py",
+      "target": "class:docflow/xiaomi.py:Engine",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1.0
+    },
+    {
+      "source": "file:runtime/probe_local.py",
+      "target": "file:scripts/smoke_xiaomi.py",
+      "type": "imports",
+      "direction": "forward",
+      "weight": 0.7
+    },
+    {
+      "source": "file:scripts/setup-models.py",
+      "target": "file:docflow/xiaomi.py",
+      "type": "imports",
+      "direction": "forward",
+      "weight": 0.7
+    },
+    {
+      "source": "file:scripts/smoke_xiaomi.py",
+      "target": "function:scripts/smoke_xiaomi.py:main",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1.0
+    },
+    {
+      "source": "file:scripts/smoke_xiaomi.py",
+      "target": "file:docflow/xiaomi.py",
+      "type": "imports",
+      "direction": "forward",
+      "weight": 0.7
+    },
+    {
+      "source": "file:tests/test_xiaomi_pipeline.py",
+      "target": "function:tests/test_xiaomi_pipeline.py:test_layout_order_category_routing_and_partial_result",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1.0
+    },
+    {
+      "source": "file:tests/test_xiaomi_pipeline.py",
+      "target": "function:tests/test_xiaomi_pipeline.py:test_empty_layout_uses_explicit_page_fallback",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1.0
+    },
+    {
+      "source": "file:tests/test_xiaomi_pipeline.py",
+      "target": "file:docflow/xiaomi.py",
+      "type": "imports",
+      "direction": "forward",
+      "weight": 0.7
+    },
+    {
+      "source": "class:docflow/xiaomi.py:Engine",
+      "target": "function:docflow/xiaomi.py:Engine.__init__",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1.0
+    },
+    {
+      "source": "class:docflow/xiaomi.py:Engine",
+      "target": "function:docflow/xiaomi.py:Engine.recognize",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1.0
+    },
+    {
+      "source": "class:docflow/xiaomi.py:Engine",
+      "target": "function:docflow/xiaomi.py:Engine.__call__",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1.0
+    },
+    {
+      "source": "class:docflow/xiaomi.py:Engine",
+      "target": "function:docflow/xiaomi.py:Engine.parse",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1.0
+    },
+    {
+      "source": "function:docflow/xiaomi.py:Engine.__call__",
+      "target": "function:docflow/xiaomi.py:Engine.parse",
+      "type": "calls",
+      "direction": "forward",
+      "weight": 0.8
+    },
+    {
+      "source": "function:docflow/xiaomi.py:Engine.parse",
+      "target": "function:docflow/xiaomi.py:Engine.recognize",
+      "type": "calls",
+      "direction": "forward",
+      "weight": 0.8
+    },
+    {
+      "source": "function:docflow/xiaomi.py:Engine.parse",
+      "target": "function:docflow/xiaomi_postprocess/document.py:finalize_document",
+      "type": "calls",
+      "direction": "forward",
+      "weight": 0.8
+    },
+    {
+      "source": "file:docflow/xiaomi_postprocess/document.py",
+      "target": "function:docflow/xiaomi_postprocess/document.py:postprocess_math_delimiters",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1.0
+    },
+    {
+      "source": "file:docflow/xiaomi_postprocess/document.py",
+      "target": "function:docflow/xiaomi_postprocess/document.py:_split_markdown_blocks",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1.0
+    },
+    {
+      "source": "file:docflow/xiaomi_postprocess/document.py",
+      "target": "function:docflow/xiaomi_postprocess/document.py:postprocess_otsl_tables",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1.0
+    },
+    {
+      "source": "file:docflow/xiaomi_postprocess/document.py",
+      "target": "function:docflow/xiaomi_postprocess/document.py:postprocess_e2e_markdown",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1.0
+    },
+    {
+      "source": "file:docflow/xiaomi_postprocess/document.py",
+      "target": "function:docflow/xiaomi_postprocess/document.py:_clean_truncated_repeats",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1.0
+    },
+    {
+      "source": "file:docflow/xiaomi_postprocess/document.py",
+      "target": "function:docflow/xiaomi_postprocess/document.py:finalize_document",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1.0
+    },
+    {
+      "source": "file:docflow/xiaomi_postprocess/document.py",
+      "target": "file:docflow/xiaomi_postprocess/otsl.py",
+      "type": "imports",
+      "direction": "forward",
+      "weight": 0.7
+    },
+    {
+      "source": "file:docflow/xiaomi_postprocess/otsl.py",
+      "target": "class:docflow/xiaomi_postprocess/otsl.py:Cell",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1.0
+    },
+    {
+      "source": "file:docflow/xiaomi_postprocess/otsl.py",
+      "target": "function:docflow/xiaomi_postprocess/otsl.py:_tag_of",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1.0
+    },
+    {
+      "source": "file:docflow/xiaomi_postprocess/otsl.py",
+      "target": "function:docflow/xiaomi_postprocess/otsl.py:_split_chunks",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1.0
+    },
+    {
+      "source": "file:docflow/xiaomi_postprocess/otsl.py",
+      "target": "function:docflow/xiaomi_postprocess/otsl.py:_required_width",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1.0
+    },
+    {
+      "source": "file:docflow/xiaomi_postprocess/otsl.py",
+      "target": "function:docflow/xiaomi_postprocess/otsl.py:_target_width",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1.0
+    },
+    {
+      "source": "file:docflow/xiaomi_postprocess/otsl.py",
+      "target": "function:docflow/xiaomi_postprocess/otsl.py:pad_rows",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1.0
+    },
+    {
+      "source": "file:docflow/xiaomi_postprocess/otsl.py",
+      "target": "function:docflow/xiaomi_postprocess/otsl.py:parse_grid",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1.0
+    },
+    {
+      "source": "file:docflow/xiaomi_postprocess/otsl.py",
+      "target": "function:docflow/xiaomi_postprocess/otsl.py:resolve_cells",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1.0
+    },
+    {
+      "source": "file:docflow/xiaomi_postprocess/otsl.py",
+      "target": "function:docflow/xiaomi_postprocess/otsl.py:render_html",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1.0
+    },
+    {
+      "source": "file:docflow/xiaomi_postprocess/otsl.py",
+      "target": "function:docflow/xiaomi_postprocess/otsl.py:convert_otsl_to_html",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1.0
+    },
+    {
+      "source": "file:tests/test_xiaomi_postprocess.py",
+      "target": "function:tests/test_xiaomi_postprocess.py:test_table_cells_escape_html",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1.0
+    },
+    {
+      "source": "file:tests/test_xiaomi_postprocess.py",
+      "target": "function:tests/test_xiaomi_postprocess.py:test_math_and_plain_text_survive",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1.0
+    },
+    {
+      "source": "file:tests/test_xiaomi_postprocess.py",
+      "target": "file:docflow/xiaomi_postprocess/document.py",
+      "type": "imports",
+      "direction": "forward",
+      "weight": 0.7
+    },
+    {
+      "source": "function:docflow/xiaomi_postprocess/document.py:finalize_document",
+      "target": "function:docflow/xiaomi_postprocess/document.py:postprocess_e2e_markdown",
+      "type": "calls",
+      "direction": "forward",
+      "weight": 0.8
+    },
+    {
+      "source": "function:docflow/xiaomi_postprocess/document.py:postprocess_otsl_tables",
+      "target": "function:docflow/xiaomi_postprocess/otsl.py:convert_otsl_to_html",
+      "type": "calls",
+      "direction": "forward",
+      "weight": 0.8
+    },
+    {
+      "source": "function:docflow/xiaomi_postprocess/otsl.py:convert_otsl_to_html",
+      "target": "function:docflow/xiaomi_postprocess/otsl.py:parse_grid",
+      "type": "calls",
+      "direction": "forward",
+      "weight": 0.8
+    },
+    {
+      "source": "function:docflow/xiaomi_postprocess/otsl.py:convert_otsl_to_html",
+      "target": "function:docflow/xiaomi_postprocess/otsl.py:resolve_cells",
+      "type": "calls",
+      "direction": "forward",
+      "weight": 0.8
+    },
+    {
+      "source": "function:docflow/xiaomi_postprocess/otsl.py:convert_otsl_to_html",
+      "target": "function:docflow/xiaomi_postprocess/otsl.py:render_html",
+      "type": "calls",
+      "direction": "forward",
+      "weight": 0.8
+    },
+    {
+      "source": "document:.agents/skills/huggingface-local-models/SKILL.md",
+      "target": "document:.agents/skills/huggingface-local-models/references/hardware.md",
+      "type": "related",
+      "direction": "forward",
+      "weight": 0.5
+    },
+    {
+      "source": "document:.agents/skills/huggingface-local-models/SKILL.md",
+      "target": "document:.agents/skills/huggingface-local-models/references/hub-discovery.md",
+      "type": "related",
+      "direction": "forward",
+      "weight": 0.5
+    },
+    {
+      "source": "document:.agents/skills/huggingface-local-models/SKILL.md",
+      "target": "document:.agents/skills/huggingface-local-models/references/quantization.md",
+      "type": "related",
+      "direction": "forward",
+      "weight": 0.5
+    },
+    {
+      "source": "document:.agents/skills/huggingface-spaces/SKILL.md",
+      "target": "document:.agents/skills/huggingface-spaces/references/3d-cuda-extensions.md",
+      "type": "related",
+      "direction": "forward",
+      "weight": 0.5
+    },
+    {
+      "source": "document:.agents/skills/huggingface-spaces/SKILL.md",
+      "target": "document:.agents/skills/huggingface-spaces/references/3d-generation.md",
+      "type": "related",
+      "direction": "forward",
+      "weight": 0.5
+    },
+    {
+      "source": "document:.agents/skills/huggingface-spaces/SKILL.md",
+      "target": "document:.agents/skills/huggingface-spaces/references/3d-gsplat.md",
+      "type": "related",
+      "direction": "forward",
+      "weight": 0.5
+    },
+    {
+      "source": "document:.agents/skills/huggingface-spaces/SKILL.md",
+      "target": "document:.agents/skills/huggingface-spaces/references/3d-models.md",
+      "type": "related",
+      "direction": "forward",
+      "weight": 0.5
+    },
+    {
+      "source": "document:.agents/skills/huggingface-spaces/SKILL.md",
+      "target": "document:.agents/skills/huggingface-spaces/references/3d-outputs.md",
+      "type": "related",
+      "direction": "forward",
+      "weight": 0.5
+    },
+    {
+      "source": "document:.agents/skills/huggingface-spaces/SKILL.md",
+      "target": "document:.agents/skills/huggingface-spaces/references/buckets.md",
+      "type": "related",
+      "direction": "forward",
+      "weight": 0.5
+    },
+    {
+      "source": "document:.agents/skills/huggingface-spaces/SKILL.md",
+      "target": "document:.agents/skills/huggingface-spaces/references/debugging.md",
+      "type": "related",
+      "direction": "forward",
+      "weight": 0.5
+    },
+    {
+      "source": "document:.agents/skills/huggingface-spaces/SKILL.md",
+      "target": "document:.agents/skills/huggingface-spaces/references/gradio.md",
+      "type": "related",
+      "direction": "forward",
+      "weight": 0.5
+    },
+    {
+      "source": "document:.agents/skills/huggingface-spaces/SKILL.md",
+      "target": "document:.agents/skills/huggingface-spaces/references/grants.md",
+      "type": "related",
+      "direction": "forward",
+      "weight": 0.5
+    },
+    {
+      "source": "document:.agents/skills/huggingface-spaces/SKILL.md",
+      "target": "document:.agents/skills/huggingface-spaces/references/inference-providers.md",
+      "type": "related",
+      "direction": "forward",
+      "weight": 0.5
+    },
+    {
+      "source": "document:.agents/skills/huggingface-spaces/SKILL.md",
+      "target": "document:.agents/skills/huggingface-spaces/references/known-errors.md",
+      "type": "related",
+      "direction": "forward",
+      "weight": 0.5
+    },
+    {
+      "source": "document:.agents/skills/huggingface-spaces/SKILL.md",
+      "target": "document:.agents/skills/huggingface-spaces/references/requirements.md",
+      "type": "related",
+      "direction": "forward",
+      "weight": 0.5
+    },
+    {
+      "source": "document:.agents/skills/huggingface-spaces/SKILL.md",
+      "target": "document:.agents/skills/huggingface-spaces/references/zerogpu.md",
+      "type": "related",
+      "direction": "forward",
+      "weight": 0.5
+    },
+    {
+      "source": "document:.agents/skills/huggingface-zerogpu/SKILL.md",
+      "target": "document:.agents/skills/huggingface-zerogpu/references/concurrency.md",
+      "type": "related",
+      "direction": "forward",
+      "weight": 0.5
+    },
+    {
+      "source": "document:.agents/skills/huggingface-zerogpu/SKILL.md",
+      "target": "document:.agents/skills/huggingface-zerogpu/references/cuda-and-deps.md",
+      "type": "related",
+      "direction": "forward",
+      "weight": 0.5
+    },
+    {
+      "source": "document:.agents/skills/huggingface-zerogpu/SKILL.md",
+      "target": "document:.agents/skills/huggingface-zerogpu/references/how-quota-works.md",
+      "type": "related",
+      "direction": "forward",
+      "weight": 0.5
+    },
+    {
+      "source": "document:.agents/skills/huggingface-zerogpu/SKILL.md",
+      "target": "document:.agents/skills/huggingface-zerogpu/references/how-zerogpu-works.md",
+      "type": "related",
+      "direction": "forward",
+      "weight": 0.5
+    },
+    {
+      "source": "document:README.md",
+      "target": "file:streamlit_app.py",
+      "type": "documents",
+      "direction": "forward",
+      "weight": 0.5
+    },
+    {
+      "source": "document:README.md",
+      "target": "file:app.py",
+      "type": "documents",
+      "direction": "forward",
+      "weight": 0.5
+    },
+    {
+      "source": "document:README.md",
+      "target": "document:docs/models.md",
+      "type": "related",
+      "direction": "forward",
+      "weight": 0.5
+    },
+    {
+      "source": "document:README.md",
+      "target": "document:docs/user-guide.md",
+      "type": "related",
+      "direction": "forward",
+      "weight": 0.5
+    },
+    {
+      "source": "config:pyproject.toml",
+      "target": "file:streamlit_app.py",
+      "type": "configures",
+      "direction": "forward",
+      "weight": 0.6
+    },
+    {
+      "source": "file:launch.cmd",
+      "target": "file:streamlit_app.py",
+      "type": "triggers",
+      "direction": "forward",
+      "weight": 0.6
+    },
+    {
+      "source": "document:requirements.txt",
+      "target": "file:app.py",
+      "type": "configures",
+      "direction": "forward",
+      "weight": 0.6
+    },
+    {
+      "source": "document:AGENTS.md",
+      "target": "document:README.md",
+      "type": "related",
+      "direction": "forward",
+      "weight": 0.5
+    },
+    {
+      "source": "document:docs/developer-guide.md",
+      "target": "file:docflow/conversion.py",
+      "type": "documents",
+      "direction": "forward",
+      "weight": 0.5
+    },
+    {
+      "source": "document:docs/developer-guide.md",
+      "target": "file:docflow/xiaomi.py",
+      "type": "documents",
+      "direction": "forward",
+      "weight": 0.5
+    },
+    {
+      "source": "document:docs/developer-guide.md",
+      "target": "file:app.py",
+      "type": "documents",
+      "direction": "forward",
+      "weight": 0.5
+    },
+    {
+      "source": "document:docs/developer-guide.md",
+      "target": "file:streamlit_app.py",
+      "type": "documents",
+      "direction": "forward",
+      "weight": 0.5
+    },
+    {
+      "source": "document:docs/models.md",
+      "target": "file:docflow/xiaomi.py",
+      "type": "documents",
+      "direction": "forward",
+      "weight": 0.5
+    },
+    {
+      "source": "document:docs/models.md",
+      "target": "file:docflow/conversion.py",
+      "type": "documents",
+      "direction": "forward",
+      "weight": 0.5
+    },
+    {
+      "source": "document:docs/user-guide.md",
+      "target": "file:streamlit_app.py",
+      "type": "documents",
+      "direction": "forward",
+      "weight": 0.5
+    },
+    {
+      "source": "document:docs/user-guide.md",
+      "target": "file:launch.cmd",
+      "type": "documents",
+      "direction": "forward",
+      "weight": 0.5
+    },
+    {
+      "source": "document:docs/xiaomi-migration-validation.md",
+      "target": "file:scripts/smoke_xiaomi.py",
+      "type": "documents",
+      "direction": "forward",
+      "weight": 0.5
+    },
+    {
+      "source": "document:docs/xiaomi-ocr-0-research.md",
+      "target": "document:docs/models.md",
+      "type": "related",
+      "direction": "forward",
+      "weight": 0.5
+    },
+    {
+      "source": "document:docs/pp-doclayoutv4-access-research.md",
+      "target": "document:docs/models.md",
+      "type": "related",
+      "direction": "forward",
+      "weight": 0.5
+    },
+    {
+      "source": "document:docs/ui-verification.md",
+      "target": "document:docs/user-guide.md",
+      "type": "related",
+      "direction": "forward",
+      "weight": 0.5
+    },
+    {
+      "source": "document:docs/linkedin-project-and-post.md",
+      "target": "document:README.md",
+      "type": "related",
+      "direction": "forward",
+      "weight": 0.5
+    },
+    {
+      "source": "document:docs/security-audit/run-1/REPORT.md",
+      "target": "document:docs/security-audit/run-1/FINDINGS-DETAIL.md",
+      "type": "related",
+      "direction": "forward",
+      "weight": 0.5
+    },
+    {
+      "source": "document:docs/security-audit/run-1/REPORT.md",
+      "target": "document:docs/security-audit/run-1/NEEDS-VALIDATION.md",
+      "type": "related",
+      "direction": "forward",
+      "weight": 0.5
+    },
+    {
+      "source": "document:docs/security-audit/run-1/REPORT.md",
+      "target": "document:docs/security-audit/run-1/architecture.md",
+      "type": "related",
+      "direction": "forward",
+      "weight": 0.5
+    },
+    {
+      "source": "document:docs/security-audit/run-1/REPORT.md",
+      "target": "config:docs/security-audit/run-1/coverage-ledger.json",
+      "type": "related",
+      "direction": "forward",
+      "weight": 0.5
+    },
+    {
+      "source": "document:docs/security-audit/run-1/REPORT.md",
+      "target": "config:docs/security-audit/run-1/findings.json",
+      "type": "related",
+      "direction": "forward",
+      "weight": 0.5
+    },
+    {
+      "source": "document:docs/security-audit/run-1/REPORT.md",
+      "target": "document:docs/security-audit/run-1/hunt_local-prompt.md",
+      "type": "related",
+      "direction": "forward",
+      "weight": 0.5
+    },
+    {
+      "source": "document:docs/security-audit/run-1/REPORT.md",
+      "target": "document:docs/security-audit/run-1/hunt_public-prompt.md",
+      "type": "related",
+      "direction": "forward",
+      "weight": 0.5
+    },
+    {
+      "source": "document:docs/security-audit/run-1/REPORT.md",
+      "target": "document:docs/security-audit/run-1/hunt_render-prompt.md",
+      "type": "related",
+      "direction": "forward",
+      "weight": 0.5
+    },
+    {
+      "source": "document:docs/security-audit/run-1/REPORT.md",
+      "target": "document:docs/security-audit/run-1/hunt_resource-prompt.md",
+      "type": "related",
+      "direction": "forward",
+      "weight": 0.5
+    },
+    {
+      "source": "document:docs/security-audit/run-1/REPORT.md",
+      "target": "document:docs/security-audit/run-1/hunt_supply-prompt.md",
+      "type": "related",
+      "direction": "forward",
+      "weight": 0.5
+    },
+    {
+      "source": "document:docs/security-audit/run-1/REPORT.md",
+      "target": "config:docs/security-audit/run-1/pending-candidates.json",
+      "type": "related",
+      "direction": "forward",
+      "weight": 0.5
+    },
+    {
+      "source": "document:docs/security-audit/run-1/REPORT.md",
+      "target": "config:docs/security-audit/run-1/run-metadata.json",
+      "type": "related",
+      "direction": "forward",
+      "weight": 0.5
+    },
+    {
+      "source": "document:docs/security-audit/run-1/REPORT.md",
+      "target": "file:docs/security-audit/run-1/run-validator.ps1",
+      "type": "related",
+      "direction": "forward",
+      "weight": 0.5
+    },
+    {
+      "source": "document:docs/security-audit/run-1/REPORT.md",
+      "target": "config:docs/security-audit/run-1/verification-results.json",
+      "type": "related",
+      "direction": "forward",
+      "weight": 0.5
+    },
+    {
+      "source": "document:docs/security-audit/run-1/REPORT.md",
+      "target": "document:docs/security-audit/run-1/verify_candidate_1-prompt.md",
+      "type": "related",
+      "direction": "forward",
+      "weight": 0.5
+    },
+    {
+      "source": "document:docs/security-audit/run-1/REPORT.md",
+      "target": "document:docs/security-audit/run-1/verify_candidate_2-prompt.md",
+      "type": "related",
+      "direction": "forward",
+      "weight": 0.5
+    },
+    {
+      "source": "document:docs/security-audit/run-1/REPORT.md",
+      "target": "document:docs/security-audit/run-1/verify_fix_1-prompt.md",
+      "type": "related",
+      "direction": "forward",
+      "weight": 0.5
+    },
+    {
+      "source": "document:docs/security-audit/run-1/REPORT.md",
+      "target": "document:docs/security-audit/run-1/verify_fix_2-prompt.md",
+      "type": "related",
+      "direction": "forward",
+      "weight": 0.5
+    },
+    {
+      "source": "file:docs/security-audit/run-1/run-validator.ps1",
+      "target": "config:docs/security-audit/run-1/coverage-ledger.json",
+      "type": "validates",
+      "direction": "forward",
+      "weight": 0.5
+    },
+    {
+      "source": "file:docs/security-audit/run-1/run-validator.ps1",
+      "target": "config:docs/security-audit/run-1/findings.json",
+      "type": "validates",
+      "direction": "forward",
+      "weight": 0.5
+    },
+    {
+      "source": "document:docs/security-audit/run-1/REPORT.md",
+      "target": "document:docs/developer-guide.md",
+      "type": "related",
+      "direction": "forward",
+      "weight": 0.5
+    },
+    {
+      "source": "document:.agents/skills/huggingface-gradio/SKILL.md",
+      "target": "document:.agents/skills/huggingface-gradio/examples.md",
+      "type": "related",
+      "direction": "forward",
+      "weight": 0.5
+    },
+    {
+      "source": "document:.agents/skills/huggingface-spaces/README.md",
+      "target": "document:.agents/skills/huggingface-spaces/SKILL.md",
+      "type": "related",
+      "direction": "forward",
+      "weight": 0.5
+    },
+    {
+      "source": "file:tests/test_exports.py",
+      "target": "function:tests/test_exports.py:test_zip_does_not_duplicate_saved_markdown",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1.0
+    },
+    {
+      "source": "file:streamlit_app.py",
+      "target": "file:tests/test_exports.py",
+      "type": "tested_by",
+      "direction": "forward",
+      "weight": 0.5
+    },
+    {
+      "source": "file:app.py",
+      "target": "file:tests/test_visitor_keys.py",
+      "type": "tested_by",
+      "direction": "forward",
+      "weight": 0.5
+    }
+  ],
+  "layers": [
+    {
+      "id": "layer:interface",
+      "name": "User Interfaces",
+      "description": "Streamlit and Gradio entry points, presentation helpers, and session-scoped Space controls.",
+      "nodeIds": [
+        "file:docflow/streamlit_ui.py",
+        "file:streamlit_app.py",
+        "file:app.py",
+        "file:docflow/space_ui.py",
+        "file:gradio_ui.py"
+      ]
+    },
+    {
+      "id": "layer:engine",
+      "name": "Conversion and Model Engine",
+      "description": "Page rendering, limits, shared Xiaomi OCR and PP-DocLayoutV3 inference, and adapted output postprocessing.",
+      "nodeIds": [
+        "file:docflow/__init__.py",
+        "file:docflow/conversion.py",
+        "file:docflow/image_limits.py",
+        "file:docflow/xiaomi.py",
+        "file:docflow/xiaomi_postprocess/document.py",
+        "file:docflow/xiaomi_postprocess/otsl.py",
+        "file:docflow/xiaomi_postprocess/NOTICE"
+      ]
+    },
+    {
+      "id": "layer:tests",
+      "name": "Tests",
+      "description": "Pytest checks for conversion limits, model routing, exports, Streamlit and Space behavior.",
+      "nodeIds": [
+        "file:tests/test_document_limits.py",
+        "file:tests/test_streamlit_workbench.py",
+        "file:tests/test_space.py",
+        "file:tests/test_xiaomi_pipeline.py",
+        "file:tests/test_xiaomi_postprocess.py",
+        "file:tests/test_exports.py",
+        "file:tests/test_visitor_keys.py"
+      ]
+    },
+    {
+      "id": "layer:tools",
+      "name": "Setup and Diagnostics",
+      "description": "Windows launcher, model download, synthetic GPU probe, and Gradio preview scripts.",
+      "nodeIds": [
+        "file:scripts/preview_ui.py",
+        "file:runtime/probe_local.py",
+        "file:scripts/setup-models.py",
+        "file:scripts/smoke_xiaomi.py",
+        "file:launch.cmd"
+      ]
+    },
+    {
+      "id": "layer:config",
+      "name": "Project Configuration",
+      "description": "Python, package, dependency and local analysis settings used by this workspace.",
+      "nodeIds": [
+        "config:pyproject.toml",
+        "document:requirements.txt",
+        "config:skills-lock.json",
+        "file:.python-version",
+        "config:.ua/config.json"
+      ]
+    },
+    {
+      "id": "layer:docs",
+      "name": "Project Documentation",
+      "description": "Current setup and model guides, architecture research, validation notes, and contributor instructions.",
+      "nodeIds": [
+        "document:AGENTS.md",
+        "document:README.md",
+        "document:docs/codebase-research-2026-10-28.md",
+        "document:docs/developer-guide.md",
+        "document:docs/grok-build-install-skills.md",
+        "document:docs/linkedin-project-and-post.md",
+        "document:docs/models.md",
+        "document:docs/nemotron-3.5-parse-research.md",
+        "document:docs/pp-doclayoutv4-access-research.md",
+        "document:docs/ui-verification.md",
+        "document:docs/user-guide.md",
+        "document:docs/xiaomi-migration-validation.md",
+        "document:docs/xiaomi-ocr-0-research.md"
+      ]
+    },
+    {
+      "id": "layer:audit",
+      "name": "Historical Security Audit",
+      "description": "Records, prompts, metadata, and helper scripts from the earlier Nemotron security review.",
+      "nodeIds": [
+        "document:docs/security-audit/run-1/FINDINGS-DETAIL.md",
+        "document:docs/security-audit/run-1/NEEDS-VALIDATION.md",
+        "document:docs/security-audit/run-1/REPORT.md",
+        "document:docs/security-audit/run-1/architecture.md",
+        "config:docs/security-audit/run-1/coverage-ledger.json",
+        "config:docs/security-audit/run-1/findings.json",
+        "document:docs/security-audit/run-1/hunt_local-prompt.md",
+        "document:docs/security-audit/run-1/hunt_public-prompt.md",
+        "document:docs/security-audit/run-1/hunt_render-prompt.md",
+        "document:docs/security-audit/run-1/hunt_resource-prompt.md",
+        "document:docs/security-audit/run-1/hunt_supply-prompt.md",
+        "config:docs/security-audit/run-1/pending-candidates.json",
+        "config:docs/security-audit/run-1/run-metadata.json",
+        "file:docs/security-audit/run-1/run-validator.ps1",
+        "config:docs/security-audit/run-1/verification-results.json",
+        "document:docs/security-audit/run-1/verify_candidate_1-prompt.md",
+        "document:docs/security-audit/run-1/verify_candidate_2-prompt.md",
+        "document:docs/security-audit/run-1/verify_fix_1-prompt.md",
+        "document:docs/security-audit/run-1/verify_fix_2-prompt.md",
+        "file:docs/security-audit/run-1/finalize_incomplete.py",
+        "file:docs/security-audit/run-1/finalize_resumed.py",
+        "file:docs/security-audit/run-1/setup_audit.py"
+      ]
+    },
+    {
+      "id": "layer:skills",
+      "name": "Bundled Agent Skills",
+      "description": "Hugging Face skill instructions and references included in the repository.",
+      "nodeIds": [
+        "document:.agents/skills/huggingface-local-models/references/hardware.md",
+        "document:.agents/skills/huggingface-local-models/references/hub-discovery.md",
+        "document:.agents/skills/huggingface-local-models/references/quantization.md",
+        "document:.agents/skills/huggingface-spaces/references/3d-cuda-extensions.md",
+        "document:.agents/skills/huggingface-spaces/references/3d-generation.md",
+        "document:.agents/skills/huggingface-spaces/references/3d-gsplat.md",
+        "document:.agents/skills/huggingface-spaces/references/3d-models.md",
+        "document:.agents/skills/huggingface-spaces/references/3d-outputs.md",
+        "document:.agents/skills/huggingface-spaces/references/buckets.md",
+        "document:.agents/skills/huggingface-spaces/references/debugging.md",
+        "document:.agents/skills/huggingface-spaces/references/gradio.md",
+        "document:.agents/skills/huggingface-spaces/references/grants.md",
+        "document:.agents/skills/huggingface-spaces/references/inference-providers.md",
+        "document:.agents/skills/huggingface-spaces/references/known-errors.md",
+        "document:.agents/skills/huggingface-spaces/references/requirements.md",
+        "document:.agents/skills/huggingface-spaces/references/zerogpu.md",
+        "document:.agents/skills/huggingface-zerogpu/references/concurrency.md",
+        "document:.agents/skills/huggingface-zerogpu/references/cuda-and-deps.md",
+        "document:.agents/skills/huggingface-zerogpu/references/how-quota-works.md",
+        "document:.agents/skills/huggingface-zerogpu/references/how-zerogpu-works.md",
+        "document:.agents/skills/hf-cli/SKILL.md",
+        "document:.agents/skills/huggingface-best/SKILL.md",
+        "document:.agents/skills/huggingface-datasets/SKILL.md",
+        "document:.agents/skills/huggingface-gradio/SKILL.md",
+        "document:.agents/skills/huggingface-gradio/examples.md",
+        "document:.agents/skills/huggingface-local-models/SKILL.md",
+        "document:.agents/skills/huggingface-spaces/README.md",
+        "document:.agents/skills/huggingface-spaces/SKILL.md",
+        "document:.agents/skills/huggingface-zerogpu/SKILL.md"
+      ]
+    }
+  ],
+  "tour": [
+    {
+      "order": 1,
+      "title": "Project overview",
+      "description": "Read the README for the purpose, supported inputs and output formats. It also distinguishes the local Windows app from the separate, unpublished Gradio Space.",
+      "nodeIds": [
+        "document:README.md",
+        "document:docs/user-guide.md"
+      ]
+    },
+    {
+      "order": 2,
+      "title": "Local Streamlit workbench",
+      "description": "The Streamlit entry point accepts documents and page selections, shows previews and loads the GPU engine when parsing starts. Its presentation helper prepares sanitized views and downloads without requiring inference during navigation.",
+      "nodeIds": [
+        "file:streamlit_app.py",
+        "file:docflow/streamlit_ui.py"
+      ],
+      "languageLesson": "A Streamlit cache_resource decorator shares a loaded model resource across reruns; the engine serializes access with a lock."
+    },
+    {
+      "order": 3,
+      "title": "Space entry point",
+      "description": "The Gradio entry point uses the same converter and engine in a separate ZeroGPU process. Its UI and session helper validate uploads, enforce workload limits and manage temporary results.",
+      "nodeIds": [
+        "file:app.py",
+        "file:gradio_ui.py",
+        "file:docflow/space_ui.py"
+      ]
+    },
+    {
+      "order": 4,
+      "title": "Render and convert",
+      "description": "The shared conversion module validates page ranges, renders PDFs or image frames and calls the page parser. It saves source images, annotations and exports; complete cache entries are reused while incomplete results are retried.",
+      "nodeIds": [
+        "file:docflow/conversion.py",
+        "file:docflow/image_limits.py"
+      ],
+      "languageLesson": "A Python generator can produce selected page images one at a time rather than materializing every page."
+    },
+    {
+      "order": 5,
+      "title": "Layout and recognition",
+      "description": "The engine loads pinned PP-DocLayoutV3 and Xiaomi-OCR-0 models on CUDA. It detects page regions, sends crops to task-specific prompts, and records warnings or incomplete output; a page-level fallback handles an empty layout.",
+      "nodeIds": [
+        "file:docflow/xiaomi.py",
+        "document:docs/models.md"
+      ]
+    },
+    {
+      "order": 6,
+      "title": "Normalize model output",
+      "description": "The postprocessing helpers convert OTSL table tokens to escaped HTML and normalize formula delimiters. These transformations feed the Markdown and structured exports produced by the converter.",
+      "nodeIds": [
+        "file:docflow/xiaomi_postprocess/document.py",
+        "file:docflow/xiaomi_postprocess/otsl.py",
+        "file:docflow/xiaomi_postprocess/NOTICE"
+      ]
+    },
+    {
+      "order": 7,
+      "title": "Setup and execution",
+      "description": "Project metadata selects Python 3.12 and CUDA-enabled dependencies. The setup script downloads pinned snapshots, while the launcher runs Streamlit without synchronizing the environment.",
+      "nodeIds": [
+        "config:pyproject.toml",
+        "file:scripts/setup-models.py",
+        "file:launch.cmd"
+      ]
+    },
+    {
+      "order": 8,
+      "title": "Tests and diagnostics",
+      "description": "The tests exercise region routing, output safety and document limits without requiring real GPU inference. A separate synthetic smoke script checks the locally installed GPU models; its result does not establish accuracy on representative documents.",
+      "nodeIds": [
+        "file:tests/test_xiaomi_pipeline.py",
+        "file:tests/test_xiaomi_postprocess.py",
+        "file:tests/test_document_limits.py",
+        "file:scripts/smoke_xiaomi.py"
+      ]
+    },
+    {
+      "order": 9,
+      "title": "Inspect and export",
+      "description": "Return to the Streamlit helpers and Space session code to see how rendered pages, JSON and ZIP archives reach the user. Saved local results persist, while Space results are stored in temporary session directories.",
+      "nodeIds": [
+        "file:docflow/streamlit_ui.py",
+        "file:docflow/space_ui.py",
+        "file:tests/test_streamlit_workbench.py",
+        "file:tests/test_space.py"
+      ]
+    },
+    {
+      "order": 10,
+      "title": "Further project context",
+      "description": "The developer guide brings together commands, model setup and deployment limits. Historical audit records describe the older Nemotron implementation and should not be treated as validation of the Xiaomi pipeline.",
+      "nodeIds": [
+        "document:docs/developer-guide.md",
+        "document:docs/xiaomi-migration-validation.md",
+        "document:docs/security-audit/run-1/REPORT.md"
+      ]
+    }
+  ]
+}

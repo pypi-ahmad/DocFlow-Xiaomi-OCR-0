@@ -1,0 +1,2215 @@
+{
+  "version": "1.0.0",
+  "gitCommitHash": "94fc06f21c3d7b32254caaec624cba833764d727",
+  "generatedAt": "2026-10-31T09:31:34.306Z",
+  "files": {
+    ".agents/skills/hf-cli/SKILL.md": {
+      "filePath": ".agents/skills/hf-cli/SKILL.md",
+      "contentHash": "557a4f7b8b6c4925daf215cf51265126885a77dd149cb0c5778fd623b75f2576",
+      "functions": [],
+      "classes": [],
+      "imports": [],
+      "exports": [],
+      "totalLines": 244,
+      "hasStructuralAnalysis": false
+    },
+    ".agents/skills/huggingface-best/SKILL.md": {
+      "filePath": ".agents/skills/huggingface-best/SKILL.md",
+      "contentHash": "d21dc6223f18c111a40ca1bb086e9e26cfbd63146ae5e8e49a4ab0f416a74a73",
+      "functions": [],
+      "classes": [],
+      "imports": [],
+      "exports": [],
+      "totalLines": 135,
+      "hasStructuralAnalysis": false
+    },
+    ".agents/skills/huggingface-datasets/SKILL.md": {
+      "filePath": ".agents/skills/huggingface-datasets/SKILL.md",
+      "contentHash": "eeca50adf211ea64a288b852938f85a5183b045c720dc696b62db9aa2ea8deb2",
+      "functions": [],
+      "classes": [],
+      "imports": [],
+      "exports": [],
+      "totalLines": 108,
+      "hasStructuralAnalysis": false
+    },
+    ".agents/skills/huggingface-gradio/SKILL.md": {
+      "filePath": ".agents/skills/huggingface-gradio/SKILL.md",
+      "contentHash": "1c499ad0a7c0c7b542c8f2f8727205169bdfed748ef24f7f452717ccf22170d5",
+      "functions": [],
+      "classes": [],
+      "imports": [],
+      "exports": [],
+      "totalLines": 299,
+      "hasStructuralAnalysis": false
+    },
+    ".agents/skills/huggingface-gradio/examples.md": {
+      "filePath": ".agents/skills/huggingface-gradio/examples.md",
+      "contentHash": "7f18b2531387a616a5ee0933c31f505de930ec8a11adfdc5a4fabff495c54476",
+      "functions": [],
+      "classes": [],
+      "imports": [],
+      "exports": [],
+      "totalLines": 614,
+      "hasStructuralAnalysis": false
+    },
+    ".agents/skills/huggingface-local-models/SKILL.md": {
+      "filePath": ".agents/skills/huggingface-local-models/SKILL.md",
+      "contentHash": "58fb40fe6064b3adc983edf785e47d6db3ffbd1fb11483235225580bffe69c0b",
+      "functions": [],
+      "classes": [],
+      "imports": [],
+      "exports": [],
+      "totalLines": 114,
+      "hasStructuralAnalysis": false
+    },
+    ".agents/skills/huggingface-local-models/references/hardware.md": {
+      "filePath": ".agents/skills/huggingface-local-models/references/hardware.md",
+      "contentHash": "9fdbbea74151f2c955d480bd44f9fc8c4c39ff952149ce6378746aa3866d7064",
+      "functions": [],
+      "classes": [],
+      "imports": [],
+      "exports": [],
+      "totalLines": 38,
+      "hasStructuralAnalysis": false
+    },
+    ".agents/skills/huggingface-local-models/references/hub-discovery.md": {
+      "filePath": ".agents/skills/huggingface-local-models/references/hub-discovery.md",
+      "contentHash": "c8e392da479b415150eabf838ba36c502f90b39dc225c5f51bf2245c8d6094f6",
+      "functions": [],
+      "classes": [],
+      "imports": [],
+      "exports": [],
+      "totalLines": 179,
+      "hasStructuralAnalysis": false
+    },
+    ".agents/skills/huggingface-local-models/references/quantization.md": {
+      "filePath": ".agents/skills/huggingface-local-models/references/quantization.md",
+      "contentHash": "afec356a6c210cfb7f014d28a10b931d475aaafad08f547051b8769832049e15",
+      "functions": [],
+      "classes": [],
+      "imports": [],
+      "exports": [],
+      "totalLines": 257,
+      "hasStructuralAnalysis": false
+    },
+    ".agents/skills/huggingface-spaces/README.md": {
+      "filePath": ".agents/skills/huggingface-spaces/README.md",
+      "contentHash": "a725382687ee9a1d88016b85a8e16bb018a0f099e35e8d03026cff18262244b1",
+      "functions": [],
+      "classes": [],
+      "imports": [],
+      "exports": [],
+      "totalLines": 10,
+      "hasStructuralAnalysis": false
+    },
+    ".agents/skills/huggingface-spaces/SKILL.md": {
+      "filePath": ".agents/skills/huggingface-spaces/SKILL.md",
+      "contentHash": "8d63d8292cb7be08493bf0553f5dd9359d5b640f117f7dd7d2a398641b98be33",
+      "functions": [],
+      "classes": [],
+      "imports": [],
+      "exports": [],
+      "totalLines": 243,
+      "hasStructuralAnalysis": false
+    },
+    ".agents/skills/huggingface-spaces/references/3d-cuda-extensions.md": {
+      "filePath": ".agents/skills/huggingface-spaces/references/3d-cuda-extensions.md",
+      "contentHash": "85fe64370a2e3320ca94adea5d5c5b073f5e7cce91137afd0992863a4a18f420",
+      "functions": [],
+      "classes": [],
+      "imports": [],
+      "exports": [],
+      "totalLines": 110,
+      "hasStructuralAnalysis": false
+    },
+    ".agents/skills/huggingface-spaces/references/3d-generation.md": {
+      "filePath": ".agents/skills/huggingface-spaces/references/3d-generation.md",
+      "contentHash": "9a22144e23eb4fe1a08df7f80a4b9601a2d339b5f654866a5ff0c81f91a0a668",
+      "functions": [],
+      "classes": [],
+      "imports": [],
+      "exports": [],
+      "totalLines": 99,
+      "hasStructuralAnalysis": false
+    },
+    ".agents/skills/huggingface-spaces/references/3d-gsplat.md": {
+      "filePath": ".agents/skills/huggingface-spaces/references/3d-gsplat.md",
+      "contentHash": "eab17f886ca1b9f2e6e430c65d28ae8e038338870bff17b111e0851a567f627d",
+      "functions": [],
+      "classes": [],
+      "imports": [],
+      "exports": [],
+      "totalLines": 54,
+      "hasStructuralAnalysis": false
+    },
+    ".agents/skills/huggingface-spaces/references/3d-models.md": {
+      "filePath": ".agents/skills/huggingface-spaces/references/3d-models.md",
+      "contentHash": "188a50df878d060ed647fe01ee3d8ad43c2a937667d48e822abebbbe071ad859",
+      "functions": [],
+      "classes": [],
+      "imports": [],
+      "exports": [],
+      "totalLines": 228,
+      "hasStructuralAnalysis": false
+    },
+    ".agents/skills/huggingface-spaces/references/3d-outputs.md": {
+      "filePath": ".agents/skills/huggingface-spaces/references/3d-outputs.md",
+      "contentHash": "d627a6bd424acebd3dd01126250ced41d917da3741046a4ac422efdfc02f1be3",
+      "functions": [],
+      "classes": [],
+      "imports": [],
+      "exports": [],
+      "totalLines": 115,
+      "hasStructuralAnalysis": false
+    },
+    ".agents/skills/huggingface-spaces/references/buckets.md": {
+      "filePath": ".agents/skills/huggingface-spaces/references/buckets.md",
+      "contentHash": "f305be5fbaea02560b22dd19b26a766a567d81c9a13ffd3a15ec711d8bc1b01a",
+      "functions": [],
+      "classes": [],
+      "imports": [],
+      "exports": [],
+      "totalLines": 90,
+      "hasStructuralAnalysis": false
+    },
+    ".agents/skills/huggingface-spaces/references/debugging.md": {
+      "filePath": ".agents/skills/huggingface-spaces/references/debugging.md",
+      "contentHash": "df3861490f83310642d7a578b31b438259f9bbee8c5808d70431cc8caeafe32d",
+      "functions": [],
+      "classes": [],
+      "imports": [],
+      "exports": [],
+      "totalLines": 237,
+      "hasStructuralAnalysis": false
+    },
+    ".agents/skills/huggingface-spaces/references/gradio.md": {
+      "filePath": ".agents/skills/huggingface-spaces/references/gradio.md",
+      "contentHash": "de855f0ea006fca7c71b9a7433a8a486ca7642b480e359a8f889e25e2896bba0",
+      "functions": [],
+      "classes": [],
+      "imports": [],
+      "exports": [],
+      "totalLines": 201,
+      "hasStructuralAnalysis": false
+    },
+    ".agents/skills/huggingface-spaces/references/grants.md": {
+      "filePath": ".agents/skills/huggingface-spaces/references/grants.md",
+      "contentHash": "9cdf85901ed924ef1f6deb0be4e0bf570fa504af899b09ec98ae893a282bd405",
+      "functions": [],
+      "classes": [],
+      "imports": [],
+      "exports": [],
+      "totalLines": 64,
+      "hasStructuralAnalysis": false
+    },
+    ".agents/skills/huggingface-spaces/references/inference-providers.md": {
+      "filePath": ".agents/skills/huggingface-spaces/references/inference-providers.md",
+      "contentHash": "dd2ed5931b145f3515b3600c842503198dc1f5844c038807955ffdee8f1edbdf",
+      "functions": [],
+      "classes": [],
+      "imports": [],
+      "exports": [],
+      "totalLines": 98,
+      "hasStructuralAnalysis": false
+    },
+    ".agents/skills/huggingface-spaces/references/known-errors.md": {
+      "filePath": ".agents/skills/huggingface-spaces/references/known-errors.md",
+      "contentHash": "582e5d3acd573b47029cccbc212223a6cd12c481de2b1e7576e487e0df84fe37",
+      "functions": [],
+      "classes": [],
+      "imports": [],
+      "exports": [],
+      "totalLines": 233,
+      "hasStructuralAnalysis": false
+    },
+    ".agents/skills/huggingface-spaces/references/requirements.md": {
+      "filePath": ".agents/skills/huggingface-spaces/references/requirements.md",
+      "contentHash": "4e8ecbd75f4f5b8cb3cc68af1bb2d8961aa7859507ac0a2cbfed52f0571059a5",
+      "functions": [],
+      "classes": [],
+      "imports": [],
+      "exports": [],
+      "totalLines": 170,
+      "hasStructuralAnalysis": false
+    },
+    ".agents/skills/huggingface-spaces/references/zerogpu.md": {
+      "filePath": ".agents/skills/huggingface-spaces/references/zerogpu.md",
+      "contentHash": "41bde22130b88bb0e6d048ff0f5706d5b923a55f74b0bbd6092de49239321ecc",
+      "functions": [],
+      "classes": [],
+      "imports": [],
+      "exports": [],
+      "totalLines": 350,
+      "hasStructuralAnalysis": false
+    },
+    ".agents/skills/huggingface-zerogpu/SKILL.md": {
+      "filePath": ".agents/skills/huggingface-zerogpu/SKILL.md",
+      "contentHash": "f2f37cac5398ffd7b75c637cfc5a782deb677ebfb7dd64763832670d97d8c0a6",
+      "functions": [],
+      "classes": [],
+      "imports": [],
+      "exports": [],
+      "totalLines": 290,
+      "hasStructuralAnalysis": false
+    },
+    ".agents/skills/huggingface-zerogpu/references/concurrency.md": {
+      "filePath": ".agents/skills/huggingface-zerogpu/references/concurrency.md",
+      "contentHash": "9be20e190998a4e1499c1de62123a087bd12433316b8cac93f5d37bcd3306c9c",
+      "functions": [],
+      "classes": [],
+      "imports": [],
+      "exports": [],
+      "totalLines": 80,
+      "hasStructuralAnalysis": false
+    },
+    ".agents/skills/huggingface-zerogpu/references/cuda-and-deps.md": {
+      "filePath": ".agents/skills/huggingface-zerogpu/references/cuda-and-deps.md",
+      "contentHash": "bf030cc6ecb8a7dfa60b8b6531f382ee91b1950244282f42894a5bebd2c547e7",
+      "functions": [],
+      "classes": [],
+      "imports": [],
+      "exports": [],
+      "totalLines": 67,
+      "hasStructuralAnalysis": false
+    },
+    ".agents/skills/huggingface-zerogpu/references/how-quota-works.md": {
+      "filePath": ".agents/skills/huggingface-zerogpu/references/how-quota-works.md",
+      "contentHash": "3da99c072d9f3ebe77c593975a466b2989929021d292ed02de685706d188dc9d",
+      "functions": [],
+      "classes": [],
+      "imports": [],
+      "exports": [],
+      "totalLines": 75,
+      "hasStructuralAnalysis": false
+    },
+    ".agents/skills/huggingface-zerogpu/references/how-zerogpu-works.md": {
+      "filePath": ".agents/skills/huggingface-zerogpu/references/how-zerogpu-works.md",
+      "contentHash": "6a91e837539bc2ff3f6601c03c723a5ace57a232fdb07c17d8072df8e62228f2",
+      "functions": [],
+      "classes": [],
+      "imports": [],
+      "exports": [],
+      "totalLines": 51,
+      "hasStructuralAnalysis": false
+    },
+    ".python-version": {
+      "filePath": ".python-version",
+      "contentHash": "8dfda54ba2f66ab3a8ebab460f4338bbeea1fb1e0f85ce06fe3530aa3c64679b",
+      "functions": [],
+      "classes": [],
+      "imports": [],
+      "exports": [],
+      "totalLines": 2,
+      "hasStructuralAnalysis": false
+    },
+    ".ua/config.json": {
+      "filePath": ".ua/config.json",
+      "contentHash": "3b7261a81d69f50685b9bb8b0690d0fcbde445a71e36781cc0cdce7167c0a8a7",
+      "functions": [],
+      "classes": [],
+      "imports": [],
+      "exports": [],
+      "totalLines": 2,
+      "hasStructuralAnalysis": false
+    },
+    "AGENTS.md": {
+      "filePath": "AGENTS.md",
+      "contentHash": "08982e90d653e03b47a9afb2d40eccdb88e5116ca306ed3871cd527e68cc1e70",
+      "functions": [],
+      "classes": [],
+      "imports": [],
+      "exports": [],
+      "totalLines": 43,
+      "hasStructuralAnalysis": false
+    },
+    "README.md": {
+      "filePath": "README.md",
+      "contentHash": "fdbcc9452b6a3dab12d5da9d9af39fbb33e0f4626e05ff086f31b417c48a8d07",
+      "functions": [],
+      "classes": [],
+      "imports": [],
+      "exports": [],
+      "totalLines": 52,
+      "hasStructuralAnalysis": false
+    },
+    "app.py": {
+      "filePath": "app.py",
+      "contentHash": "fe09270739d8f7f82ce4040ba6bddf04bdb184603d39bf66d39bb2b0bb410039",
+      "functions": [
+        {
+          "name": "preflight",
+          "params": [
+            "files",
+            "first",
+            "last",
+            "state"
+          ],
+          "exported": true,
+          "lineCount": 6
+        },
+        {
+          "name": "convert_batch",
+          "params": [
+            "state",
+            "mode",
+            "parser",
+            "progress"
+          ],
+          "exported": true,
+          "lineCount": 23
+        },
+        {
+          "name": "run_gpu",
+          "params": [
+            "state",
+            "progress"
+          ],
+          "exported": true,
+          "lineCount": 2
+        }
+      ],
+      "classes": [],
+      "imports": [
+        {
+          "source": "spaces",
+          "specifiers": [
+            "spaces"
+          ]
+        },
+        {
+          "source": "gradio",
+          "specifiers": [
+            "gr"
+          ]
+        },
+        {
+          "source": "pathlib",
+          "specifiers": [
+            "Path"
+          ]
+        },
+        {
+          "source": "docflow.xiaomi",
+          "specifiers": [
+            "Engine"
+          ]
+        },
+        {
+          "source": "docflow.conversion",
+          "specifiers": [
+            "convert"
+          ]
+        },
+        {
+          "source": "docflow.space_ui",
+          "specifiers": [
+            "bundle",
+            "prepare",
+            "view"
+          ]
+        },
+        {
+          "source": "gradio_ui",
+          "specifiers": [
+            "CSS",
+            "THEME",
+            "build_demo"
+          ]
+        }
+      ],
+      "exports": [
+        "preflight",
+        "convert_batch",
+        "run_gpu"
+      ],
+      "totalLines": 55,
+      "hasStructuralAnalysis": true
+    },
+    "docflow/__init__.py": {
+      "filePath": "docflow/__init__.py",
+      "contentHash": "d97f9e369cf048dfa025db74d19c6f59e17deeb55f21502e8c42ccb4cf4aad1c",
+      "functions": [],
+      "classes": [],
+      "imports": [],
+      "exports": [],
+      "totalLines": 2,
+      "hasStructuralAnalysis": true
+    },
+    "docflow/conversion.py": {
+      "filePath": "docflow/conversion.py",
+      "contentHash": "9c3dbdb094bdcb6c25b8193adc72dfcce855ffa4362c1dae9decbcdd26889655",
+      "functions": [
+        {
+          "name": "_page_indexes",
+          "params": [
+            "count",
+            "first",
+            "last"
+          ],
+          "exported": true,
+          "lineCount": 6
+        },
+        {
+          "name": "page_count",
+          "params": [
+            "data",
+            "filename"
+          ],
+          "exported": true,
+          "lineCount": 13
+        },
+        {
+          "name": "page_images",
+          "params": [
+            "data",
+            "filename",
+            "first",
+            "last"
+          ],
+          "exported": true,
+          "lineCount": 26
+        },
+        {
+          "name": "convert",
+          "params": [
+            "data",
+            "filename",
+            "mode",
+            "first",
+            "last",
+            "progress",
+            "page_parser",
+            "output_root"
+          ],
+          "exported": true,
+          "lineCount": 105
+        }
+      ],
+      "classes": [],
+      "imports": [
+        {
+          "source": "hashlib",
+          "specifiers": [
+            "hashlib"
+          ]
+        },
+        {
+          "source": "io",
+          "specifiers": [
+            "io"
+          ]
+        },
+        {
+          "source": "json",
+          "specifiers": [
+            "json"
+          ]
+        },
+        {
+          "source": "pathlib",
+          "specifiers": [
+            "Path"
+          ]
+        },
+        {
+          "source": "typing",
+          "specifiers": [
+            "Any"
+          ]
+        },
+        {
+          "source": "bleach",
+          "specifiers": [
+            "bleach"
+          ]
+        },
+        {
+          "source": "markdown2",
+          "specifiers": [
+            "markdown2"
+          ]
+        },
+        {
+          "source": "pypdfium2",
+          "specifiers": [
+            "pdfium"
+          ]
+        },
+        {
+          "source": "PIL",
+          "specifiers": [
+            "Image",
+            "ImageDraw"
+          ]
+        },
+        {
+          "source": "docflow.image_limits",
+          "specifiers": [
+            "check_image_size"
+          ]
+        },
+        {
+          "source": "docflow.xiaomi",
+          "specifiers": [
+            "LAYOUT",
+            "LAYOUT_REV",
+            "OCR"
+          ]
+        },
+        {
+          "source": "docflow.xiaomi",
+          "specifiers": [
+            "MODEL_REVISION"
+          ]
+        }
+      ],
+      "exports": [
+        "_page_indexes",
+        "page_count",
+        "page_images",
+        "convert"
+      ],
+      "totalLines": 177,
+      "hasStructuralAnalysis": true
+    },
+    "docflow/image_limits.py": {
+      "filePath": "docflow/image_limits.py",
+      "contentHash": "7db64ffec6262506b9cbdb3d3e4285772a35e70792715ef111d4525427178f21",
+      "functions": [
+        {
+          "name": "check_image_size",
+          "params": [
+            "size"
+          ],
+          "exported": true,
+          "lineCount": 5
+        }
+      ],
+      "classes": [],
+      "imports": [],
+      "exports": [
+        "check_image_size"
+      ],
+      "totalLines": 11,
+      "hasStructuralAnalysis": true
+    },
+    "docflow/space_ui.py": {
+      "filePath": "docflow/space_ui.py",
+      "contentHash": "c7d5214beaa003d94ef6afdfa0fc448bca29192591214833afbd4777d9b948ee",
+      "functions": [
+        {
+          "name": "cleanup",
+          "params": [
+            "state"
+          ],
+          "exported": true,
+          "lineCount": 4
+        },
+        {
+          "name": "prepare",
+          "params": [
+            "files",
+            "first",
+            "last",
+            "state"
+          ],
+          "exported": true,
+          "lineCount": 28
+        },
+        {
+          "name": "bundle",
+          "params": [
+            "results",
+            "destination"
+          ],
+          "exported": true,
+          "lineCount": 8
+        },
+        {
+          "name": "view",
+          "params": [
+            "state",
+            "selection"
+          ],
+          "exported": true,
+          "lineCount": 11
+        }
+      ],
+      "classes": [],
+      "imports": [
+        {
+          "source": "json",
+          "specifiers": [
+            "json"
+          ]
+        },
+        {
+          "source": "shutil",
+          "specifiers": [
+            "shutil"
+          ]
+        },
+        {
+          "source": "tempfile",
+          "specifiers": [
+            "tempfile"
+          ]
+        },
+        {
+          "source": "uuid",
+          "specifiers": [
+            "uuid"
+          ]
+        },
+        {
+          "source": "zipfile",
+          "specifiers": [
+            "zipfile"
+          ]
+        },
+        {
+          "source": "pathlib",
+          "specifiers": [
+            "Path"
+          ]
+        },
+        {
+          "source": "docflow.conversion",
+          "specifiers": [
+            "page_count"
+          ]
+        }
+      ],
+      "exports": [
+        "cleanup",
+        "prepare",
+        "bundle",
+        "view"
+      ],
+      "totalLines": 71,
+      "hasStructuralAnalysis": true
+    },
+    "docflow/streamlit_ui.py": {
+      "filePath": "docflow/streamlit_ui.py",
+      "contentHash": "f55915eac97e9abfdf136777e636e8e66b2220c8c4baec8245c99358f97a693d",
+      "functions": [
+        {
+          "name": "safe_html",
+          "params": [
+            "value"
+          ],
+          "exported": true,
+          "lineCount": 2
+        },
+        {
+          "name": "markdown_text",
+          "params": [
+            "result"
+          ],
+          "exported": true,
+          "lineCount": 2
+        },
+        {
+          "name": "artifacts",
+          "params": [
+            "result",
+            "directory"
+          ],
+          "exported": true,
+          "lineCount": 20
+        },
+        {
+          "name": "archive_bytes",
+          "params": [
+            "result",
+            "directory"
+          ],
+          "exported": true,
+          "lineCount": 10
+        },
+        {
+          "name": "preview_bytes",
+          "params": [
+            "data",
+            "filename",
+            "page"
+          ],
+          "exported": true,
+          "lineCount": 9
+        }
+      ],
+      "classes": [],
+      "imports": [
+        {
+          "source": "io",
+          "specifiers": [
+            "io"
+          ]
+        },
+        {
+          "source": "json",
+          "specifiers": [
+            "json"
+          ]
+        },
+        {
+          "source": "contextlib",
+          "specifiers": [
+            "closing"
+          ]
+        },
+        {
+          "source": "zipfile",
+          "specifiers": [
+            "ZIP_DEFLATED",
+            "ZipFile"
+          ]
+        },
+        {
+          "source": "bleach",
+          "specifiers": [
+            "bleach"
+          ]
+        },
+        {
+          "source": "markdown2",
+          "specifiers": [
+            "markdown2"
+          ]
+        },
+        {
+          "source": "docflow.conversion",
+          "specifiers": [
+            "page_images"
+          ]
+        }
+      ],
+      "exports": [
+        "safe_html",
+        "markdown_text",
+        "artifacts",
+        "archive_bytes",
+        "preview_bytes"
+      ],
+      "totalLines": 90,
+      "hasStructuralAnalysis": true
+    },
+    "docflow/xiaomi.py": {
+      "filePath": "docflow/xiaomi.py",
+      "contentHash": "9d1163c91942f97fbed7e195a28030dda22c29390288f9d9c448afa9838e55c5",
+      "functions": [],
+      "classes": [
+        {
+          "name": "PageResult",
+          "methods": [
+            "complete"
+          ],
+          "properties": [
+            "content",
+            "finish_reason",
+            "usage",
+            "markdown",
+            "blocks",
+            "warnings"
+          ],
+          "exported": true,
+          "lineCount": 11
+        },
+        {
+          "name": "Engine",
+          "methods": [
+            "__init__",
+            "recognize",
+            "__call__",
+            "parse"
+          ],
+          "properties": [],
+          "exported": true,
+          "lineCount": 99
+        }
+      ],
+      "imports": [
+        {
+          "source": "threading",
+          "specifiers": [
+            "threading"
+          ]
+        },
+        {
+          "source": "dataclasses",
+          "specifiers": [
+            "dataclass"
+          ]
+        },
+        {
+          "source": "pathlib",
+          "specifiers": [
+            "Path"
+          ]
+        },
+        {
+          "source": "typing",
+          "specifiers": [
+            "Any",
+            "cast"
+          ]
+        }
+      ],
+      "exports": [
+        "PageResult",
+        "Engine"
+      ],
+      "totalLines": 128,
+      "hasStructuralAnalysis": true
+    },
+    "docflow/xiaomi_postprocess/NOTICE": {
+      "filePath": "docflow/xiaomi_postprocess/NOTICE",
+      "contentHash": "e2150b36f66f152b36616a990469d1c92e0a31b8da32952d0aae85c8e7947b0a",
+      "functions": [],
+      "classes": [],
+      "imports": [],
+      "exports": [],
+      "totalLines": 2,
+      "hasStructuralAnalysis": false
+    },
+    "docflow/xiaomi_postprocess/document.py": {
+      "filePath": "docflow/xiaomi_postprocess/document.py",
+      "contentHash": "3d6649911c1decaa0fdac850eb6b4e5fc250bc22bdecb9010cad9297323109f4",
+      "functions": [
+        {
+          "name": "postprocess_math_delimiters",
+          "params": [
+            "markdown"
+          ],
+          "returnType": "str",
+          "exported": true,
+          "lineCount": 30
+        },
+        {
+          "name": "_split_markdown_blocks",
+          "params": [
+            "markdown"
+          ],
+          "exported": true,
+          "lineCount": 8
+        },
+        {
+          "name": "postprocess_otsl_tables",
+          "params": [
+            "markdown"
+          ],
+          "returnType": "str",
+          "exported": true,
+          "lineCount": 25
+        },
+        {
+          "name": "postprocess_e2e_markdown",
+          "params": [
+            "result",
+            "convert_otsl"
+          ],
+          "returnType": "str",
+          "exported": true,
+          "lineCount": 5
+        },
+        {
+          "name": "_clean_truncated_repeats",
+          "params": [
+            "text",
+            "min_text_len",
+            "max_period",
+            "min_period",
+            "min_repeat_chars",
+            "min_repeat_times"
+          ],
+          "returnType": "str",
+          "exported": true,
+          "lineCount": 36
+        },
+        {
+          "name": "finalize_document",
+          "params": [
+            "text"
+          ],
+          "exported": true,
+          "lineCount": 2
+        }
+      ],
+      "classes": [],
+      "imports": [
+        {
+          "source": "re",
+          "specifiers": [
+            "re"
+          ]
+        },
+        {
+          "source": ".otsl",
+          "specifiers": [
+            "convert_otsl_to_html"
+          ]
+        }
+      ],
+      "exports": [
+        "postprocess_math_delimiters",
+        "_split_markdown_blocks",
+        "postprocess_otsl_tables",
+        "postprocess_e2e_markdown",
+        "_clean_truncated_repeats",
+        "finalize_document"
+      ],
+      "totalLines": 124,
+      "hasStructuralAnalysis": true
+    },
+    "docflow/xiaomi_postprocess/otsl.py": {
+      "filePath": "docflow/xiaomi_postprocess/otsl.py",
+      "contentHash": "bdbf3129e35017e954a8688d7da82d6175e6caccba5bc69af7067ac5424eaa6c",
+      "functions": [
+        {
+          "name": "_tag_of",
+          "params": [
+            "chunk"
+          ],
+          "returnType": "str",
+          "exported": true,
+          "lineCount": 3
+        },
+        {
+          "name": "_split_chunks",
+          "params": [
+            "line"
+          ],
+          "returnType": "list[str]",
+          "exported": true,
+          "lineCount": 5
+        },
+        {
+          "name": "_required_width",
+          "params": [
+            "chunks"
+          ],
+          "returnType": "int",
+          "exported": true,
+          "lineCount": 7
+        },
+        {
+          "name": "_target_width",
+          "params": [
+            "rows"
+          ],
+          "returnType": "int",
+          "exported": true,
+          "lineCount": 16
+        },
+        {
+          "name": "pad_rows",
+          "params": [
+            "otsl"
+          ],
+          "returnType": "str",
+          "exported": true,
+          "lineCount": 21
+        },
+        {
+          "name": "parse_grid",
+          "params": [
+            "otsl"
+          ],
+          "returnType": "tuple[list[list[str]], list[list[str]]]",
+          "exported": true,
+          "lineCount": 23
+        },
+        {
+          "name": "resolve_cells",
+          "params": [
+            "tag_rows",
+            "text_rows"
+          ],
+          "returnType": "list[Cell]",
+          "exported": true,
+          "lineCount": 38
+        },
+        {
+          "name": "render_html",
+          "params": [
+            "cells",
+            "num_rows",
+            "num_cols"
+          ],
+          "returnType": "str",
+          "exported": true,
+          "lineCount": 66
+        },
+        {
+          "name": "convert_otsl_to_html",
+          "params": [
+            "otsl_content"
+          ],
+          "returnType": "str",
+          "exported": true,
+          "lineCount": 10
+        }
+      ],
+      "classes": [
+        {
+          "name": "Cell",
+          "methods": [],
+          "properties": [
+            "text",
+            "row",
+            "column",
+            "rowspan",
+            "colspan"
+          ],
+          "exported": true,
+          "lineCount": 8
+        }
+      ],
+      "imports": [
+        {
+          "source": "re",
+          "specifiers": [
+            "re"
+          ]
+        },
+        {
+          "source": "html",
+          "specifiers": [
+            "escape"
+          ]
+        },
+        {
+          "source": "dataclasses",
+          "specifiers": [
+            "dataclass"
+          ]
+        }
+      ],
+      "exports": [
+        "Cell",
+        "_tag_of",
+        "_split_chunks",
+        "_required_width",
+        "_target_width",
+        "pad_rows",
+        "parse_grid",
+        "resolve_cells",
+        "render_html",
+        "convert_otsl_to_html"
+      ],
+      "totalLines": 252,
+      "hasStructuralAnalysis": true
+    },
+    "docs/codebase-research-2026-10-28.md": {
+      "filePath": "docs/codebase-research-2026-10-28.md",
+      "contentHash": "ac58d3a8362a5e67119480a8c6934c4b96e8024d4ce4b47422e8863abb253461",
+      "functions": [],
+      "classes": [],
+      "imports": [],
+      "exports": [],
+      "totalLines": 143,
+      "hasStructuralAnalysis": false
+    },
+    "docs/developer-guide.md": {
+      "filePath": "docs/developer-guide.md",
+      "contentHash": "2d11a86d1c3ae66f5b2ccee3696547eccea30bca0d122dab3a01921bce6fd448",
+      "functions": [],
+      "classes": [],
+      "imports": [],
+      "exports": [],
+      "totalLines": 35,
+      "hasStructuralAnalysis": false
+    },
+    "docs/grok-build-install-skills.md": {
+      "filePath": "docs/grok-build-install-skills.md",
+      "contentHash": "56c0064e76ab8d42b11b86d70fb7e99be3fcb95a2ba5ff8edaf3498b266e4c19",
+      "functions": [],
+      "classes": [],
+      "imports": [],
+      "exports": [],
+      "totalLines": 112,
+      "hasStructuralAnalysis": false
+    },
+    "docs/linkedin-project-and-post.md": {
+      "filePath": "docs/linkedin-project-and-post.md",
+      "contentHash": "05cd68ff992d13277c0d0d9eb3da1e2a5cb87ed00971cb7abcf3a5103968c594",
+      "functions": [],
+      "classes": [],
+      "imports": [],
+      "exports": [],
+      "totalLines": 16,
+      "hasStructuralAnalysis": false
+    },
+    "docs/models.md": {
+      "filePath": "docs/models.md",
+      "contentHash": "dacba364a0481dbc0efea46ee1be70b38f9a6a77ba0ba1c411b75f4cfe99b678",
+      "functions": [],
+      "classes": [],
+      "imports": [],
+      "exports": [],
+      "totalLines": 37,
+      "hasStructuralAnalysis": false
+    },
+    "docs/nemotron-3.5-parse-research.md": {
+      "filePath": "docs/nemotron-3.5-parse-research.md",
+      "contentHash": "105f694e2ab2c2e313a151fd7c3e400c2372fed1f6bd626f27c5e824396682bd",
+      "functions": [],
+      "classes": [],
+      "imports": [],
+      "exports": [],
+      "totalLines": 68,
+      "hasStructuralAnalysis": false
+    },
+    "docs/pp-doclayoutv4-access-research.md": {
+      "filePath": "docs/pp-doclayoutv4-access-research.md",
+      "contentHash": "8733ae03b6fc85510f99443a5ae4e17827fe2f06a9a53024f7941b533eb101a5",
+      "functions": [],
+      "classes": [],
+      "imports": [],
+      "exports": [],
+      "totalLines": 20,
+      "hasStructuralAnalysis": false
+    },
+    "docs/security-audit/run-1/FINDINGS-DETAIL.md": {
+      "filePath": "docs/security-audit/run-1/FINDINGS-DETAIL.md",
+      "contentHash": "2e7bc8850057edd2a1af84b8f75ca23495c2d6bd37dd593ff6f7c172c4bfb066",
+      "functions": [],
+      "classes": [],
+      "imports": [],
+      "exports": [],
+      "totalLines": 8,
+      "hasStructuralAnalysis": false
+    },
+    "docs/security-audit/run-1/NEEDS-VALIDATION.md": {
+      "filePath": "docs/security-audit/run-1/NEEDS-VALIDATION.md",
+      "contentHash": "ede0f1b8c96f7dd8a8904dd009f61f4115d729aea5c710a39fa55579f6f8bed4",
+      "functions": [],
+      "classes": [],
+      "imports": [],
+      "exports": [],
+      "totalLines": 15,
+      "hasStructuralAnalysis": false
+    },
+    "docs/security-audit/run-1/REPORT.md": {
+      "filePath": "docs/security-audit/run-1/REPORT.md",
+      "contentHash": "a92e209010a4e9bdeb75fd9127b4cf0d1e34d53a5f92f487236c23ef129969a3",
+      "functions": [],
+      "classes": [],
+      "imports": [],
+      "exports": [],
+      "totalLines": 47,
+      "hasStructuralAnalysis": false
+    },
+    "docs/security-audit/run-1/architecture.md": {
+      "filePath": "docs/security-audit/run-1/architecture.md",
+      "contentHash": "0d210055b110f5e41c17dfe5f2701cac0510b57d17ee69de116d7f75118e1709",
+      "functions": [],
+      "classes": [],
+      "imports": [],
+      "exports": [],
+      "totalLines": 13,
+      "hasStructuralAnalysis": false
+    },
+    "docs/security-audit/run-1/coverage-ledger.json": {
+      "filePath": "docs/security-audit/run-1/coverage-ledger.json",
+      "contentHash": "35e6818ad0b482bf067d6c825ae07c3f7df4199b591303c2941e46d8bb242f59",
+      "functions": [],
+      "classes": [],
+      "imports": [],
+      "exports": [],
+      "totalLines": 2041,
+      "hasStructuralAnalysis": false
+    },
+    "docs/security-audit/run-1/finalize_incomplete.py": {
+      "filePath": "docs/security-audit/run-1/finalize_incomplete.py",
+      "contentHash": "8a5d2d102dbffed473eb642bd4d34777659b6d5fb99f6b83335c97fd999a7630",
+      "functions": [],
+      "classes": [],
+      "imports": [
+        {
+          "source": "json",
+          "specifiers": [
+            "json"
+          ]
+        },
+        {
+          "source": "hashlib",
+          "specifiers": [
+            "hashlib"
+          ]
+        },
+        {
+          "source": "pathlib",
+          "specifiers": [
+            "Path"
+          ]
+        }
+      ],
+      "exports": [],
+      "totalLines": 76,
+      "hasStructuralAnalysis": true
+    },
+    "docs/security-audit/run-1/finalize_resumed.py": {
+      "filePath": "docs/security-audit/run-1/finalize_resumed.py",
+      "contentHash": "994be271be6a059725338e6f1ef47779acfab476383198bfd7aa87e9293b46c5",
+      "functions": [],
+      "classes": [],
+      "imports": [
+        {
+          "source": "json",
+          "specifiers": [
+            "json"
+          ]
+        },
+        {
+          "source": "hashlib",
+          "specifiers": [
+            "hashlib"
+          ]
+        },
+        {
+          "source": "collections",
+          "specifiers": [
+            "Counter"
+          ]
+        },
+        {
+          "source": "pathlib",
+          "specifiers": [
+            "Path"
+          ]
+        }
+      ],
+      "exports": [],
+      "totalLines": 77,
+      "hasStructuralAnalysis": true
+    },
+    "docs/security-audit/run-1/findings.json": {
+      "filePath": "docs/security-audit/run-1/findings.json",
+      "contentHash": "4570d90d6c5c550cf775afbab0a8e8722868a9e473a9eaecd66e8664e9ed9b16",
+      "functions": [],
+      "classes": [],
+      "imports": [],
+      "exports": [],
+      "totalLines": 93,
+      "hasStructuralAnalysis": false
+    },
+    "docs/security-audit/run-1/hunt_local-prompt.md": {
+      "filePath": "docs/security-audit/run-1/hunt_local-prompt.md",
+      "contentHash": "062c4ad95ba268ab542dfe3406ff7e4ec092bc54ec55cc58140852a05e692be8",
+      "functions": [],
+      "classes": [],
+      "imports": [],
+      "exports": [],
+      "totalLines": 1046,
+      "hasStructuralAnalysis": false
+    },
+    "docs/security-audit/run-1/hunt_public-prompt.md": {
+      "filePath": "docs/security-audit/run-1/hunt_public-prompt.md",
+      "contentHash": "71f22875a7bd4986a6bd9348f80db8c7f43223eb02c6596e75153edf1787305f",
+      "functions": [],
+      "classes": [],
+      "imports": [],
+      "exports": [],
+      "totalLines": 1099,
+      "hasStructuralAnalysis": false
+    },
+    "docs/security-audit/run-1/hunt_render-prompt.md": {
+      "filePath": "docs/security-audit/run-1/hunt_render-prompt.md",
+      "contentHash": "b3ccb6eab3f93459e3fdd61695705dcd935ae503503611d2780d195765251190",
+      "functions": [],
+      "classes": [],
+      "imports": [],
+      "exports": [],
+      "totalLines": 925,
+      "hasStructuralAnalysis": false
+    },
+    "docs/security-audit/run-1/hunt_resource-prompt.md": {
+      "filePath": "docs/security-audit/run-1/hunt_resource-prompt.md",
+      "contentHash": "e5258d6cd44eae5564816a8c3edf710feadcc94a5c4530e6c0811d466d8782dc",
+      "functions": [],
+      "classes": [],
+      "imports": [],
+      "exports": [],
+      "totalLines": 1046,
+      "hasStructuralAnalysis": false
+    },
+    "docs/security-audit/run-1/hunt_supply-prompt.md": {
+      "filePath": "docs/security-audit/run-1/hunt_supply-prompt.md",
+      "contentHash": "b3ae2017f09343f0be3e25b2d15ca5966e682cd6c9b6a58b326aea87649e761f",
+      "functions": [],
+      "classes": [],
+      "imports": [],
+      "exports": [],
+      "totalLines": 922,
+      "hasStructuralAnalysis": false
+    },
+    "docs/security-audit/run-1/pending-candidates.json": {
+      "filePath": "docs/security-audit/run-1/pending-candidates.json",
+      "contentHash": "e0889720ffcbcbd90cde1ab103ca5e9d28724d2f9734bacef229305b145e943a",
+      "functions": [],
+      "classes": [],
+      "imports": [],
+      "exports": [],
+      "totalLines": 90,
+      "hasStructuralAnalysis": false
+    },
+    "docs/security-audit/run-1/run-metadata.json": {
+      "filePath": "docs/security-audit/run-1/run-metadata.json",
+      "contentHash": "072c3c9f24e6e70dd3ce3a9c67047d905389218dff0d594326f6dca95ec52645",
+      "functions": [],
+      "classes": [],
+      "imports": [],
+      "exports": [],
+      "totalLines": 110,
+      "hasStructuralAnalysis": false
+    },
+    "docs/security-audit/run-1/run-validator.ps1": {
+      "filePath": "docs/security-audit/run-1/run-validator.ps1",
+      "contentHash": "875898b27bec828bbac4256c5db3819fea2a9cc1b7a3bcab5bd712f5230cbf89",
+      "functions": [],
+      "classes": [],
+      "imports": [],
+      "exports": [],
+      "totalLines": 6,
+      "hasStructuralAnalysis": false
+    },
+    "docs/security-audit/run-1/setup_audit.py": {
+      "filePath": "docs/security-audit/run-1/setup_audit.py",
+      "contentHash": "b43fdfdeb1fdbad132775f19a724597d04edd69bc2070527b71c637ae2a37a5b",
+      "functions": [
+        {
+          "name": "block",
+          "params": [
+            "t",
+            "n"
+          ],
+          "exported": true,
+          "lineCount": 8
+        }
+      ],
+      "classes": [],
+      "imports": [
+        {
+          "source": "json",
+          "specifiers": [
+            "json"
+          ]
+        },
+        {
+          "source": "re",
+          "specifiers": [
+            "re"
+          ]
+        },
+        {
+          "source": "hashlib",
+          "specifiers": [
+            "hashlib"
+          ]
+        },
+        {
+          "source": "pathlib",
+          "specifiers": [
+            "Path"
+          ]
+        },
+        {
+          "source": "urllib.parse",
+          "specifiers": [
+            "quote"
+          ]
+        }
+      ],
+      "exports": [
+        "block"
+      ],
+      "totalLines": 44,
+      "hasStructuralAnalysis": true
+    },
+    "docs/security-audit/run-1/verification-results.json": {
+      "filePath": "docs/security-audit/run-1/verification-results.json",
+      "contentHash": "18858850e4121699c00d43e163609eae23be56c434ae7f8f2064b9f16d81f400",
+      "functions": [],
+      "classes": [],
+      "imports": [],
+      "exports": [],
+      "totalLines": 48,
+      "hasStructuralAnalysis": false
+    },
+    "docs/security-audit/run-1/verify_candidate_1-prompt.md": {
+      "filePath": "docs/security-audit/run-1/verify_candidate_1-prompt.md",
+      "contentHash": "4927fbbfe4236711361006b69ecaafc087eaee3c5f80af23318afd1beb316224",
+      "functions": [],
+      "classes": [],
+      "imports": [],
+      "exports": [],
+      "totalLines": 606,
+      "hasStructuralAnalysis": false
+    },
+    "docs/security-audit/run-1/verify_candidate_2-prompt.md": {
+      "filePath": "docs/security-audit/run-1/verify_candidate_2-prompt.md",
+      "contentHash": "f3a2f774e8e43a79141c973134730eb99d6ce055994ce14b6b1256288e0a6240",
+      "functions": [],
+      "classes": [],
+      "imports": [],
+      "exports": [],
+      "totalLines": 606,
+      "hasStructuralAnalysis": false
+    },
+    "docs/security-audit/run-1/verify_fix_1-prompt.md": {
+      "filePath": "docs/security-audit/run-1/verify_fix_1-prompt.md",
+      "contentHash": "43616260ea03d51af23e34203a80577be02d334fbef72c1d6f33b73ee607cd0a",
+      "functions": [],
+      "classes": [],
+      "imports": [],
+      "exports": [],
+      "totalLines": 551,
+      "hasStructuralAnalysis": false
+    },
+    "docs/security-audit/run-1/verify_fix_2-prompt.md": {
+      "filePath": "docs/security-audit/run-1/verify_fix_2-prompt.md",
+      "contentHash": "58a63d53eb61b4a8ce6131fd69cd8fc397fef27142b11955009eb218bb96a87c",
+      "functions": [],
+      "classes": [],
+      "imports": [],
+      "exports": [],
+      "totalLines": 556,
+      "hasStructuralAnalysis": false
+    },
+    "docs/ui-verification.md": {
+      "filePath": "docs/ui-verification.md",
+      "contentHash": "90f92d571850284c004cab8a892ee22c35f44ef688eb0ae0b7440d61b4562e20",
+      "functions": [],
+      "classes": [],
+      "imports": [],
+      "exports": [],
+      "totalLines": 40,
+      "hasStructuralAnalysis": false
+    },
+    "docs/user-guide.md": {
+      "filePath": "docs/user-guide.md",
+      "contentHash": "c5b2bb63623b0b03d35440d96c767fad4fe5dc258a75eab32ea98408964586a0",
+      "functions": [],
+      "classes": [],
+      "imports": [],
+      "exports": [],
+      "totalLines": 34,
+      "hasStructuralAnalysis": false
+    },
+    "docs/xiaomi-migration-validation.md": {
+      "filePath": "docs/xiaomi-migration-validation.md",
+      "contentHash": "349c8232a420644796a9aaf08539e9706c614000c4069272f468d7b6b95eea3e",
+      "functions": [],
+      "classes": [],
+      "imports": [],
+      "exports": [],
+      "totalLines": 31,
+      "hasStructuralAnalysis": false
+    },
+    "docs/xiaomi-ocr-0-research.md": {
+      "filePath": "docs/xiaomi-ocr-0-research.md",
+      "contentHash": "00b5019dbe90fa3a1d07ec47567c823a197056558eb9284536f01c98186fdd0a",
+      "functions": [],
+      "classes": [],
+      "imports": [],
+      "exports": [],
+      "totalLines": 38,
+      "hasStructuralAnalysis": false
+    },
+    "gradio_ui.py": {
+      "filePath": "gradio_ui.py",
+      "contentHash": "71a8766c4a674dd7494815e2f917c80e89865560429d8afc1a807da9a0d9057c",
+      "functions": [
+        {
+          "name": "upload_panel",
+          "params": [
+            "files"
+          ],
+          "exported": true,
+          "lineCount": 52
+        },
+        {
+          "name": "build_demo",
+          "params": [
+            "preflight",
+            "run"
+          ],
+          "exported": true,
+          "lineCount": 151
+        }
+      ],
+      "classes": [],
+      "imports": [
+        {
+          "source": "gradio",
+          "specifiers": [
+            "gr"
+          ]
+        },
+        {
+          "source": "docflow.space_ui",
+          "specifiers": [
+            "cleanup",
+            "view"
+          ]
+        }
+      ],
+      "exports": [
+        "upload_panel",
+        "build_demo"
+      ],
+      "totalLines": 275,
+      "hasStructuralAnalysis": true
+    },
+    "launch.cmd": {
+      "filePath": "launch.cmd",
+      "contentHash": "ce86b1a99e3b7c5aed495f9b2b63cce8c05e33602f6e53a0ce59be1cfdd905eb",
+      "functions": [],
+      "classes": [],
+      "imports": [],
+      "exports": [],
+      "totalLines": 4,
+      "hasStructuralAnalysis": false
+    },
+    "pyproject.toml": {
+      "filePath": "pyproject.toml",
+      "contentHash": "de327baf2936d9dc83924e40e6cdb178357c45725cf65dc2e65131afb3b1ff42",
+      "functions": [],
+      "classes": [],
+      "imports": [],
+      "exports": [],
+      "totalLines": 44,
+      "hasStructuralAnalysis": false
+    },
+    "requirements.txt": {
+      "filePath": "requirements.txt",
+      "contentHash": "1a474bd22301ee5df3723377b059304dcb10f4e04a50b5608b11e996a228a725",
+      "functions": [],
+      "classes": [],
+      "imports": [],
+      "exports": [],
+      "totalLines": 13,
+      "hasStructuralAnalysis": false
+    },
+    "runtime/probe_local.py": {
+      "filePath": "runtime/probe_local.py",
+      "contentHash": "6f15da66b59a0bca25cf7c6f6c4322c7ec0bfa2fe83aa97996798962e2782e40",
+      "functions": [],
+      "classes": [],
+      "imports": [
+        {
+          "source": "scripts.smoke_xiaomi",
+          "specifiers": [
+            "main"
+          ]
+        }
+      ],
+      "exports": [],
+      "totalLines": 6,
+      "hasStructuralAnalysis": true
+    },
+    "scripts/preview_ui.py": {
+      "filePath": "scripts/preview_ui.py",
+      "contentHash": "fcbb3c1d74ec7a918de53cd9282e99f455a95b42bc5b40867736c4ac6aff14a6",
+      "functions": [
+        {
+          "name": "preview_only",
+          "params": [
+            "state",
+            "backend",
+            "api_key"
+          ],
+          "exported": true,
+          "lineCount": 5
+        }
+      ],
+      "classes": [],
+      "imports": [
+        {
+          "source": "argparse",
+          "specifiers": [
+            "argparse"
+          ]
+        },
+        {
+          "source": "sys",
+          "specifiers": [
+            "sys"
+          ]
+        },
+        {
+          "source": "tempfile",
+          "specifiers": [
+            "tempfile"
+          ]
+        },
+        {
+          "source": "pathlib",
+          "specifiers": [
+            "Path"
+          ]
+        },
+        {
+          "source": "gradio",
+          "specifiers": [
+            "gr"
+          ]
+        },
+        {
+          "source": "PIL",
+          "specifiers": [
+            "Image"
+          ]
+        },
+        {
+          "source": "docflow.space_ui",
+          "specifiers": [
+            "prepare"
+          ]
+        },
+        {
+          "source": "gradio_ui",
+          "specifiers": [
+            "CSS",
+            "THEME",
+            "build_demo",
+            "upload_panel"
+          ]
+        }
+      ],
+      "exports": [
+        "preview_only"
+      ],
+      "totalLines": 81,
+      "hasStructuralAnalysis": true
+    },
+    "scripts/setup-models.py": {
+      "filePath": "scripts/setup-models.py",
+      "contentHash": "3b45d938736e3cc6fc5cfd22a833c6b45a88f49aa19e95187b27f796bd4ff7c5",
+      "functions": [],
+      "classes": [],
+      "imports": [
+        {
+          "source": "huggingface_hub",
+          "specifiers": [
+            "snapshot_download"
+          ]
+        },
+        {
+          "source": "docflow.xiaomi",
+          "specifiers": [
+            "CACHE",
+            "OCR",
+            "OCR_REV",
+            "LAYOUT",
+            "LAYOUT_REV"
+          ]
+        }
+      ],
+      "exports": [],
+      "totalLines": 5,
+      "hasStructuralAnalysis": true
+    },
+    "scripts/smoke_xiaomi.py": {
+      "filePath": "scripts/smoke_xiaomi.py",
+      "contentHash": "8312adf64d7d691f60fb42f82c948f85e60399c5c34c9da4ccc7cd612acfaf02",
+      "functions": [
+        {
+          "name": "main",
+          "params": [],
+          "exported": true,
+          "lineCount": 13
+        }
+      ],
+      "classes": [],
+      "imports": [
+        {
+          "source": "time",
+          "specifiers": [
+            "time"
+          ]
+        },
+        {
+          "source": "torch",
+          "specifiers": [
+            "torch"
+          ]
+        },
+        {
+          "source": "PIL",
+          "specifiers": [
+            "Image",
+            "ImageDraw",
+            "ImageFont"
+          ]
+        },
+        {
+          "source": "docflow.xiaomi",
+          "specifiers": [
+            "Engine"
+          ]
+        }
+      ],
+      "exports": [
+        "main"
+      ],
+      "totalLines": 27,
+      "hasStructuralAnalysis": true
+    },
+    "skills-lock.json": {
+      "filePath": "skills-lock.json",
+      "contentHash": "a931dfff7d0aae495fe6600eb5b207ed0c78d52b28a72e0dc3c1f8ee38849203",
+      "functions": [],
+      "classes": [],
+      "imports": [],
+      "exports": [],
+      "totalLines": 48,
+      "hasStructuralAnalysis": false
+    },
+    "streamlit_app.py": {
+      "filePath": "streamlit_app.py",
+      "contentHash": "7e401b0e6be434ae1d23f747943c2d9b3cc9ea508c1c03ee3c9ae51567802a6f",
+      "functions": [
+        {
+          "name": "local_engine",
+          "params": [],
+          "exported": true,
+          "lineCount": 4
+        }
+      ],
+      "classes": [],
+      "imports": [
+        {
+          "source": "hashlib",
+          "specifiers": [
+            "hashlib"
+          ]
+        },
+        {
+          "source": "json",
+          "specifiers": [
+            "json"
+          ]
+        },
+        {
+          "source": "pathlib",
+          "specifiers": [
+            "Path"
+          ]
+        },
+        {
+          "source": "bleach",
+          "specifiers": [
+            "bleach"
+          ]
+        },
+        {
+          "source": "streamlit",
+          "specifiers": [
+            "st"
+          ]
+        },
+        {
+          "source": "docflow.conversion",
+          "specifiers": [
+            "ROOT",
+            "convert",
+            "page_count"
+          ]
+        },
+        {
+          "source": "docflow.streamlit_ui",
+          "specifiers": [
+            "ATTRIBUTES",
+            "TAGS",
+            "archive_bytes",
+            "artifacts",
+            "preview_bytes"
+          ]
+        }
+      ],
+      "exports": [
+        "local_engine"
+      ],
+      "totalLines": 304,
+      "hasStructuralAnalysis": true
+    },
+    "tests/test_document_limits.py": {
+      "filePath": "tests/test_document_limits.py",
+      "contentHash": "66c0e10d6bb19dd1c924eca7e4e3b71d2c9f25a6f2c562611c9f6f29603e7e53",
+      "functions": [],
+      "classes": [
+        {
+          "name": "DocumentLimitTests",
+          "methods": [
+            "setUp",
+            "test_preflight_counts_without_rendering",
+            "test_pdf_renders_only_selected_page",
+            "test_conversion_preserves_original_page_number",
+            "test_large_image_rejected_before_rgb",
+            "test_selected_tiff_frame",
+            "test_pixel_boundary"
+          ],
+          "properties": [],
+          "exported": true,
+          "lineCount": 90
+        }
+      ],
+      "imports": [
+        {
+          "source": "unittest",
+          "specifiers": [
+            "unittest"
+          ]
+        },
+        {
+          "source": "pathlib",
+          "specifiers": [
+            "Path"
+          ]
+        },
+        {
+          "source": "tempfile",
+          "specifiers": [
+            "TemporaryDirectory"
+          ]
+        },
+        {
+          "source": "types",
+          "specifiers": [
+            "SimpleNamespace"
+          ]
+        },
+        {
+          "source": "unittest.mock",
+          "specifiers": [
+            "MagicMock",
+            "patch"
+          ]
+        },
+        {
+          "source": "PIL",
+          "specifiers": [
+            "Image"
+          ]
+        },
+        {
+          "source": "docflow",
+          "specifiers": [
+            "conversion"
+          ]
+        },
+        {
+          "source": "docflow.image_limits",
+          "specifiers": [
+            "check_image_size"
+          ]
+        },
+        {
+          "source": "docflow.space_ui",
+          "specifiers": [
+            "cleanup",
+            "prepare"
+          ]
+        }
+      ],
+      "exports": [
+        "DocumentLimitTests"
+      ],
+      "totalLines": 108,
+      "hasStructuralAnalysis": true
+    },
+    "tests/test_exports.py": {
+      "filePath": "tests/test_exports.py",
+      "contentHash": "daacdd29f49d2aba20b237c0aff5eb4e25285563dd3bb162407dfe0a7abfebc2",
+      "functions": [
+        {
+          "name": "test_zip_does_not_duplicate_saved_markdown",
+          "params": [
+            "tmp_path"
+          ],
+          "exported": true,
+          "lineCount": 14
+        }
+      ],
+      "classes": [],
+      "imports": [
+        {
+          "source": "warnings",
+          "specifiers": [
+            "warnings"
+          ]
+        },
+        {
+          "source": "pathlib",
+          "specifiers": [
+            "Path"
+          ]
+        },
+        {
+          "source": "streamlit.testing.v1",
+          "specifiers": [
+            "AppTest"
+          ]
+        }
+      ],
+      "exports": [
+        "test_zip_does_not_duplicate_saved_markdown"
+      ],
+      "totalLines": 21,
+      "hasStructuralAnalysis": true
+    },
+    "tests/test_space.py": {
+      "filePath": "tests/test_space.py",
+      "contentHash": "a9eff742b4d2502f925abf9f002d55ef74553298ff22c6dc5396464770bb16e4",
+      "functions": [
+        {
+          "name": "test_limit_and_session_isolation",
+          "params": [
+            "tmp_path"
+          ],
+          "exported": true,
+          "lineCount": 14
+        },
+        {
+          "name": "test_duplicate_archive_names",
+          "params": [
+            "tmp_path"
+          ],
+          "exported": true,
+          "lineCount": 11
+        }
+      ],
+      "classes": [],
+      "imports": [
+        {
+          "source": "zipfile",
+          "specifiers": [
+            "zipfile"
+          ]
+        },
+        {
+          "source": "pytest",
+          "specifiers": [
+            "pytest"
+          ]
+        },
+        {
+          "source": "PIL",
+          "specifiers": [
+            "Image"
+          ]
+        },
+        {
+          "source": "docflow.space_ui",
+          "specifiers": [
+            "bundle",
+            "cleanup",
+            "prepare"
+          ]
+        }
+      ],
+      "exports": [
+        "test_limit_and_session_isolation",
+        "test_duplicate_archive_names"
+      ],
+      "totalLines": 36,
+      "hasStructuralAnalysis": true
+    },
+    "tests/test_streamlit_workbench.py": {
+      "filePath": "tests/test_streamlit_workbench.py",
+      "contentHash": "25148ad1049872098610720e05d54ba236d7509305c5e331a091e46d1d2980c4",
+      "functions": [
+        {
+          "name": "test_legacy_exports_are_safe_and_unique",
+          "params": [
+            "tmp_path"
+          ],
+          "exported": true,
+          "lineCount": 16
+        },
+        {
+          "name": "test_preview_selected_frame_only",
+          "params": [],
+          "exported": true,
+          "lineCount": 12
+        },
+        {
+          "name": "test_saved_result_tabs_and_selection_do_not_load_models",
+          "params": [
+            "tmp_path",
+            "monkeypatch"
+          ],
+          "exported": true,
+          "lineCount": 32
+        }
+      ],
+      "classes": [],
+      "imports": [
+        {
+          "source": "io",
+          "specifiers": [
+            "io"
+          ]
+        },
+        {
+          "source": "zipfile",
+          "specifiers": [
+            "ZipFile"
+          ]
+        },
+        {
+          "source": "PIL",
+          "specifiers": [
+            "Image"
+          ]
+        },
+        {
+          "source": "streamlit.testing.v1",
+          "specifiers": [
+            "AppTest"
+          ]
+        },
+        {
+          "source": "docflow.streamlit_ui",
+          "specifiers": [
+            "archive_bytes",
+            "artifacts",
+            "preview_bytes"
+          ]
+        }
+      ],
+      "exports": [
+        "test_legacy_exports_are_safe_and_unique",
+        "test_preview_selected_frame_only",
+        "test_saved_result_tabs_and_selection_do_not_load_models"
+      ],
+      "totalLines": 74,
+      "hasStructuralAnalysis": true
+    },
+    "tests/test_visitor_keys.py": {
+      "filePath": "tests/test_visitor_keys.py",
+      "contentHash": "170c2c9dad918216ea50c3ac51ad2445a724165e09bafe8f61a574e33cc60248",
+      "functions": [
+        {
+          "name": "test_space_directly_binds_gpu_handler",
+          "params": [],
+          "exported": true,
+          "lineCount": 6
+        }
+      ],
+      "classes": [],
+      "imports": [
+        {
+          "source": "ast",
+          "specifiers": [
+            "ast"
+          ]
+        },
+        {
+          "source": "pathlib",
+          "specifiers": [
+            "Path"
+          ]
+        }
+      ],
+      "exports": [
+        "test_space_directly_binds_gpu_handler"
+      ],
+      "totalLines": 11,
+      "hasStructuralAnalysis": true
+    },
+    "tests/test_xiaomi_pipeline.py": {
+      "filePath": "tests/test_xiaomi_pipeline.py",
+      "contentHash": "d9c2844ab0406110019d028e324c2b47c5a7bb9c1dc9bdb7ebb0494a7bcb87df",
+      "functions": [
+        {
+          "name": "test_layout_order_category_routing_and_partial_result",
+          "params": [],
+          "exported": true,
+          "lineCount": 19
+        },
+        {
+          "name": "test_empty_layout_uses_explicit_page_fallback",
+          "params": [],
+          "exported": true,
+          "lineCount": 10
+        }
+      ],
+      "classes": [],
+      "imports": [
+        {
+          "source": "types",
+          "specifiers": [
+            "SimpleNamespace"
+          ]
+        },
+        {
+          "source": "unittest.mock",
+          "specifiers": [
+            "Mock"
+          ]
+        },
+        {
+          "source": "numpy",
+          "specifiers": [
+            "np"
+          ]
+        },
+        {
+          "source": "PIL",
+          "specifiers": [
+            "Image"
+          ]
+        },
+        {
+          "source": "docflow.xiaomi",
+          "specifiers": [
+            "Engine"
+          ]
+        }
+      ],
+      "exports": [
+        "test_layout_order_category_routing_and_partial_result",
+        "test_empty_layout_uses_explicit_page_fallback"
+      ],
+      "totalLines": 41,
+      "hasStructuralAnalysis": true
+    },
+    "tests/test_xiaomi_postprocess.py": {
+      "filePath": "tests/test_xiaomi_postprocess.py",
+      "contentHash": "e9d14c4b81b19c55b1eb07a2cb11fc7966bb6fc71449b31f898b2063d07caa27",
+      "functions": [
+        {
+          "name": "test_table_cells_escape_html",
+          "params": [],
+          "exported": true,
+          "lineCount": 5
+        },
+        {
+          "name": "test_math_and_plain_text_survive",
+          "params": [],
+          "exported": true,
+          "lineCount": 3
+        }
+      ],
+      "classes": [],
+      "imports": [
+        {
+          "source": "docflow.xiaomi_postprocess.document",
+          "specifiers": [
+            "finalize_document"
+          ]
+        }
+      ],
+      "exports": [
+        "test_table_cells_escape_html",
+        "test_math_and_plain_text_survive"
+      ],
+      "totalLines": 14,
+      "hasStructuralAnalysis": true
+    }
+  }
+}

@@ -1,0 +1,718 @@
+{
+  "name": "docflow-xiaomi-ocr-0",
+  "description": "Local Windows Streamlit and separate Gradio applications for document parsing using Xiaomi-OCR-0 and PP-DocLayoutV3.",
+  "languages": [
+    "batch",
+    "json",
+    "markdown",
+    "powershell",
+    "python",
+    "toml",
+    "txt",
+    "unknown"
+  ],
+  "frameworks": [
+    "Streamlit",
+    "Gradio",
+    "Pytest"
+  ],
+  "files": [
+    {
+      "path": ".agents/skills/hf-cli/SKILL.md",
+      "language": "markdown",
+      "sizeLines": 243,
+      "fileCategory": "docs"
+    },
+    {
+      "path": ".agents/skills/huggingface-best/SKILL.md",
+      "language": "markdown",
+      "sizeLines": 134,
+      "fileCategory": "docs"
+    },
+    {
+      "path": ".agents/skills/huggingface-datasets/SKILL.md",
+      "language": "markdown",
+      "sizeLines": 107,
+      "fileCategory": "docs"
+    },
+    {
+      "path": ".agents/skills/huggingface-gradio/SKILL.md",
+      "language": "markdown",
+      "sizeLines": 298,
+      "fileCategory": "docs"
+    },
+    {
+      "path": ".agents/skills/huggingface-gradio/examples.md",
+      "language": "markdown",
+      "sizeLines": 613,
+      "fileCategory": "docs"
+    },
+    {
+      "path": ".agents/skills/huggingface-local-models/SKILL.md",
+      "language": "markdown",
+      "sizeLines": 113,
+      "fileCategory": "docs"
+    },
+    {
+      "path": ".agents/skills/huggingface-local-models/references/hardware.md",
+      "language": "markdown",
+      "sizeLines": 37,
+      "fileCategory": "docs"
+    },
+    {
+      "path": ".agents/skills/huggingface-local-models/references/hub-discovery.md",
+      "language": "markdown",
+      "sizeLines": 178,
+      "fileCategory": "docs"
+    },
+    {
+      "path": ".agents/skills/huggingface-local-models/references/quantization.md",
+      "language": "markdown",
+      "sizeLines": 256,
+      "fileCategory": "docs"
+    },
+    {
+      "path": ".agents/skills/huggingface-spaces/README.md",
+      "language": "markdown",
+      "sizeLines": 9,
+      "fileCategory": "docs"
+    },
+    {
+      "path": ".agents/skills/huggingface-spaces/SKILL.md",
+      "language": "markdown",
+      "sizeLines": 242,
+      "fileCategory": "docs"
+    },
+    {
+      "path": ".agents/skills/huggingface-spaces/references/3d-cuda-extensions.md",
+      "language": "markdown",
+      "sizeLines": 109,
+      "fileCategory": "docs"
+    },
+    {
+      "path": ".agents/skills/huggingface-spaces/references/3d-generation.md",
+      "language": "markdown",
+      "sizeLines": 98,
+      "fileCategory": "docs"
+    },
+    {
+      "path": ".agents/skills/huggingface-spaces/references/3d-gsplat.md",
+      "language": "markdown",
+      "sizeLines": 53,
+      "fileCategory": "docs"
+    },
+    {
+      "path": ".agents/skills/huggingface-spaces/references/3d-models.md",
+      "language": "markdown",
+      "sizeLines": 227,
+      "fileCategory": "docs"
+    },
+    {
+      "path": ".agents/skills/huggingface-spaces/references/3d-outputs.md",
+      "language": "markdown",
+      "sizeLines": 114,
+      "fileCategory": "docs"
+    },
+    {
+      "path": ".agents/skills/huggingface-spaces/references/buckets.md",
+      "language": "markdown",
+      "sizeLines": 89,
+      "fileCategory": "docs"
+    },
+    {
+      "path": ".agents/skills/huggingface-spaces/references/debugging.md",
+      "language": "markdown",
+      "sizeLines": 236,
+      "fileCategory": "docs"
+    },
+    {
+      "path": ".agents/skills/huggingface-spaces/references/gradio.md",
+      "language": "markdown",
+      "sizeLines": 200,
+      "fileCategory": "docs"
+    },
+    {
+      "path": ".agents/skills/huggingface-spaces/references/grants.md",
+      "language": "markdown",
+      "sizeLines": 63,
+      "fileCategory": "docs"
+    },
+    {
+      "path": ".agents/skills/huggingface-spaces/references/inference-providers.md",
+      "language": "markdown",
+      "sizeLines": 97,
+      "fileCategory": "docs"
+    },
+    {
+      "path": ".agents/skills/huggingface-spaces/references/known-errors.md",
+      "language": "markdown",
+      "sizeLines": 232,
+      "fileCategory": "docs"
+    },
+    {
+      "path": ".agents/skills/huggingface-spaces/references/requirements.md",
+      "language": "markdown",
+      "sizeLines": 169,
+      "fileCategory": "docs"
+    },
+    {
+      "path": ".agents/skills/huggingface-spaces/references/zerogpu.md",
+      "language": "markdown",
+      "sizeLines": 349,
+      "fileCategory": "docs"
+    },
+    {
+      "path": ".agents/skills/huggingface-zerogpu/SKILL.md",
+      "language": "markdown",
+      "sizeLines": 289,
+      "fileCategory": "docs"
+    },
+    {
+      "path": ".agents/skills/huggingface-zerogpu/references/concurrency.md",
+      "language": "markdown",
+      "sizeLines": 79,
+      "fileCategory": "docs"
+    },
+    {
+      "path": ".agents/skills/huggingface-zerogpu/references/cuda-and-deps.md",
+      "language": "markdown",
+      "sizeLines": 66,
+      "fileCategory": "docs"
+    },
+    {
+      "path": ".agents/skills/huggingface-zerogpu/references/how-quota-works.md",
+      "language": "markdown",
+      "sizeLines": 74,
+      "fileCategory": "docs"
+    },
+    {
+      "path": ".agents/skills/huggingface-zerogpu/references/how-zerogpu-works.md",
+      "language": "markdown",
+      "sizeLines": 50,
+      "fileCategory": "docs"
+    },
+    {
+      "path": ".python-version",
+      "language": "unknown",
+      "sizeLines": 1,
+      "fileCategory": "code"
+    },
+    {
+      "path": ".ua/config.json",
+      "language": "json",
+      "sizeLines": 1,
+      "fileCategory": "config"
+    },
+    {
+      "path": "AGENTS.md",
+      "language": "markdown",
+      "sizeLines": 42,
+      "fileCategory": "docs"
+    },
+    {
+      "path": "README.md",
+      "language": "markdown",
+      "sizeLines": 51,
+      "fileCategory": "docs"
+    },
+    {
+      "path": "app.py",
+      "language": "python",
+      "sizeLines": 54,
+      "fileCategory": "code"
+    },
+    {
+      "path": "docflow/__init__.py",
+      "language": "python",
+      "sizeLines": 1,
+      "fileCategory": "code"
+    },
+    {
+      "path": "docflow/conversion.py",
+      "language": "python",
+      "sizeLines": 176,
+      "fileCategory": "code"
+    },
+    {
+      "path": "docflow/image_limits.py",
+      "language": "python",
+      "sizeLines": 10,
+      "fileCategory": "code"
+    },
+    {
+      "path": "docflow/space_ui.py",
+      "language": "python",
+      "sizeLines": 70,
+      "fileCategory": "code"
+    },
+    {
+      "path": "docflow/streamlit_ui.py",
+      "language": "python",
+      "sizeLines": 89,
+      "fileCategory": "code"
+    },
+    {
+      "path": "docflow/xiaomi.py",
+      "language": "python",
+      "sizeLines": 127,
+      "fileCategory": "code"
+    },
+    {
+      "path": "docflow/xiaomi_postprocess/NOTICE",
+      "language": "unknown",
+      "sizeLines": 1,
+      "fileCategory": "code"
+    },
+    {
+      "path": "docflow/xiaomi_postprocess/document.py",
+      "language": "python",
+      "sizeLines": 123,
+      "fileCategory": "code"
+    },
+    {
+      "path": "docflow/xiaomi_postprocess/otsl.py",
+      "language": "python",
+      "sizeLines": 251,
+      "fileCategory": "code"
+    },
+    {
+      "path": "docs/codebase-research-2026-10-28.md",
+      "language": "markdown",
+      "sizeLines": 142,
+      "fileCategory": "docs"
+    },
+    {
+      "path": "docs/developer-guide.md",
+      "language": "markdown",
+      "sizeLines": 34,
+      "fileCategory": "docs"
+    },
+    {
+      "path": "docs/grok-build-install-skills.md",
+      "language": "markdown",
+      "sizeLines": 111,
+      "fileCategory": "docs"
+    },
+    {
+      "path": "docs/linkedin-project-and-post.md",
+      "language": "markdown",
+      "sizeLines": 15,
+      "fileCategory": "docs"
+    },
+    {
+      "path": "docs/models.md",
+      "language": "markdown",
+      "sizeLines": 36,
+      "fileCategory": "docs"
+    },
+    {
+      "path": "docs/nemotron-3.5-parse-research.md",
+      "language": "markdown",
+      "sizeLines": 67,
+      "fileCategory": "docs"
+    },
+    {
+      "path": "docs/pp-doclayoutv4-access-research.md",
+      "language": "markdown",
+      "sizeLines": 19,
+      "fileCategory": "docs"
+    },
+    {
+      "path": "docs/security-audit/run-1/FINDINGS-DETAIL.md",
+      "language": "markdown",
+      "sizeLines": 7,
+      "fileCategory": "docs"
+    },
+    {
+      "path": "docs/security-audit/run-1/NEEDS-VALIDATION.md",
+      "language": "markdown",
+      "sizeLines": 14,
+      "fileCategory": "docs"
+    },
+    {
+      "path": "docs/security-audit/run-1/REPORT.md",
+      "language": "markdown",
+      "sizeLines": 46,
+      "fileCategory": "docs"
+    },
+    {
+      "path": "docs/security-audit/run-1/architecture.md",
+      "language": "markdown",
+      "sizeLines": 12,
+      "fileCategory": "docs"
+    },
+    {
+      "path": "docs/security-audit/run-1/coverage-ledger.json",
+      "language": "json",
+      "sizeLines": 2040,
+      "fileCategory": "config"
+    },
+    {
+      "path": "docs/security-audit/run-1/finalize_incomplete.py",
+      "language": "python",
+      "sizeLines": 75,
+      "fileCategory": "code"
+    },
+    {
+      "path": "docs/security-audit/run-1/finalize_resumed.py",
+      "language": "python",
+      "sizeLines": 76,
+      "fileCategory": "code"
+    },
+    {
+      "path": "docs/security-audit/run-1/findings.json",
+      "language": "json",
+      "sizeLines": 92,
+      "fileCategory": "config"
+    },
+    {
+      "path": "docs/security-audit/run-1/hunt_local-prompt.md",
+      "language": "markdown",
+      "sizeLines": 1045,
+      "fileCategory": "docs"
+    },
+    {
+      "path": "docs/security-audit/run-1/hunt_public-prompt.md",
+      "language": "markdown",
+      "sizeLines": 1098,
+      "fileCategory": "docs"
+    },
+    {
+      "path": "docs/security-audit/run-1/hunt_render-prompt.md",
+      "language": "markdown",
+      "sizeLines": 924,
+      "fileCategory": "docs"
+    },
+    {
+      "path": "docs/security-audit/run-1/hunt_resource-prompt.md",
+      "language": "markdown",
+      "sizeLines": 1045,
+      "fileCategory": "docs"
+    },
+    {
+      "path": "docs/security-audit/run-1/hunt_supply-prompt.md",
+      "language": "markdown",
+      "sizeLines": 921,
+      "fileCategory": "docs"
+    },
+    {
+      "path": "docs/security-audit/run-1/pending-candidates.json",
+      "language": "json",
+      "sizeLines": 89,
+      "fileCategory": "config"
+    },
+    {
+      "path": "docs/security-audit/run-1/run-metadata.json",
+      "language": "json",
+      "sizeLines": 109,
+      "fileCategory": "config"
+    },
+    {
+      "path": "docs/security-audit/run-1/run-validator.ps1",
+      "language": "powershell",
+      "sizeLines": 5,
+      "fileCategory": "script"
+    },
+    {
+      "path": "docs/security-audit/run-1/setup_audit.py",
+      "language": "python",
+      "sizeLines": 43,
+      "fileCategory": "code"
+    },
+    {
+      "path": "docs/security-audit/run-1/verification-results.json",
+      "language": "json",
+      "sizeLines": 47,
+      "fileCategory": "config"
+    },
+    {
+      "path": "docs/security-audit/run-1/verify_candidate_1-prompt.md",
+      "language": "markdown",
+      "sizeLines": 605,
+      "fileCategory": "docs"
+    },
+    {
+      "path": "docs/security-audit/run-1/verify_candidate_2-prompt.md",
+      "language": "markdown",
+      "sizeLines": 605,
+      "fileCategory": "docs"
+    },
+    {
+      "path": "docs/security-audit/run-1/verify_fix_1-prompt.md",
+      "language": "markdown",
+      "sizeLines": 550,
+      "fileCategory": "docs"
+    },
+    {
+      "path": "docs/security-audit/run-1/verify_fix_2-prompt.md",
+      "language": "markdown",
+      "sizeLines": 555,
+      "fileCategory": "docs"
+    },
+    {
+      "path": "docs/ui-verification.md",
+      "language": "markdown",
+      "sizeLines": 39,
+      "fileCategory": "docs"
+    },
+    {
+      "path": "docs/user-guide.md",
+      "language": "markdown",
+      "sizeLines": 33,
+      "fileCategory": "docs"
+    },
+    {
+      "path": "docs/xiaomi-migration-validation.md",
+      "language": "markdown",
+      "sizeLines": 30,
+      "fileCategory": "docs"
+    },
+    {
+      "path": "docs/xiaomi-ocr-0-research.md",
+      "language": "markdown",
+      "sizeLines": 37,
+      "fileCategory": "docs"
+    },
+    {
+      "path": "gradio_ui.py",
+      "language": "python",
+      "sizeLines": 274,
+      "fileCategory": "code"
+    },
+    {
+      "path": "launch.cmd",
+      "language": "batch",
+      "sizeLines": 3,
+      "fileCategory": "script"
+    },
+    {
+      "path": "pyproject.toml",
+      "language": "toml",
+      "sizeLines": 43,
+      "fileCategory": "config"
+    },
+    {
+      "path": "requirements.txt",
+      "language": "txt",
+      "sizeLines": 12,
+      "fileCategory": "docs"
+    },
+    {
+      "path": "runtime/probe_local.py",
+      "language": "python",
+      "sizeLines": 5,
+      "fileCategory": "code"
+    },
+    {
+      "path": "scripts/preview_ui.py",
+      "language": "python",
+      "sizeLines": 80,
+      "fileCategory": "code"
+    },
+    {
+      "path": "scripts/setup-models.py",
+      "language": "python",
+      "sizeLines": 4,
+      "fileCategory": "code"
+    },
+    {
+      "path": "scripts/smoke_xiaomi.py",
+      "language": "python",
+      "sizeLines": 26,
+      "fileCategory": "code"
+    },
+    {
+      "path": "skills-lock.json",
+      "language": "json",
+      "sizeLines": 47,
+      "fileCategory": "config"
+    },
+    {
+      "path": "streamlit_app.py",
+      "language": "python",
+      "sizeLines": 303,
+      "fileCategory": "code"
+    },
+    {
+      "path": "tests/test_document_limits.py",
+      "language": "python",
+      "sizeLines": 107,
+      "fileCategory": "code"
+    },
+    {
+      "path": "tests/test_exports.py",
+      "language": "python",
+      "sizeLines": 20,
+      "fileCategory": "code"
+    },
+    {
+      "path": "tests/test_space.py",
+      "language": "python",
+      "sizeLines": 35,
+      "fileCategory": "code"
+    },
+    {
+      "path": "tests/test_streamlit_workbench.py",
+      "language": "python",
+      "sizeLines": 73,
+      "fileCategory": "code"
+    },
+    {
+      "path": "tests/test_visitor_keys.py",
+      "language": "python",
+      "sizeLines": 10,
+      "fileCategory": "code"
+    },
+    {
+      "path": "tests/test_xiaomi_pipeline.py",
+      "language": "python",
+      "sizeLines": 40,
+      "fileCategory": "code"
+    },
+    {
+      "path": "tests/test_xiaomi_postprocess.py",
+      "language": "python",
+      "sizeLines": 13,
+      "fileCategory": "code"
+    }
+  ],
+  "totalFiles": 93,
+  "filteredByIgnore": 13,
+  "estimatedComplexity": "moderate",
+  "importMap": {
+    ".agents/skills/hf-cli/SKILL.md": [],
+    ".agents/skills/huggingface-best/SKILL.md": [],
+    ".agents/skills/huggingface-datasets/SKILL.md": [],
+    ".agents/skills/huggingface-gradio/SKILL.md": [],
+    ".agents/skills/huggingface-gradio/examples.md": [],
+    ".agents/skills/huggingface-local-models/SKILL.md": [],
+    ".agents/skills/huggingface-local-models/references/hardware.md": [],
+    ".agents/skills/huggingface-local-models/references/hub-discovery.md": [],
+    ".agents/skills/huggingface-local-models/references/quantization.md": [],
+    ".agents/skills/huggingface-spaces/README.md": [],
+    ".agents/skills/huggingface-spaces/SKILL.md": [],
+    ".agents/skills/huggingface-spaces/references/3d-cuda-extensions.md": [],
+    ".agents/skills/huggingface-spaces/references/3d-generation.md": [],
+    ".agents/skills/huggingface-spaces/references/3d-gsplat.md": [],
+    ".agents/skills/huggingface-spaces/references/3d-models.md": [],
+    ".agents/skills/huggingface-spaces/references/3d-outputs.md": [],
+    ".agents/skills/huggingface-spaces/references/buckets.md": [],
+    ".agents/skills/huggingface-spaces/references/debugging.md": [],
+    ".agents/skills/huggingface-spaces/references/gradio.md": [],
+    ".agents/skills/huggingface-spaces/references/grants.md": [],
+    ".agents/skills/huggingface-spaces/references/inference-providers.md": [],
+    ".agents/skills/huggingface-spaces/references/known-errors.md": [],
+    ".agents/skills/huggingface-spaces/references/requirements.md": [],
+    ".agents/skills/huggingface-spaces/references/zerogpu.md": [],
+    ".agents/skills/huggingface-zerogpu/SKILL.md": [],
+    ".agents/skills/huggingface-zerogpu/references/concurrency.md": [],
+    ".agents/skills/huggingface-zerogpu/references/cuda-and-deps.md": [],
+    ".agents/skills/huggingface-zerogpu/references/how-quota-works.md": [],
+    ".agents/skills/huggingface-zerogpu/references/how-zerogpu-works.md": [],
+    ".python-version": [],
+    ".ua/config.json": [],
+    "AGENTS.md": [],
+    "README.md": [],
+    "app.py": [
+      "docflow/conversion.py",
+      "docflow/space_ui.py",
+      "docflow/xiaomi.py",
+      "gradio_ui.py"
+    ],
+    "docflow/__init__.py": [],
+    "docflow/conversion.py": [
+      "docflow/image_limits.py",
+      "docflow/xiaomi.py"
+    ],
+    "docflow/image_limits.py": [],
+    "docflow/space_ui.py": [
+      "docflow/conversion.py"
+    ],
+    "docflow/streamlit_ui.py": [
+      "docflow/conversion.py"
+    ],
+    "docflow/xiaomi.py": [],
+    "docflow/xiaomi_postprocess/NOTICE": [],
+    "docflow/xiaomi_postprocess/document.py": [
+      "docflow/xiaomi_postprocess/otsl.py"
+    ],
+    "docflow/xiaomi_postprocess/otsl.py": [],
+    "docs/codebase-research-2026-10-28.md": [],
+    "docs/developer-guide.md": [],
+    "docs/grok-build-install-skills.md": [],
+    "docs/linkedin-project-and-post.md": [],
+    "docs/models.md": [],
+    "docs/nemotron-3.5-parse-research.md": [],
+    "docs/pp-doclayoutv4-access-research.md": [],
+    "docs/security-audit/run-1/FINDINGS-DETAIL.md": [],
+    "docs/security-audit/run-1/NEEDS-VALIDATION.md": [],
+    "docs/security-audit/run-1/REPORT.md": [],
+    "docs/security-audit/run-1/architecture.md": [],
+    "docs/security-audit/run-1/coverage-ledger.json": [],
+    "docs/security-audit/run-1/finalize_incomplete.py": [],
+    "docs/security-audit/run-1/finalize_resumed.py": [],
+    "docs/security-audit/run-1/findings.json": [],
+    "docs/security-audit/run-1/hunt_local-prompt.md": [],
+    "docs/security-audit/run-1/hunt_public-prompt.md": [],
+    "docs/security-audit/run-1/hunt_render-prompt.md": [],
+    "docs/security-audit/run-1/hunt_resource-prompt.md": [],
+    "docs/security-audit/run-1/hunt_supply-prompt.md": [],
+    "docs/security-audit/run-1/pending-candidates.json": [],
+    "docs/security-audit/run-1/run-metadata.json": [],
+    "docs/security-audit/run-1/run-validator.ps1": [],
+    "docs/security-audit/run-1/setup_audit.py": [],
+    "docs/security-audit/run-1/verification-results.json": [],
+    "docs/security-audit/run-1/verify_candidate_1-prompt.md": [],
+    "docs/security-audit/run-1/verify_candidate_2-prompt.md": [],
+    "docs/security-audit/run-1/verify_fix_1-prompt.md": [],
+    "docs/security-audit/run-1/verify_fix_2-prompt.md": [],
+    "docs/ui-verification.md": [],
+    "docs/user-guide.md": [],
+    "docs/xiaomi-migration-validation.md": [],
+    "docs/xiaomi-ocr-0-research.md": [],
+    "gradio_ui.py": [
+      "docflow/space_ui.py"
+    ],
+    "launch.cmd": [],
+    "pyproject.toml": [],
+    "requirements.txt": [],
+    "runtime/probe_local.py": [
+      "scripts/smoke_xiaomi.py"
+    ],
+    "scripts/preview_ui.py": [
+      "docflow/space_ui.py",
+      "gradio_ui.py"
+    ],
+    "scripts/setup-models.py": [
+      "docflow/xiaomi.py"
+    ],
+    "scripts/smoke_xiaomi.py": [
+      "docflow/xiaomi.py"
+    ],
+    "skills-lock.json": [],
+    "streamlit_app.py": [
+      "docflow/conversion.py",
+      "docflow/streamlit_ui.py"
+    ],
+    "tests/test_document_limits.py": [
+      "docflow/__init__.py",
+      "docflow/conversion.py",
+      "docflow/image_limits.py",
+      "docflow/space_ui.py"
+    ],
+    "tests/test_exports.py": [],
+    "tests/test_space.py": [
+      "docflow/space_ui.py"
+    ],
+    "tests/test_streamlit_workbench.py": [
+      "docflow/streamlit_ui.py"
+    ],
+    "tests/test_visitor_keys.py": [],
+    "tests/test_xiaomi_pipeline.py": [
+      "docflow/xiaomi.py"
+    ],
+    "tests/test_xiaomi_postprocess.py": [
+      "docflow/xiaomi_postprocess/document.py"
+    ]
+  }
+}
