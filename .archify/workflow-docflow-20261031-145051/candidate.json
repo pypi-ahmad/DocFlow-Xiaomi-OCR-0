@@ -1,0 +1,214 @@
+{
+  "schema_version": 2,
+  "diagram_type": "workflow",
+  "meta": {
+    "title": "Convert a document locally",
+    "output": ".archify/workflow-docflow-20261031-145051/conversion-workflow.html",
+    "quality_profile": "showcase",
+    "locale": "en",
+    "repository": {
+      "url": "https://github.com/pypi-ahmad/DocFlow-Xiaomi-OCR-0.git",
+      "revision": "68e0a3f9075f2877222419f30d430d56205c1be9"
+    }
+  },
+  "lanes": [
+    {
+      "id": "user",
+      "label": "Streamlit workbench"
+    },
+    {
+      "id": "engine",
+      "label": "Conversion and inference"
+    },
+    {
+      "id": "results",
+      "label": "Results"
+    }
+  ],
+  "mainPath": [
+    "upload",
+    "choose",
+    "run",
+    "pages",
+    "parse",
+    "export",
+    "review"
+  ],
+  "nodes": [
+    {
+      "id": "upload",
+      "lane": "user",
+      "col": 0,
+      "type": "frontend",
+      "label": "Upload",
+      "sublabel": "PDF or image",
+      "sources": [
+        {
+          "path": "streamlit_app.py",
+          "line": 37,
+          "end_line": 45
+        }
+      ]
+    },
+    {
+      "id": "choose",
+      "lane": "user",
+      "col": 1,
+      "type": "frontend",
+      "label": "Choose pages",
+      "sublabel": "preview before OCR",
+      "sources": [
+        {
+          "path": "streamlit_app.py",
+          "line": 60,
+          "end_line": 91
+        }
+      ]
+    },
+    {
+      "id": "run",
+      "lane": "user",
+      "col": 2,
+      "type": "frontend",
+      "label": "Parse",
+      "sublabel": "explicit action",
+      "sources": [
+        {
+          "path": "streamlit_app.py",
+          "line": 91,
+          "end_line": 108
+        }
+      ]
+    },
+    {
+      "id": "pages",
+      "lane": "engine",
+      "col": 2,
+      "type": "backend",
+      "label": "Render pages",
+      "sublabel": "selected pages only",
+      "sources": [
+        {
+          "path": "docflow/conversion.py",
+          "line": 44,
+          "end_line": 69
+        }
+      ]
+    },
+    {
+      "id": "parse",
+      "lane": "engine",
+      "col": 3,
+      "type": "backend",
+      "label": "Read regions",
+      "sublabel": "V3 then Xiaomi",
+      "sources": [
+        {
+          "path": "docflow/xiaomi.py",
+          "line": 70,
+          "end_line": 126
+        }
+      ]
+    },
+    {
+      "id": "export",
+      "lane": "results",
+      "col": 4,
+      "type": "database",
+      "label": "Save outputs",
+      "sublabel": "text, JSON, images",
+      "sources": [
+        {
+          "path": "docflow/conversion.py",
+          "line": 124,
+          "end_line": 175
+        }
+      ]
+    },
+    {
+      "id": "review",
+      "lane": "user",
+      "col": 5,
+      "type": "frontend",
+      "label": "Review",
+      "sublabel": "tabs and downloads",
+      "sources": [
+        {
+          "path": "streamlit_app.py",
+          "line": 144,
+          "end_line": 180
+        }
+      ]
+    },
+    {
+      "id": "partial",
+      "lane": "results",
+      "col": 3,
+      "type": "backend",
+      "label": "Partial page",
+      "sublabel": "error or truncation",
+      "sources": [
+        {
+          "path": "docflow/conversion.py",
+          "line": 93,
+          "end_line": 118
+        }
+      ]
+    }
+  ],
+  "edges": [
+    {
+      "from": "upload",
+      "to": "choose"
+    },
+    {
+      "from": "choose",
+      "to": "run"
+    },
+    {
+      "from": "run",
+      "to": "pages"
+    },
+    {
+      "from": "pages",
+      "to": "parse"
+    },
+    {
+      "from": "parse",
+      "to": "export"
+    },
+    {
+      "from": "export",
+      "to": "review"
+    },
+    {
+      "from": "parse",
+      "to": "partial",
+      "label": "incomplete",
+      "role": "branch"
+    },
+    {
+      "from": "partial",
+      "to": "export",
+      "label": "retain result"
+    }
+  ],
+  "cards": [
+    {
+      "dot": "cyan",
+      "title": "Scope",
+      "items": [
+        "A batch processes files sequentially and includes all pages.",
+        "Single-file page ranges preserve original page numbers."
+      ]
+    },
+    {
+      "dot": "amber",
+      "title": "Model loading",
+      "items": [
+        "The cached engine is loaded when Parse is selected.",
+        "Saved results and preview navigation do not require model inference."
+      ]
+    }
+  ]
+}

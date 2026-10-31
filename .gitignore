@@ -12,3 +12,7 @@ output/
 .claude/
 .grok/
 docs/security-audit/run-1/agents/**/scratch/
+.archify/**/*.browser-check.json
+.archify/**/*.delivery.json
+.archify/**/*.finalize.json
+.archify/**/*.finalize-summary.json

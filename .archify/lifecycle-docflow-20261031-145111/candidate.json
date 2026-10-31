@@ -1,0 +1,129 @@
+{
+  "schema_version": 3,
+  "diagram_type": "lifecycle",
+  "meta": {
+    "title": "Conversion result lifecycle",
+    "output": ".archify/lifecycle-docflow-20261031-145111/result-lifecycle.html",
+    "quality_profile": "showcase",
+    "locale": "en",
+    "repository": {
+      "url": "https://github.com/pypi-ahmad/DocFlow-Xiaomi-OCR-0.git",
+      "revision": "68e0a3f9075f2877222419f30d430d56205c1be9"
+    }
+  },
+  "mainPath": [
+    "submit",
+    "cache",
+    "processing",
+    "complete"
+  ],
+  "states": [
+    {
+      "id": "submit",
+      "type": "start",
+      "label": "Submitted",
+      "sublabel": "user selects Parse",
+      "sources": [
+        {
+          "path": "streamlit_app.py",
+          "line": 91,
+          "end_line": 103
+        }
+      ]
+    },
+    {
+      "id": "cache",
+      "type": "decision",
+      "label": "Cache check",
+      "sublabel": "identity and complete flag",
+      "sources": [
+        {
+          "path": "docflow/conversion.py",
+          "line": 78,
+          "end_line": 86
+        }
+      ]
+    },
+    {
+      "id": "processing",
+      "type": "active",
+      "label": "Processing",
+      "sublabel": "page and region loop",
+      "sources": [
+        {
+          "path": "docflow/conversion.py",
+          "line": 87,
+          "end_line": 103
+        }
+      ]
+    },
+    {
+      "id": "complete",
+      "type": "success",
+      "label": "Complete",
+      "sublabel": "all pages complete",
+      "sources": [
+        {
+          "path": "docflow/conversion.py",
+          "line": 124,
+          "end_line": 136
+        }
+      ]
+    },
+    {
+      "id": "partial",
+      "type": "failure",
+      "label": "Incomplete",
+      "sublabel": "failure or truncation",
+      "sources": [
+        {
+          "path": "docflow/conversion.py",
+          "line": 101,
+          "end_line": 118
+        }
+      ]
+    }
+  ],
+  "transitions": [
+    {
+      "from": "submit",
+      "to": "cache",
+      "label": "load engine"
+    },
+    {
+      "from": "cache",
+      "to": "processing",
+      "label": "miss or incomplete"
+    },
+    {
+      "from": "processing",
+      "to": "complete",
+      "label": "all pages complete"
+    },
+    {
+      "from": "cache",
+      "to": "complete",
+      "label": "complete cache hit"
+    },
+    {
+      "from": "processing",
+      "to": "partial",
+      "label": "page incomplete"
+    },
+    {
+      "from": "partial",
+      "to": "cache",
+      "label": "user retries"
+    }
+  ],
+  "cards": [
+    {
+      "dot": "amber",
+      "title": "What gets saved",
+      "items": [
+        "Partial documents are written and can be inspected.",
+        "A retry reprocesses incomplete results; complete cache entries are reused."
+      ]
+    }
+  ]
+}
