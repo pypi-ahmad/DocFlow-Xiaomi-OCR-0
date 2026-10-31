@@ -1,0 +1,79 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>A page through both models</title>
+  <link href="https://fonts.googleapis.com/css2?family=Instrument+Serif:ital@0;1&family=Geist:wght@400;500;600&family=Geist+Mono:wght@400;500;600&family=Noto+Serif:ital@0;1&family=Noto+Sans+KR:wght@400;500;600&family=Noto+Serif+KR:wght@400&family=Noto+Sans+TC:wght@400;500;600&family=Noto+Serif+TC:wght@400&display=swap" rel="stylesheet">
+  <style>
+    *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
+    :root {
+      --color-paper:   #f5f5f5;   /* white-smoke */
+      --color-ink:     #2d3142;   /* jet-black */
+      --color-muted:   #4f5d75;   /* blue-slate */
+      --color-accent:  #bf4520;   /* burnt-tangerine */
+      --font-sans:     'Geist', system-ui, sans-serif;
+      --font-serif:    'Instrument Serif', 'Noto Serif', 'Noto Serif KR', serif;
+      --font-mono:     'Geist Mono', ui-monospace, monospace;
+    }
+
+    body {
+      font-family: var(--font-sans);
+      background: var(--color-paper);
+      color: var(--color-ink);
+      min-height: 100vh;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      padding: 3rem 2rem;
+    }
+
+    .frame { max-width: 1280px; width: 100%; }
+    /* The SVG holds its readable width (min-width == the viewBox width, so the
+       type ramp is never silently scaled down). This wrapper lets a narrow
+       screen scroll the diagram instead of the whole page. */
+    .diagram-container { width: 100%; overflow-x: auto; }
+
+    .eyebrow {
+      font-family: var(--font-mono);
+      font-size: 0.66rem;
+      font-weight: 500;
+      letter-spacing: 0.18em;
+      text-transform: uppercase;
+      color: var(--color-muted);
+      margin-bottom: 0.5rem;
+    }
+
+    h1 {
+      font-family: var(--font-serif);
+      font-size: clamp(1.5rem, 2.4vw + 0.75rem, 2rem);
+      font-weight: 400;
+      letter-spacing: -0.02em;
+      line-height: 1.15;
+      color: var(--color-ink);
+      margin-bottom: 1.5rem;
+    }
+
+    svg { width: 100%; min-width: 1280px; display: block; }
+    /* Paper has no scrollbar, so the local scroller would clip instead of
+       scroll. Let the diagram scale down to the sheet: smaller but whole
+       beats sharp but cut off. Must come after the svg rule above - a media
+       query adds no specificity, so a later plain rule would win. */
+    @media print {
+      .diagram-container { overflow-x: visible; }
+      svg { min-width: 0; }
+    }
+  </style>
+</head>
+<body>
+  <div class="frame">
+    <p class="eyebrow">DOCFLOW · SEQUENCE</p>
+    <h1>A page through both models</h1>
+
+    <!-- Replace [diagram-slug] with a unique slug for this diagram before export. -->
+    <div class="diagram-container">
+      <svg viewBox="0 0 1280 720" xmlns="http://www.w3.org/2000/svg" role="img" aria-labelledby="sequence-title sequence-desc"><title id="sequence-title">A page through both models</title><desc id="sequence-desc">An uncached page passes through layout detection and crop recognition before its results return to the workbench.</desc><defs><marker id="arrow" markerWidth="8" markerHeight="6" refX="7" refY="3" orient="auto"><polygon points="0 0,8 3,0 6" fill="#4f5d75"/></marker></defs><rect width="1280" height="720" fill="#f5f5f5"/><line x1="120" y1="140" x2="120" y2="636" stroke="rgba(45,49,66,0.25)" stroke-dasharray="3,3"/><line x1="360" y1="140" x2="360" y2="636" stroke="rgba(45,49,66,0.25)" stroke-dasharray="3,3"/><line x1="600" y1="140" x2="600" y2="636" stroke="rgba(45,49,66,0.25)" stroke-dasharray="3,3"/><line x1="840" y1="140" x2="840" y2="636" stroke="rgba(45,49,66,0.25)" stroke-dasharray="3,3"/><line x1="1080" y1="140" x2="1080" y2="636" stroke="rgba(45,49,66,0.25)" stroke-dasharray="3,3"/><path d="M 120 180 H 360" fill="none" stroke="#4f5d75" stroke-width="1.5" marker-end="url(#arrow)"/><rect x="219.0" y="154" width="42" height="14" rx="2" fill="#f5f5f5"/><text x="240.0" y="164" fill="#4f5d75" font-family="'Geist Mono',monospace" font-size="8" font-weight="400" text-anchor="middle">PARSE</text><path d="M 360 244 H 600" fill="none" stroke="#4f5d75" stroke-width="1.5" marker-end="url(#arrow)"/><rect x="460.0" y="218" width="40" height="14" rx="2" fill="#f5f5f5"/><text x="480.0" y="228" fill="#4f5d75" font-family="'Geist Mono',monospace" font-size="8" font-weight="400" text-anchor="middle">PAGE</text><path d="M 600 308 H 840" fill="none" stroke="#4f5d75" stroke-width="1.5" marker-end="url(#arrow)"/><rect x="696.0" y="282" width="48" height="14" rx="2" fill="#f5f5f5"/><text x="720.0" y="292" fill="#4f5d75" font-family="'Geist Mono',monospace" font-size="8" font-weight="400" text-anchor="middle">DETECT</text><path d="M 840 372 H 600" fill="none" stroke="#4f5d75" stroke-width="1.5" stroke-dasharray="5,4" marker-end="url(#arrow)"/><rect x="693.0" y="346" width="54" height="14" rx="2" fill="#f5f5f5"/><text x="720.0" y="356" fill="#4f5d75" font-family="'Geist Mono',monospace" font-size="8" font-weight="400" text-anchor="middle">REGIONS</text><path d="M 600 436 H 1080" fill="none" stroke="#4f5d75" stroke-width="1.5" marker-end="url(#arrow)"/><rect x="807.0" y="410" width="66" height="14" rx="2" fill="#f5f5f5"/><text x="840.0" y="420" fill="#4f5d75" font-family="'Geist Mono',monospace" font-size="8" font-weight="400" text-anchor="middle">EACH CROP</text><path d="M 1080 500 H 600" fill="none" stroke="#4f5d75" stroke-width="1.5" stroke-dasharray="5,4" marker-end="url(#arrow)"/><rect x="798.0" y="474" width="84" height="14" rx="2" fill="#f5f5f5"/><text x="840.0" y="484" fill="#4f5d75" font-family="'Geist Mono',monospace" font-size="8" font-weight="400" text-anchor="middle">TEXT / TABLE</text><path d="M 600 564 H 360" fill="none" stroke="#4f5d75" stroke-width="1.5" stroke-dasharray="5,4" marker-end="url(#arrow)"/><rect x="441.0" y="538" width="78" height="14" rx="2" fill="#f5f5f5"/><text x="480.0" y="548" fill="#4f5d75" font-family="'Geist Mono',monospace" font-size="8" font-weight="400" text-anchor="middle">PAGE RESULT</text><path d="M 360 628 H 120" fill="none" stroke="#4f5d75" stroke-width="1.5" stroke-dasharray="5,4" marker-end="url(#arrow)"/><rect x="213.0" y="602" width="54" height="14" rx="2" fill="#f5f5f5"/><text x="240.0" y="612" fill="#4f5d75" font-family="'Geist Mono',monospace" font-size="8" font-weight="400" text-anchor="middle">EXPORTS</text><rect x="40" y="48" width="160" height="80" rx="6" fill="#f5f5f5" stroke="#4f5d75"/><text x="120.0" y="86.0" fill="#2d3142" font-family="'Geist',sans-serif" font-size="12" font-weight="600" text-anchor="middle">Workbench</text><text x="120.0" y="104.0" fill="#4f5d75" font-family="'Geist Mono',monospace" font-size="9" font-weight="400" text-anchor="middle"></text><rect x="280" y="48" width="160" height="80" rx="6" fill="#f5f5f5" stroke="#4f5d75"/><text x="360.0" y="86.0" fill="#2d3142" font-family="'Geist',sans-serif" font-size="12" font-weight="600" text-anchor="middle">Conversion</text><text x="360.0" y="104.0" fill="#4f5d75" font-family="'Geist Mono',monospace" font-size="9" font-weight="400" text-anchor="middle"></text><rect x="520" y="48" width="160" height="80" rx="6" fill="#f5f5f5" stroke="#4f5d75"/><text x="600.0" y="86.0" fill="#2d3142" font-family="'Geist',sans-serif" font-size="12" font-weight="600" text-anchor="middle">Engine</text><text x="600.0" y="104.0" fill="#4f5d75" font-family="'Geist Mono',monospace" font-size="9" font-weight="400" text-anchor="middle"></text><rect x="760" y="48" width="160" height="80" rx="6" fill="#f5f5f5" stroke="#4f5d75"/><text x="840.0" y="86.0" fill="#2d3142" font-family="'Geist',sans-serif" font-size="12" font-weight="600" text-anchor="middle">Layout V3</text><text x="840.0" y="104.0" fill="#4f5d75" font-family="'Geist Mono',monospace" font-size="9" font-weight="400" text-anchor="middle"></text><rect x="1000" y="48" width="160" height="80" rx="6" fill="rgba(191,69,32,0.08)" stroke="#bf4520"/><text x="1080.0" y="86.0" fill="#2d3142" font-family="'Geist',sans-serif" font-size="12" font-weight="600" text-anchor="middle">Xiaomi OCR</text><text x="1080.0" y="104.0" fill="#4f5d75" font-family="'Geist Mono',monospace" font-size="9" font-weight="400" text-anchor="middle"></text></svg>
+    </div><p style="font-size:0.85rem;color:#4f5d75;line-height:1.6;max-width:70ch">This shows one uncached page. A complete cached result is reused; no usable detections trigger whole-page OCR. See <a href="../../models.md">model details</a>.</p>
+  </div>
+</body>
+</html>

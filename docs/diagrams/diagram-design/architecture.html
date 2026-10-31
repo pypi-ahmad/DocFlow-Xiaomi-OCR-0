@@ -1,0 +1,79 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>DocFlow architecture</title>
+  <link href="https://fonts.googleapis.com/css2?family=Instrument+Serif:ital@0;1&family=Geist:wght@400;500;600&family=Geist+Mono:wght@400;500;600&family=Noto+Serif:ital@0;1&family=Noto+Sans+KR:wght@400;500;600&family=Noto+Serif+KR:wght@400&family=Noto+Sans+TC:wght@400;500;600&family=Noto+Serif+TC:wght@400&display=swap" rel="stylesheet">
+  <style>
+    *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
+    :root {
+      --color-paper:   #f5f5f5;   /* white-smoke */
+      --color-ink:     #2d3142;   /* jet-black */
+      --color-muted:   #4f5d75;   /* blue-slate */
+      --color-accent:  #bf4520;   /* burnt-tangerine */
+      --font-sans:     'Geist', system-ui, sans-serif;
+      --font-serif:    'Instrument Serif', 'Noto Serif', 'Noto Serif KR', serif;
+      --font-mono:     'Geist Mono', ui-monospace, monospace;
+    }
+
+    body {
+      font-family: var(--font-sans);
+      background: var(--color-paper);
+      color: var(--color-ink);
+      min-height: 100vh;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      padding: 3rem 2rem;
+    }
+
+    .frame { max-width: 1280px; width: 100%; }
+    /* The SVG holds its readable width (min-width == the viewBox width, so the
+       type ramp is never silently scaled down). This wrapper lets a narrow
+       screen scroll the diagram instead of the whole page. */
+    .diagram-container { width: 100%; overflow-x: auto; }
+
+    .eyebrow {
+      font-family: var(--font-mono);
+      font-size: 0.66rem;
+      font-weight: 500;
+      letter-spacing: 0.18em;
+      text-transform: uppercase;
+      color: var(--color-muted);
+      margin-bottom: 0.5rem;
+    }
+
+    h1 {
+      font-family: var(--font-serif);
+      font-size: clamp(1.5rem, 2.4vw + 0.75rem, 2rem);
+      font-weight: 400;
+      letter-spacing: -0.02em;
+      line-height: 1.15;
+      color: var(--color-ink);
+      margin-bottom: 1.5rem;
+    }
+
+    svg { width: 100%; min-width: 1280px; display: block; }
+    /* Paper has no scrollbar, so the local scroller would clip instead of
+       scroll. Let the diagram scale down to the sheet: smaller but whole
+       beats sharp but cut off. Must come after the svg rule above - a media
+       query adds no specificity, so a later plain rule would win. */
+    @media print {
+      .diagram-container { overflow-x: visible; }
+      svg { min-width: 0; }
+    }
+  </style>
+</head>
+<body>
+  <div class="frame">
+    <p class="eyebrow">DOCFLOW · ARCHITECTURE</p>
+    <h1>DocFlow architecture</h1>
+
+    <!-- Replace [diagram-slug] with a unique slug for this diagram before export. -->
+    <div class="diagram-container">
+      <svg viewBox="0 0 1280 720" xmlns="http://www.w3.org/2000/svg" role="img" aria-labelledby="architecture-title architecture-desc"><title id="architecture-title">DocFlow architecture</title><desc id="architecture-desc">Streamlit and a separate Gradio Space run the same conversion code and model pipeline with different result storage.</desc><defs><marker id="arrow" markerWidth="8" markerHeight="6" refX="7" refY="3" orient="auto"><polygon points="0 0,8 3,0 6" fill="#4f5d75"/></marker></defs><rect width="1280" height="720" fill="#f5f5f5"/><path d="M 280 200 H 352 Q 360 200 360 208 V 304 Q 360 312 368 312 H 448" fill="none" stroke="#4f5d75" stroke-width="1.5" marker-end="url(#arrow)"/><rect x="379.0" y="275" width="42" height="14" rx="2" fill="#f5f5f5"/><text x="400" y="285" fill="#4f5d75" font-family="'Geist Mono',monospace" font-size="8" font-weight="400" text-anchor="middle">PARSE</text><path d="M 280 424 H 328 Q 336 424 336 416 V 352 Q 336 344 344 344 H 448" fill="none" stroke="#4f5d75" stroke-width="1.5" marker-end="url(#arrow)"/><rect x="369.0" y="385" width="42" height="14" rx="2" fill="#f5f5f5"/><text x="390" y="395" fill="#4f5d75" font-family="'Geist Mono',monospace" font-size="8" font-weight="400" text-anchor="middle">BATCH</text><path d="M 648 328 H 800" fill="none" stroke="#4f5d75" stroke-width="1.5" marker-end="url(#arrow)"/><rect x="704.0" y="302" width="40" height="14" rx="2" fill="#f5f5f5"/><text x="724" y="312" fill="#4f5d75" font-family="'Geist Mono',monospace" font-size="8" font-weight="400" text-anchor="middle">PAGE</text><path d="M 548 368 V 480" fill="none" stroke="#4f5d75" stroke-width="1.5" marker-end="url(#arrow)"/><rect x="569.0" y="422" width="42" height="14" rx="2" fill="#f5f5f5"/><text x="590" y="432" fill="#4f5d75" font-family="'Geist Mono',monospace" font-size="8" font-weight="400" text-anchor="middle">WRITE</text><rect x="80" y="160" width="200" height="80" rx="6" fill="#f5f5f5" stroke="#4f5d75"/><text x="180.0" y="198.0" fill="#2d3142" font-family="'Geist',sans-serif" font-size="12" font-weight="600" text-anchor="middle">Streamlit</text><text x="180.0" y="216.0" fill="#4f5d75" font-family="'Geist Mono',monospace" font-size="9" font-weight="400" text-anchor="middle">native Windows</text><rect x="80" y="384" width="200" height="80" rx="6" fill="#f5f5f5" stroke="#4f5d75"/><text x="180.0" y="422.0" fill="#2d3142" font-family="'Geist',sans-serif" font-size="12" font-weight="600" text-anchor="middle">Gradio Space</text><text x="180.0" y="440.0" fill="#4f5d75" font-family="'Geist Mono',monospace" font-size="9" font-weight="400" text-anchor="middle">separate runtime</text><rect x="448" y="288" width="200" height="80" rx="6" fill="#f5f5f5" stroke="#4f5d75"/><text x="548.0" y="326.0" fill="#2d3142" font-family="'Geist',sans-serif" font-size="12" font-weight="600" text-anchor="middle">Conversion</text><text x="548.0" y="344.0" fill="#4f5d75" font-family="'Geist Mono',monospace" font-size="9" font-weight="400" text-anchor="middle">render and export</text><rect x="800" y="288" width="240" height="80" rx="6" fill="rgba(191,69,32,0.08)" stroke="#bf4520"/><text x="920.0" y="326.0" fill="#2d3142" font-family="'Geist',sans-serif" font-size="12" font-weight="600" text-anchor="middle">Layout + OCR</text><text x="920.0" y="344.0" fill="#4f5d75" font-family="'Geist Mono',monospace" font-size="9" font-weight="400" text-anchor="middle">V3 → Xiaomi</text><rect x="448" y="480" width="200" height="80" rx="6" fill="#f5f5f5" stroke="#4f5d75"/><text x="548.0" y="518.0" fill="#2d3142" font-family="'Geist',sans-serif" font-size="12" font-weight="600" text-anchor="middle">Result files</text><text x="548.0" y="536.0" fill="#4f5d75" font-family="'Geist Mono',monospace" font-size="9" font-weight="400" text-anchor="middle">local or temporary</text></svg>
+    </div><p style="font-size:0.85rem;color:#4f5d75;line-height:1.6;max-width:70ch">The apps run separate engine instances. The Space has not been deployed; local processing does not fall back online. See <a href="../../models.md">model details</a>.</p>
+  </div>
+</body>
+</html>
