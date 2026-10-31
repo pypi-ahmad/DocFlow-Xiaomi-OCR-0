@@ -15,17 +15,23 @@ GitHub repository: [pypi-ahmad/DocFlow-Xiaomi-OCR-0](https://github.com/pypi-ahm
 
 Read [how the models work](docs/models.md) for their official references and how DocFlow combines them.
 
-## Native Windows setup
+## Setup and use on Windows
 
-Requires Python 3.12, uv and an NVIDIA GPU with a compatible driver. No Docker or WSL.
+Install Git, Python 3.12 and [uv](https://docs.astral.sh/uv/getting-started/installation/). You also need an NVIDIA GPU with a compatible driver. No Docker or WSL is required.
+
+Clone the repository and run setup in PowerShell:
 
 ```powershell
+git clone https://github.com/pypi-ahmad/DocFlow-Xiaomi-OCR-0.git
+cd DocFlow-Xiaomi-OCR-0
 uv sync --python 3.12
 uv run python -m scripts.setup-models
 .\launch.cmd
 ```
 
 Setup downloads pinned model snapshots. Normal launches use local files only. Open http://127.0.0.1:8472. Models load on first conversion; saved results can be opened without loading models.
+
+Upload a document, select its pages and start conversion. Review the results in the output tabs, then download individual outputs or the document ZIP. To launch again later, open PowerShell in the cloned folder and run `.\launch.cmd`.
 
 PDF, PNG, JPEG, GIF, TIFF and WebP inputs support page selection, batches, annotations, Markdown, HTML, JSON, chunks and ZIP exports. Chat, classification and business-field extraction are excluded.
 
