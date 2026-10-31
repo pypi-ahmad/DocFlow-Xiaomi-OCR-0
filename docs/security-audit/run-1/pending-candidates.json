@@ -1,0 +1,90 @@
+[
+  {
+    "verdict": "needs_validation",
+    "fingerprint": "docflow:page-selection-after-pdf-render",
+    "title": "Page selection happens after PDF rendering",
+    "description": "prepare and convert filter selected pages only after page_images renders preceding PDF pages. Shared-service impact is not demonstrated.",
+    "claimed_root_cause": "prepare and convert filter selected pages only after page_images renders preceding PDF pages.",
+    "trace": [
+      {
+        "kind": "entrypoint",
+        "file": "app.py",
+        "line": 84,
+        "scope": "event",
+        "description": "prepare and convert filter selected pages only after page_images renders preceding PDF pages."
+      },
+      {
+        "kind": "propagation",
+        "file": "docflow/space_ui.py",
+        "line": 34,
+        "scope": "prepare",
+        "description": "prepare and convert filter selected pages only after page_images renders preceding PDF pages."
+      },
+      {
+        "kind": "sink",
+        "file": "docflow/conversion.py",
+        "line": 33,
+        "scope": "page_images",
+        "description": "prepare and convert filter selected pages only after page_images renders preceding PDF pages."
+      }
+    ],
+    "evidence": [
+      {
+        "file": "docflow/conversion.py",
+        "line": 33,
+        "description": "prepare and convert filter selected pages only after page_images renders preceding PDF pages."
+      }
+    ],
+    "blockers": [
+      "Effective deployed worker isolation, library guards and cross-user consequences are unverified; no independently retained bounded runtime evidence."
+    ],
+    "validation_plan": {
+      "local": "Use a strict offline sandbox with mocked PDF render counters or image metadata to observe the minimum extra-work/allocation-order difference without expensive documents.",
+      "deployment": "Owner may inspect existing worker/library/resource-limit configuration without sending audit traffic."
+    }
+  },
+  {
+    "verdict": "needs_validation",
+    "fingerprint": "docflow:decoded-image-allocation-before-budget",
+    "title": "RGB expansion precedes a pixel budget",
+    "description": "Image conversion expands the original frame before thumbnailing without an application pixel limit. Shared-service impact is not demonstrated.",
+    "claimed_root_cause": "Image conversion expands the original frame before thumbnailing without an application pixel limit.",
+    "trace": [
+      {
+        "kind": "entrypoint",
+        "file": "app.py",
+        "line": 63,
+        "scope": "event",
+        "description": "Image conversion expands the original frame before thumbnailing without an application pixel limit."
+      },
+      {
+        "kind": "propagation",
+        "file": "docflow/space_ui.py",
+        "line": 30,
+        "scope": "prepare",
+        "description": "Image conversion expands the original frame before thumbnailing without an application pixel limit."
+      },
+      {
+        "kind": "sink",
+        "file": "docflow/conversion.py",
+        "line": 45,
+        "scope": "page_images",
+        "description": "Image conversion expands the original frame before thumbnailing without an application pixel limit."
+      }
+    ],
+    "evidence": [
+      {
+        "file": "docflow/conversion.py",
+        "line": 45,
+        "description": "Image conversion expands the original frame before thumbnailing without an application pixel limit."
+      }
+    ],
+    "blockers": [
+      "Effective deployed worker isolation, library guards and cross-user consequences are unverified; no independently retained bounded runtime evidence."
+    ],
+    "validation_plan": {
+      "local": "Use a strict offline sandbox with mocked PDF render counters or image metadata to observe the minimum extra-work/allocation-order difference without expensive documents.",
+      "deployment": "Owner may inspect existing worker/library/resource-limit configuration without sending audit traffic."
+    }
+  }
+]

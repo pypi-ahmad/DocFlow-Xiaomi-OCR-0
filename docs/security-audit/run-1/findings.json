@@ -1,0 +1,93 @@
+[
+  {
+    "verdict": "rejected",
+    "fingerprint": "docflow:decoded-image-allocation-before-budget",
+    "title": "Explicit pixel guard added before RGB expansion",
+    "description": "Source-grounded pre-remediation resource hypothesis with a local corrective change; fresh independent final source verification passed.",
+    "claimed_root_cause": "The original implementation expanded image frames before an application-defined pixel budget.",
+    "trace": [
+      {
+        "kind": "entrypoint",
+        "file": "app.py",
+        "line": 63,
+        "scope": "uploads",
+        "description": "Accepts image documents."
+      },
+      {
+        "kind": "propagation",
+        "file": "docflow/space_ui.py",
+        "line": 33,
+        "scope": "prepare",
+        "description": "Metadata counting uses the shared page_count path."
+      },
+      {
+        "kind": "sink",
+        "file": "docflow/conversion.py",
+        "line": 68,
+        "scope": "page_images",
+        "description": "Checks each selected frame size before RGB conversion."
+      }
+    ],
+    "evidence": [
+      {
+        "file": "docflow/conversion.py",
+        "line": 40,
+        "description": "Metadata preflight checks the image size."
+      },
+      {
+        "file": "runtime/server.py",
+        "line": 41,
+        "description": "Worker checks source size before RGB conversion."
+      },
+      {
+        "file": "docflow/image_limits.py",
+        "line": 9,
+        "description": "Rejects nonpositive or greater than forty-million-pixel dimensions."
+      }
+    ],
+    "reason": "The corrected source applies the pixel guard before the specified RGB allocation in both document rendering and the local worker. Real decoder internals and shared-service containment are not fully validated, so this is a corrected source lead rather than a confirmed historical outage."
+  },
+  {
+    "verdict": "rejected",
+    "fingerprint": "docflow:page-selection-after-pdf-render",
+    "title": "Skipped PDF rasterization removed in local source",
+    "description": "Source-grounded pre-remediation resource hypothesis with a local corrective change; fresh independent final source verification passed.",
+    "claimed_root_cause": "The original implementation filtered page ranges after rendering.",
+    "trace": [
+      {
+        "kind": "entrypoint",
+        "file": "app.py",
+        "line": 84,
+        "scope": "Convert",
+        "description": "Public selected range enters preflight."
+      },
+      {
+        "kind": "propagation",
+        "file": "docflow/space_ui.py",
+        "line": 33,
+        "scope": "prepare",
+        "description": "Counts metadata pages without rendering."
+      },
+      {
+        "kind": "sink",
+        "file": "docflow/conversion.py",
+        "line": 52,
+        "scope": "page_images",
+        "description": "Indexes only requested PDF pages before rendering."
+      }
+    ],
+    "evidence": [
+      {
+        "file": "docflow/conversion.py",
+        "line": 28,
+        "description": "Range is restricted before PDF page selection."
+      },
+      {
+        "file": "docflow/conversion.py",
+        "line": 97,
+        "description": "Conversion passes the selected range and preserves original page numbers."
+      }
+    ],
+    "reason": "The pre-remediation source hypothesis is no longer an active path in the corrected worktree. Shared-service outage was never demonstrated; this verdict records a corrected source lead, not a statement that the old code was safe."
+  }
+]

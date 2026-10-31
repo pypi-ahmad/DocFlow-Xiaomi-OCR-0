@@ -1,0 +1,5 @@
+param([ValidateSet('coverage','findings')][string]$Kind)
+$validator = if ($Kind -eq 'coverage') { '/skill/validate-coverage-ledger.cjs' } else { '/skill/validate-findings.cjs' }
+$inputFile = if ($Kind -eq 'coverage') { '/audit/coverage-ledger.json' } else { '/audit/findings.json' }
+docker run --rm --pull never --network none --read-only --cap-drop ALL --security-opt no-new-privileges --pids-limit 32 --memory 256m --cpus 1 --ulimit cpu=20 --ulimit fsize=5242880 --ulimit nofile=64:64 --tmpfs /scratch:rw,noexec,nosuid,size=32m,uid=1000,gid=1000 --user 1000:1000 --mount 'type=bind,source=C:\Users\ahmad\.agents\skills\security-audit,target=/skill,readonly' --mount 'type=bind,source=D:\Workspace\Github\DocFlow NIM\docs\security-audit\run-1,target=/audit,readonly' --entrypoint /usr/bin/env unclecode/crawl4ai:latest -i PATH=/usr/local/bin:/usr/bin:/bin HOME=/scratch TMPDIR=/scratch timeout 45s /usr/local/lib/python3.12/site-packages/playwright/driver/node $validator $inputFile
+exit $LASTEXITCODE

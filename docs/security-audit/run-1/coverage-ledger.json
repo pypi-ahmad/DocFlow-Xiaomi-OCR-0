@@ -1,0 +1,2041 @@
+[
+  {
+    "coverage_id": "app.py%23events::app.py%23gr.State::public::ATTACK-CLASSES.md%23Access%20control",
+    "canonical_refs": {
+      "surface": "app.py#events",
+      "boundary": "app.py#gr.State",
+      "subsystem": "public",
+      "attack_class": "ATTACK-CLASSES.md#Access control"
+    },
+    "surface": "app.py#events",
+    "boundary": "app.py#gr.State",
+    "subsystem": "public",
+    "attack_class": "ATTACK-CLASSES.md#Access control",
+    "starting_paths": [
+      "app.py",
+      "docflow/space_ui.py",
+      "docflow/conversion.py",
+      "tests/test_space.py"
+    ],
+    "ordinary_attack_class_block": "ATTACK-CLASSES.md#Access control",
+    "selected_companion_blocks": [],
+    "excluded_blocks": [
+      {
+        "block": "PROTOCOLS-RPC-AND-MESSAGING.md",
+        "reason": "No first-party custom framing/broker implementation."
+      },
+      {
+        "block": "MEMORY-SAFETY-AND-BINARY.md",
+        "reason": "Native decoder implementations are dependencies; first-party bounds reviewed under resource handling."
+      }
+    ],
+    "prior_status": "none",
+    "attempts": [],
+    "wave": 1,
+    "status": "blocked",
+    "agent_id": "hunt_public",
+    "reviewed_paths": [
+      "app.py",
+      "docflow/space_ui.py",
+      "docflow/conversion.py",
+      "tests/test_space.py"
+    ],
+    "local_checks": [
+      {
+        "agent_id": "hunt_public",
+        "reviewed_paths": [
+          "app.py",
+          "docflow/space_ui.py",
+          "docflow/conversion.py",
+          "tests/test_space.py"
+        ],
+        "invariant": "Preserve input-to-data/authority/resource boundary under lower-trust input.",
+        "method": "source",
+        "artifact": null,
+        "result": "Server-held State roots, UUID job paths and numeric/fixed artifact names confine first-party paths; framework State/file/cache behavior unavailable locally."
+      }
+    ],
+    "result_fingerprints": [],
+    "unresolved": [
+      "Framework/runtime/advisory facts unverified; no demonstrated violation."
+    ],
+    "planned_owner": "hunt_public"
+  },
+  {
+    "coverage_id": "app.py%23events::app.py%23gr.State::public::ATTACK-CLASSES.md%23Business%20logic",
+    "canonical_refs": {
+      "surface": "app.py#events",
+      "boundary": "app.py#gr.State",
+      "subsystem": "public",
+      "attack_class": "ATTACK-CLASSES.md#Business logic"
+    },
+    "surface": "app.py#events",
+    "boundary": "app.py#gr.State",
+    "subsystem": "public",
+    "attack_class": "ATTACK-CLASSES.md#Business logic",
+    "starting_paths": [
+      "app.py",
+      "docflow/space_ui.py",
+      "docflow/conversion.py",
+      "tests/test_space.py"
+    ],
+    "ordinary_attack_class_block": "ATTACK-CLASSES.md#Business logic",
+    "selected_companion_blocks": [],
+    "excluded_blocks": [
+      {
+        "block": "PROTOCOLS-RPC-AND-MESSAGING.md",
+        "reason": "No first-party custom framing/broker implementation."
+      },
+      {
+        "block": "MEMORY-SAFETY-AND-BINARY.md",
+        "reason": "Native decoder implementations are dependencies; first-party bounds reviewed under resource handling."
+      }
+    ],
+    "prior_status": "none",
+    "attempts": [],
+    "wave": 1,
+    "status": "covered",
+    "agent_id": "hunt_public",
+    "reviewed_paths": [
+      "app.py",
+      "docflow/space_ui.py",
+      "docflow/conversion.py",
+      "tests/test_space.py"
+    ],
+    "local_checks": [
+      {
+        "agent_id": "hunt_public",
+        "reviewed_paths": [
+          "app.py",
+          "docflow/space_ui.py",
+          "docflow/conversion.py",
+          "tests/test_space.py"
+        ],
+        "invariant": "Preserve input-to-data/authority/resource boundary under lower-trust input.",
+        "method": "source",
+        "artifact": null,
+        "result": "Server-held State roots, UUID job paths and numeric/fixed artifact names confine first-party paths; framework State/file/cache behavior unavailable locally."
+      }
+    ],
+    "result_fingerprints": [],
+    "unresolved": [],
+    "planned_owner": "hunt_public"
+  },
+  {
+    "coverage_id": "app.py%23events::app.py%23gr.State::public::ATTACK-CLASSES.md%23Feature%20abuse%20and%20data%20leakage",
+    "canonical_refs": {
+      "surface": "app.py#events",
+      "boundary": "app.py#gr.State",
+      "subsystem": "public",
+      "attack_class": "ATTACK-CLASSES.md#Feature abuse and data leakage"
+    },
+    "surface": "app.py#events",
+    "boundary": "app.py#gr.State",
+    "subsystem": "public",
+    "attack_class": "ATTACK-CLASSES.md#Feature abuse and data leakage",
+    "starting_paths": [
+      "app.py",
+      "docflow/space_ui.py",
+      "docflow/conversion.py",
+      "tests/test_space.py"
+    ],
+    "ordinary_attack_class_block": "ATTACK-CLASSES.md#Feature abuse and data leakage",
+    "selected_companion_blocks": [],
+    "excluded_blocks": [
+      {
+        "block": "PROTOCOLS-RPC-AND-MESSAGING.md",
+        "reason": "No first-party custom framing/broker implementation."
+      },
+      {
+        "block": "MEMORY-SAFETY-AND-BINARY.md",
+        "reason": "Native decoder implementations are dependencies; first-party bounds reviewed under resource handling."
+      }
+    ],
+    "prior_status": "none",
+    "attempts": [],
+    "wave": 1,
+    "status": "blocked",
+    "agent_id": "hunt_public",
+    "reviewed_paths": [
+      "app.py",
+      "docflow/space_ui.py",
+      "docflow/conversion.py",
+      "tests/test_space.py"
+    ],
+    "local_checks": [
+      {
+        "agent_id": "hunt_public",
+        "reviewed_paths": [
+          "app.py",
+          "docflow/space_ui.py",
+          "docflow/conversion.py",
+          "tests/test_space.py"
+        ],
+        "invariant": "Preserve input-to-data/authority/resource boundary under lower-trust input.",
+        "method": "source",
+        "artifact": null,
+        "result": "Server-held State roots, UUID job paths and numeric/fixed artifact names confine first-party paths; framework State/file/cache behavior unavailable locally."
+      }
+    ],
+    "result_fingerprints": [],
+    "unresolved": [
+      "Framework/runtime/advisory facts unverified; no demonstrated violation."
+    ],
+    "planned_owner": "hunt_public"
+  },
+  {
+    "coverage_id": "app.py%23events::app.py%23gr.State::public::ATTACK-CLASSES.md%23Resource%20and%20file%20handling",
+    "canonical_refs": {
+      "surface": "app.py#events",
+      "boundary": "app.py#gr.State",
+      "subsystem": "public",
+      "attack_class": "ATTACK-CLASSES.md#Resource and file handling"
+    },
+    "surface": "app.py#events",
+    "boundary": "app.py#gr.State",
+    "subsystem": "public",
+    "attack_class": "ATTACK-CLASSES.md#Resource and file handling",
+    "starting_paths": [
+      "app.py",
+      "docflow/space_ui.py",
+      "docflow/conversion.py",
+      "tests/test_space.py"
+    ],
+    "ordinary_attack_class_block": "ATTACK-CLASSES.md#Resource and file handling",
+    "selected_companion_blocks": [],
+    "excluded_blocks": [
+      {
+        "block": "PROTOCOLS-RPC-AND-MESSAGING.md",
+        "reason": "No first-party custom framing/broker implementation."
+      },
+      {
+        "block": "MEMORY-SAFETY-AND-BINARY.md",
+        "reason": "Native decoder implementations are dependencies; first-party bounds reviewed under resource handling."
+      }
+    ],
+    "prior_status": "none",
+    "attempts": [],
+    "wave": 1,
+    "status": "covered",
+    "agent_id": "hunt_public",
+    "reviewed_paths": [
+      "app.py",
+      "docflow/space_ui.py",
+      "docflow/conversion.py",
+      "tests/test_space.py"
+    ],
+    "local_checks": [
+      {
+        "agent_id": "hunt_public",
+        "reviewed_paths": [
+          "app.py",
+          "docflow/space_ui.py",
+          "docflow/conversion.py",
+          "tests/test_space.py"
+        ],
+        "invariant": "Preserve input-to-data/authority/resource boundary under lower-trust input.",
+        "method": "source",
+        "artifact": null,
+        "result": "Server-held State roots, UUID job paths and numeric/fixed artifact names confine first-party paths; framework State/file/cache behavior unavailable locally."
+      }
+    ],
+    "result_fingerprints": [],
+    "unresolved": [],
+    "planned_owner": "hunt_public"
+  },
+  {
+    "coverage_id": "app.py%23events::app.py%23gr.State::public::DATA-ISOLATION-AND-LIFECYCLE.md%23Blob%20and%20signed-reference%20overreach",
+    "canonical_refs": {
+      "surface": "app.py#events",
+      "boundary": "app.py#gr.State",
+      "subsystem": "public",
+      "attack_class": "DATA-ISOLATION-AND-LIFECYCLE.md#Blob and signed-reference overreach"
+    },
+    "surface": "app.py#events",
+    "boundary": "app.py#gr.State",
+    "subsystem": "public",
+    "attack_class": "DATA-ISOLATION-AND-LIFECYCLE.md#Blob and signed-reference overreach",
+    "starting_paths": [
+      "app.py",
+      "docflow/space_ui.py",
+      "docflow/conversion.py",
+      "tests/test_space.py"
+    ],
+    "ordinary_attack_class_block": "ATTACK-CLASSES.md#Access control",
+    "selected_companion_blocks": [
+      "DATA-ISOLATION-AND-LIFECYCLE.md#Core discipline",
+      "DATA-ISOLATION-AND-LIFECYCLE.md#Blob and signed-reference overreach",
+      "DATA-ISOLATION-AND-LIFECYCLE.md#Universal moves",
+      "DATA-ISOLATION-AND-LIFECYCLE.md#Validation rules"
+    ],
+    "excluded_blocks": [
+      {
+        "block": "PROTOCOLS-RPC-AND-MESSAGING.md",
+        "reason": "No first-party custom framing/broker implementation."
+      },
+      {
+        "block": "MEMORY-SAFETY-AND-BINARY.md",
+        "reason": "Native decoder implementations are dependencies; first-party bounds reviewed under resource handling."
+      }
+    ],
+    "prior_status": "none",
+    "attempts": [],
+    "wave": 1,
+    "status": "blocked",
+    "agent_id": "hunt_public",
+    "reviewed_paths": [
+      "app.py",
+      "docflow/space_ui.py",
+      "docflow/conversion.py",
+      "tests/test_space.py"
+    ],
+    "local_checks": [
+      {
+        "agent_id": "hunt_public",
+        "reviewed_paths": [
+          "app.py",
+          "docflow/space_ui.py",
+          "docflow/conversion.py",
+          "tests/test_space.py"
+        ],
+        "invariant": "Preserve input-to-data/authority/resource boundary under lower-trust input.",
+        "method": "source",
+        "artifact": null,
+        "result": "Server-held State roots, UUID job paths and numeric/fixed artifact names confine first-party paths; framework State/file/cache behavior unavailable locally."
+      }
+    ],
+    "result_fingerprints": [],
+    "unresolved": [
+      "Framework/runtime/advisory facts unverified; no demonstrated violation."
+    ],
+    "planned_owner": "hunt_public"
+  },
+  {
+    "coverage_id": "app.py%23events::app.py%23gr.State::public::DATA-ISOLATION-AND-LIFECYCLE.md%23Composite-key%20and%20namespace%20collision",
+    "canonical_refs": {
+      "surface": "app.py#events",
+      "boundary": "app.py#gr.State",
+      "subsystem": "public",
+      "attack_class": "DATA-ISOLATION-AND-LIFECYCLE.md#Composite-key and namespace collision"
+    },
+    "surface": "app.py#events",
+    "boundary": "app.py#gr.State",
+    "subsystem": "public",
+    "attack_class": "DATA-ISOLATION-AND-LIFECYCLE.md#Composite-key and namespace collision",
+    "starting_paths": [
+      "app.py",
+      "docflow/space_ui.py",
+      "docflow/conversion.py",
+      "tests/test_space.py"
+    ],
+    "ordinary_attack_class_block": "ATTACK-CLASSES.md#Access control",
+    "selected_companion_blocks": [
+      "DATA-ISOLATION-AND-LIFECYCLE.md#Core discipline",
+      "DATA-ISOLATION-AND-LIFECYCLE.md#Composite-key and namespace collision",
+      "DATA-ISOLATION-AND-LIFECYCLE.md#Universal moves",
+      "DATA-ISOLATION-AND-LIFECYCLE.md#Validation rules"
+    ],
+    "excluded_blocks": [
+      {
+        "block": "PROTOCOLS-RPC-AND-MESSAGING.md",
+        "reason": "No first-party custom framing/broker implementation."
+      },
+      {
+        "block": "MEMORY-SAFETY-AND-BINARY.md",
+        "reason": "Native decoder implementations are dependencies; first-party bounds reviewed under resource handling."
+      }
+    ],
+    "prior_status": "none",
+    "attempts": [],
+    "wave": 1,
+    "status": "covered",
+    "agent_id": "hunt_public",
+    "reviewed_paths": [
+      "app.py",
+      "docflow/space_ui.py",
+      "docflow/conversion.py",
+      "tests/test_space.py"
+    ],
+    "local_checks": [
+      {
+        "agent_id": "hunt_public",
+        "reviewed_paths": [
+          "app.py",
+          "docflow/space_ui.py",
+          "docflow/conversion.py",
+          "tests/test_space.py"
+        ],
+        "invariant": "Preserve input-to-data/authority/resource boundary under lower-trust input.",
+        "method": "source",
+        "artifact": null,
+        "result": "Server-held State roots, UUID job paths and numeric/fixed artifact names confine first-party paths; framework State/file/cache behavior unavailable locally."
+      }
+    ],
+    "result_fingerprints": [],
+    "unresolved": [],
+    "planned_owner": "hunt_public"
+  },
+  {
+    "coverage_id": "app.py%23events::app.py%23gr.State::public::DATA-ISOLATION-AND-LIFECYCLE.md%23Missing%20tenant%20or%20owner%20enforcement",
+    "canonical_refs": {
+      "surface": "app.py#events",
+      "boundary": "app.py#gr.State",
+      "subsystem": "public",
+      "attack_class": "DATA-ISOLATION-AND-LIFECYCLE.md#Missing tenant or owner enforcement"
+    },
+    "surface": "app.py#events",
+    "boundary": "app.py#gr.State",
+    "subsystem": "public",
+    "attack_class": "DATA-ISOLATION-AND-LIFECYCLE.md#Missing tenant or owner enforcement",
+    "starting_paths": [
+      "app.py",
+      "docflow/space_ui.py",
+      "docflow/conversion.py",
+      "tests/test_space.py"
+    ],
+    "ordinary_attack_class_block": "ATTACK-CLASSES.md#Access control",
+    "selected_companion_blocks": [
+      "DATA-ISOLATION-AND-LIFECYCLE.md#Core discipline",
+      "DATA-ISOLATION-AND-LIFECYCLE.md#Missing tenant or owner enforcement",
+      "DATA-ISOLATION-AND-LIFECYCLE.md#Universal moves",
+      "DATA-ISOLATION-AND-LIFECYCLE.md#Validation rules"
+    ],
+    "excluded_blocks": [
+      {
+        "block": "PROTOCOLS-RPC-AND-MESSAGING.md",
+        "reason": "No first-party custom framing/broker implementation."
+      },
+      {
+        "block": "MEMORY-SAFETY-AND-BINARY.md",
+        "reason": "Native decoder implementations are dependencies; first-party bounds reviewed under resource handling."
+      }
+    ],
+    "prior_status": "none",
+    "attempts": [],
+    "wave": 1,
+    "status": "blocked",
+    "agent_id": "hunt_public",
+    "reviewed_paths": [
+      "app.py",
+      "docflow/space_ui.py",
+      "docflow/conversion.py",
+      "tests/test_space.py"
+    ],
+    "local_checks": [
+      {
+        "agent_id": "hunt_public",
+        "reviewed_paths": [
+          "app.py",
+          "docflow/space_ui.py",
+          "docflow/conversion.py",
+          "tests/test_space.py"
+        ],
+        "invariant": "Preserve input-to-data/authority/resource boundary under lower-trust input.",
+        "method": "source",
+        "artifact": null,
+        "result": "Server-held State roots, UUID job paths and numeric/fixed artifact names confine first-party paths; framework State/file/cache behavior unavailable locally."
+      }
+    ],
+    "result_fingerprints": [],
+    "unresolved": [
+      "Framework/runtime/advisory facts unverified; no demonstrated violation."
+    ],
+    "planned_owner": "hunt_public"
+  },
+  {
+    "coverage_id": "app.py%23events::app.py%23gr.State::public::DATA-ISOLATION-AND-LIFECYCLE.md%23Retention%20and%20queued-work%20overrun",
+    "canonical_refs": {
+      "surface": "app.py#events",
+      "boundary": "app.py#gr.State",
+      "subsystem": "public",
+      "attack_class": "DATA-ISOLATION-AND-LIFECYCLE.md#Retention and queued-work overrun"
+    },
+    "surface": "app.py#events",
+    "boundary": "app.py#gr.State",
+    "subsystem": "public",
+    "attack_class": "DATA-ISOLATION-AND-LIFECYCLE.md#Retention and queued-work overrun",
+    "starting_paths": [
+      "app.py",
+      "docflow/space_ui.py",
+      "docflow/conversion.py",
+      "tests/test_space.py"
+    ],
+    "ordinary_attack_class_block": "ATTACK-CLASSES.md#Access control",
+    "selected_companion_blocks": [
+      "DATA-ISOLATION-AND-LIFECYCLE.md#Core discipline",
+      "DATA-ISOLATION-AND-LIFECYCLE.md#Retention and queued-work overrun",
+      "DATA-ISOLATION-AND-LIFECYCLE.md#Universal moves",
+      "DATA-ISOLATION-AND-LIFECYCLE.md#Validation rules"
+    ],
+    "excluded_blocks": [
+      {
+        "block": "PROTOCOLS-RPC-AND-MESSAGING.md",
+        "reason": "No first-party custom framing/broker implementation."
+      },
+      {
+        "block": "MEMORY-SAFETY-AND-BINARY.md",
+        "reason": "Native decoder implementations are dependencies; first-party bounds reviewed under resource handling."
+      }
+    ],
+    "prior_status": "none",
+    "attempts": [],
+    "wave": 1,
+    "status": "blocked",
+    "agent_id": "hunt_public",
+    "reviewed_paths": [
+      "app.py",
+      "docflow/space_ui.py",
+      "docflow/conversion.py",
+      "tests/test_space.py"
+    ],
+    "local_checks": [
+      {
+        "agent_id": "hunt_public",
+        "reviewed_paths": [
+          "app.py",
+          "docflow/space_ui.py",
+          "docflow/conversion.py",
+          "tests/test_space.py"
+        ],
+        "invariant": "Preserve input-to-data/authority/resource boundary under lower-trust input.",
+        "method": "source",
+        "artifact": null,
+        "result": "Server-held State roots, UUID job paths and numeric/fixed artifact names confine first-party paths; framework State/file/cache behavior unavailable locally."
+      }
+    ],
+    "result_fingerprints": [],
+    "unresolved": [
+      "Framework/runtime/advisory facts unverified; no demonstrated violation."
+    ],
+    "planned_owner": "hunt_public"
+  },
+  {
+    "coverage_id": "app.py%23snapshot_download::docflow%2Fbackends.py%23MODEL_REVISION::build::ATTACK-CLASSES.md%23Obvious%20things",
+    "canonical_refs": {
+      "surface": "app.py#snapshot_download",
+      "boundary": "docflow/backends.py#MODEL_REVISION",
+      "subsystem": "build",
+      "attack_class": "ATTACK-CLASSES.md#Obvious things"
+    },
+    "surface": "app.py#snapshot_download",
+    "boundary": "docflow/backends.py#MODEL_REVISION",
+    "subsystem": "build",
+    "attack_class": "ATTACK-CLASSES.md#Obvious things",
+    "starting_paths": [
+      "app.py",
+      "runtime/Dockerfile",
+      "requirements.txt",
+      "pyproject.toml",
+      "uv.lock",
+      "README.md",
+      "docs/user-guide.md",
+      ".gitignore"
+    ],
+    "ordinary_attack_class_block": "ATTACK-CLASSES.md#Obvious things",
+    "selected_companion_blocks": [],
+    "excluded_blocks": [
+      {
+        "block": "PROTOCOLS-RPC-AND-MESSAGING.md",
+        "reason": "No first-party custom framing/broker implementation."
+      },
+      {
+        "block": "MEMORY-SAFETY-AND-BINARY.md",
+        "reason": "Native decoder implementations are dependencies; first-party bounds reviewed under resource handling."
+      }
+    ],
+    "prior_status": "none",
+    "attempts": [],
+    "wave": 1,
+    "status": "blocked",
+    "agent_id": "hunt_supply",
+    "reviewed_paths": [
+      "app.py",
+      "runtime/Dockerfile",
+      "requirements.txt",
+      "pyproject.toml",
+      "uv.lock",
+      "README.md",
+      "docs/user-guide.md",
+      ".gitignore"
+    ],
+    "local_checks": [
+      {
+        "agent_id": "hunt_supply",
+        "reviewed_paths": [
+          "app.py",
+          "runtime/Dockerfile",
+          "requirements.txt",
+          "pyproject.toml",
+          "uv.lock",
+          "README.md",
+          "docs/user-guide.md",
+          ".gitignore"
+        ],
+        "invariant": "Preserve input-to-data/authority/resource boundary under lower-trust input.",
+        "method": "source",
+        "artifact": null,
+        "result": "Fixed immutable NVIDIA model repository/revision and ordinary PyPI sources. No lower-trust dependency substitution or secret-bearing build artifact demonstrated. Advisory database and deployed framework controls not checked."
+      }
+    ],
+    "result_fingerprints": [],
+    "unresolved": [
+      "Framework/runtime/advisory facts unverified; no demonstrated violation."
+    ],
+    "planned_owner": "hunt_supply"
+  },
+  {
+    "coverage_id": "app.py%23snapshot_download::docflow%2Fbackends.py%23MODEL_REVISION::build::SUPPLY-CHAIN-AND-RELEASE.md%23Build-context%20inclusion",
+    "canonical_refs": {
+      "surface": "app.py#snapshot_download",
+      "boundary": "docflow/backends.py#MODEL_REVISION",
+      "subsystem": "build",
+      "attack_class": "SUPPLY-CHAIN-AND-RELEASE.md#Build-context inclusion"
+    },
+    "surface": "app.py#snapshot_download",
+    "boundary": "docflow/backends.py#MODEL_REVISION",
+    "subsystem": "build",
+    "attack_class": "SUPPLY-CHAIN-AND-RELEASE.md#Build-context inclusion",
+    "starting_paths": [
+      "app.py",
+      "runtime/Dockerfile",
+      "requirements.txt",
+      "pyproject.toml",
+      "uv.lock",
+      "README.md",
+      "docs/user-guide.md",
+      ".gitignore"
+    ],
+    "ordinary_attack_class_block": "ATTACK-CLASSES.md#Obvious things",
+    "selected_companion_blocks": [
+      "SUPPLY-CHAIN-AND-RELEASE.md#Core discipline",
+      "SUPPLY-CHAIN-AND-RELEASE.md#Build-context inclusion",
+      "SUPPLY-CHAIN-AND-RELEASE.md#Universal moves",
+      "SUPPLY-CHAIN-AND-RELEASE.md#Validation rules"
+    ],
+    "excluded_blocks": [
+      {
+        "block": "PROTOCOLS-RPC-AND-MESSAGING.md",
+        "reason": "No first-party custom framing/broker implementation."
+      },
+      {
+        "block": "MEMORY-SAFETY-AND-BINARY.md",
+        "reason": "Native decoder implementations are dependencies; first-party bounds reviewed under resource handling."
+      }
+    ],
+    "prior_status": "none",
+    "attempts": [],
+    "wave": 1,
+    "status": "covered",
+    "agent_id": "hunt_supply",
+    "reviewed_paths": [
+      "app.py",
+      "runtime/Dockerfile",
+      "requirements.txt",
+      "pyproject.toml",
+      "uv.lock",
+      "README.md",
+      "docs/user-guide.md",
+      ".gitignore"
+    ],
+    "local_checks": [
+      {
+        "agent_id": "hunt_supply",
+        "reviewed_paths": [
+          "app.py",
+          "runtime/Dockerfile",
+          "requirements.txt",
+          "pyproject.toml",
+          "uv.lock",
+          "README.md",
+          "docs/user-guide.md",
+          ".gitignore"
+        ],
+        "invariant": "Preserve input-to-data/authority/resource boundary under lower-trust input.",
+        "method": "source",
+        "artifact": null,
+        "result": "Fixed immutable NVIDIA model repository/revision and ordinary PyPI sources. No lower-trust dependency substitution or secret-bearing build artifact demonstrated. Advisory database and deployed framework controls not checked."
+      }
+    ],
+    "result_fingerprints": [],
+    "unresolved": [],
+    "planned_owner": "hunt_supply"
+  },
+  {
+    "coverage_id": "app.py%23snapshot_download::docflow%2Fbackends.py%23MODEL_REVISION::build::SUPPLY-CHAIN-AND-RELEASE.md%23Dependency%20source%20and%20namespace%20confusion",
+    "canonical_refs": {
+      "surface": "app.py#snapshot_download",
+      "boundary": "docflow/backends.py#MODEL_REVISION",
+      "subsystem": "build",
+      "attack_class": "SUPPLY-CHAIN-AND-RELEASE.md#Dependency source and namespace confusion"
+    },
+    "surface": "app.py#snapshot_download",
+    "boundary": "docflow/backends.py#MODEL_REVISION",
+    "subsystem": "build",
+    "attack_class": "SUPPLY-CHAIN-AND-RELEASE.md#Dependency source and namespace confusion",
+    "starting_paths": [
+      "app.py",
+      "runtime/Dockerfile",
+      "requirements.txt",
+      "pyproject.toml",
+      "uv.lock",
+      "README.md",
+      "docs/user-guide.md",
+      ".gitignore"
+    ],
+    "ordinary_attack_class_block": "ATTACK-CLASSES.md#Obvious things",
+    "selected_companion_blocks": [
+      "SUPPLY-CHAIN-AND-RELEASE.md#Core discipline",
+      "SUPPLY-CHAIN-AND-RELEASE.md#Dependency source and namespace confusion",
+      "SUPPLY-CHAIN-AND-RELEASE.md#Universal moves",
+      "SUPPLY-CHAIN-AND-RELEASE.md#Validation rules"
+    ],
+    "excluded_blocks": [
+      {
+        "block": "PROTOCOLS-RPC-AND-MESSAGING.md",
+        "reason": "No first-party custom framing/broker implementation."
+      },
+      {
+        "block": "MEMORY-SAFETY-AND-BINARY.md",
+        "reason": "Native decoder implementations are dependencies; first-party bounds reviewed under resource handling."
+      }
+    ],
+    "prior_status": "none",
+    "attempts": [],
+    "wave": 1,
+    "status": "covered",
+    "agent_id": "hunt_supply",
+    "reviewed_paths": [
+      "app.py",
+      "runtime/Dockerfile",
+      "requirements.txt",
+      "pyproject.toml",
+      "uv.lock",
+      "README.md",
+      "docs/user-guide.md",
+      ".gitignore"
+    ],
+    "local_checks": [
+      {
+        "agent_id": "hunt_supply",
+        "reviewed_paths": [
+          "app.py",
+          "runtime/Dockerfile",
+          "requirements.txt",
+          "pyproject.toml",
+          "uv.lock",
+          "README.md",
+          "docs/user-guide.md",
+          ".gitignore"
+        ],
+        "invariant": "Preserve input-to-data/authority/resource boundary under lower-trust input.",
+        "method": "source",
+        "artifact": null,
+        "result": "Fixed immutable NVIDIA model repository/revision and ordinary PyPI sources. No lower-trust dependency substitution or secret-bearing build artifact demonstrated. Advisory database and deployed framework controls not checked."
+      }
+    ],
+    "result_fingerprints": [],
+    "unresolved": [],
+    "planned_owner": "hunt_supply"
+  },
+  {
+    "coverage_id": "app.py%23snapshot_download::docflow%2Fbackends.py%23MODEL_REVISION::build::SUPPLY-CHAIN-AND-RELEASE.md%23Mutable%20and%20unbound%20build%20inputs",
+    "canonical_refs": {
+      "surface": "app.py#snapshot_download",
+      "boundary": "docflow/backends.py#MODEL_REVISION",
+      "subsystem": "build",
+      "attack_class": "SUPPLY-CHAIN-AND-RELEASE.md#Mutable and unbound build inputs"
+    },
+    "surface": "app.py#snapshot_download",
+    "boundary": "docflow/backends.py#MODEL_REVISION",
+    "subsystem": "build",
+    "attack_class": "SUPPLY-CHAIN-AND-RELEASE.md#Mutable and unbound build inputs",
+    "starting_paths": [
+      "app.py",
+      "runtime/Dockerfile",
+      "requirements.txt",
+      "pyproject.toml",
+      "uv.lock",
+      "README.md",
+      "docs/user-guide.md",
+      ".gitignore"
+    ],
+    "ordinary_attack_class_block": "ATTACK-CLASSES.md#Obvious things",
+    "selected_companion_blocks": [
+      "SUPPLY-CHAIN-AND-RELEASE.md#Core discipline",
+      "SUPPLY-CHAIN-AND-RELEASE.md#Mutable and unbound build inputs",
+      "SUPPLY-CHAIN-AND-RELEASE.md#Universal moves",
+      "SUPPLY-CHAIN-AND-RELEASE.md#Validation rules"
+    ],
+    "excluded_blocks": [
+      {
+        "block": "PROTOCOLS-RPC-AND-MESSAGING.md",
+        "reason": "No first-party custom framing/broker implementation."
+      },
+      {
+        "block": "MEMORY-SAFETY-AND-BINARY.md",
+        "reason": "Native decoder implementations are dependencies; first-party bounds reviewed under resource handling."
+      }
+    ],
+    "prior_status": "none",
+    "attempts": [],
+    "wave": 1,
+    "status": "covered",
+    "agent_id": "hunt_supply",
+    "reviewed_paths": [
+      "app.py",
+      "runtime/Dockerfile",
+      "requirements.txt",
+      "pyproject.toml",
+      "uv.lock",
+      "README.md",
+      "docs/user-guide.md",
+      ".gitignore"
+    ],
+    "local_checks": [
+      {
+        "agent_id": "hunt_supply",
+        "reviewed_paths": [
+          "app.py",
+          "runtime/Dockerfile",
+          "requirements.txt",
+          "pyproject.toml",
+          "uv.lock",
+          "README.md",
+          "docs/user-guide.md",
+          ".gitignore"
+        ],
+        "invariant": "Preserve input-to-data/authority/resource boundary under lower-trust input.",
+        "method": "source",
+        "artifact": null,
+        "result": "Fixed immutable NVIDIA model repository/revision and ordinary PyPI sources. No lower-trust dependency substitution or secret-bearing build artifact demonstrated. Advisory database and deployed framework controls not checked."
+      }
+    ],
+    "result_fingerprints": [],
+    "unresolved": [],
+    "planned_owner": "hunt_supply"
+  },
+  {
+    "coverage_id": "docflow%2Fconversion.py%23model%20output::docflow%2Fconversion.py%23bleach.clean::output::AI-AND-LLM.md%23Insecure%20output%20rendering",
+    "canonical_refs": {
+      "surface": "docflow/conversion.py#model output",
+      "boundary": "docflow/conversion.py#bleach.clean",
+      "subsystem": "output",
+      "attack_class": "AI-AND-LLM.md#Insecure output rendering"
+    },
+    "surface": "docflow/conversion.py#model output",
+    "boundary": "docflow/conversion.py#bleach.clean",
+    "subsystem": "output",
+    "attack_class": "AI-AND-LLM.md#Insecure output rendering",
+    "starting_paths": [
+      "docflow/conversion.py",
+      "streamlit_app.py",
+      "app.py",
+      "docflow/backends.py"
+    ],
+    "ordinary_attack_class_block": "ATTACK-CLASSES.md#Injection",
+    "selected_companion_blocks": [
+      "AI-AND-LLM.md#Core discipline",
+      "AI-AND-LLM.md#Insecure output rendering",
+      "AI-AND-LLM.md#Universal moves",
+      "AI-AND-LLM.md#Validation rules"
+    ],
+    "excluded_blocks": [
+      {
+        "block": "PROTOCOLS-RPC-AND-MESSAGING.md",
+        "reason": "No first-party custom framing/broker implementation."
+      },
+      {
+        "block": "MEMORY-SAFETY-AND-BINARY.md",
+        "reason": "Native decoder implementations are dependencies; first-party bounds reviewed under resource handling."
+      }
+    ],
+    "prior_status": "none",
+    "attempts": [],
+    "wave": 1,
+    "status": "covered",
+    "agent_id": "hunt_render",
+    "reviewed_paths": [
+      "docflow/conversion.py",
+      "streamlit_app.py",
+      "app.py",
+      "docflow/backends.py"
+    ],
+    "local_checks": [
+      {
+        "agent_id": "hunt_render",
+        "reviewed_paths": [
+          "docflow/conversion.py",
+          "streamlit_app.py",
+          "app.py",
+          "docflow/backends.py"
+        ],
+        "invariant": "Document output and credentials remain data rather than cross-principal execution or disclosure.",
+        "method": "source",
+        "artifact": null,
+        "result": "Source review found fixed network destinations, server-only key headers, hashed/fixed artifact paths, explicit Gradio sanitization, default escaped Streamlit Markdown and narrow bleach export allowlists; no surviving injection or credential disclosure candidate. No dynamic browser testing performed."
+      }
+    ],
+    "result_fingerprints": [],
+    "unresolved": [],
+    "planned_owner": "hunt_render"
+  },
+  {
+    "coverage_id": "docflow%2Fconversion.py%23model%20output::docflow%2Fconversion.py%23bleach.clean::output::ATTACK-CLASSES.md%23Cryptography%20and%20secrets",
+    "canonical_refs": {
+      "surface": "docflow/conversion.py#model output",
+      "boundary": "docflow/conversion.py#bleach.clean",
+      "subsystem": "output",
+      "attack_class": "ATTACK-CLASSES.md#Cryptography and secrets"
+    },
+    "surface": "docflow/conversion.py#model output",
+    "boundary": "docflow/conversion.py#bleach.clean",
+    "subsystem": "output",
+    "attack_class": "ATTACK-CLASSES.md#Cryptography and secrets",
+    "starting_paths": [
+      "docflow/conversion.py",
+      "streamlit_app.py",
+      "app.py",
+      "docflow/backends.py"
+    ],
+    "ordinary_attack_class_block": "ATTACK-CLASSES.md#Cryptography and secrets",
+    "selected_companion_blocks": [],
+    "excluded_blocks": [
+      {
+        "block": "PROTOCOLS-RPC-AND-MESSAGING.md",
+        "reason": "No first-party custom framing/broker implementation."
+      },
+      {
+        "block": "MEMORY-SAFETY-AND-BINARY.md",
+        "reason": "Native decoder implementations are dependencies; first-party bounds reviewed under resource handling."
+      }
+    ],
+    "prior_status": "none",
+    "attempts": [],
+    "wave": 1,
+    "status": "covered",
+    "agent_id": "hunt_render",
+    "reviewed_paths": [
+      "docflow/conversion.py",
+      "streamlit_app.py",
+      "app.py",
+      "docflow/backends.py"
+    ],
+    "local_checks": [
+      {
+        "agent_id": "hunt_render",
+        "reviewed_paths": [
+          "docflow/conversion.py",
+          "streamlit_app.py",
+          "app.py",
+          "docflow/backends.py"
+        ],
+        "invariant": "Document output and credentials remain data rather than cross-principal execution or disclosure.",
+        "method": "source",
+        "artifact": null,
+        "result": "Source review found fixed network destinations, server-only key headers, hashed/fixed artifact paths, explicit Gradio sanitization, default escaped Streamlit Markdown and narrow bleach export allowlists; no surviving injection or credential disclosure candidate. No dynamic browser testing performed."
+      }
+    ],
+    "result_fingerprints": [],
+    "unresolved": [],
+    "planned_owner": "hunt_render"
+  },
+  {
+    "coverage_id": "docflow%2Fconversion.py%23model%20output::docflow%2Fconversion.py%23bleach.clean::output::ATTACK-CLASSES.md%23Injection",
+    "canonical_refs": {
+      "surface": "docflow/conversion.py#model output",
+      "boundary": "docflow/conversion.py#bleach.clean",
+      "subsystem": "output",
+      "attack_class": "ATTACK-CLASSES.md#Injection"
+    },
+    "surface": "docflow/conversion.py#model output",
+    "boundary": "docflow/conversion.py#bleach.clean",
+    "subsystem": "output",
+    "attack_class": "ATTACK-CLASSES.md#Injection",
+    "starting_paths": [
+      "docflow/conversion.py",
+      "streamlit_app.py",
+      "app.py",
+      "docflow/backends.py"
+    ],
+    "ordinary_attack_class_block": "ATTACK-CLASSES.md#Injection",
+    "selected_companion_blocks": [],
+    "excluded_blocks": [
+      {
+        "block": "PROTOCOLS-RPC-AND-MESSAGING.md",
+        "reason": "No first-party custom framing/broker implementation."
+      },
+      {
+        "block": "MEMORY-SAFETY-AND-BINARY.md",
+        "reason": "Native decoder implementations are dependencies; first-party bounds reviewed under resource handling."
+      }
+    ],
+    "prior_status": "none",
+    "attempts": [],
+    "wave": 1,
+    "status": "covered",
+    "agent_id": "hunt_render",
+    "reviewed_paths": [
+      "docflow/conversion.py",
+      "streamlit_app.py",
+      "app.py",
+      "docflow/backends.py"
+    ],
+    "local_checks": [
+      {
+        "agent_id": "hunt_render",
+        "reviewed_paths": [
+          "docflow/conversion.py",
+          "streamlit_app.py",
+          "app.py",
+          "docflow/backends.py"
+        ],
+        "invariant": "Document output and credentials remain data rather than cross-principal execution or disclosure.",
+        "method": "source",
+        "artifact": null,
+        "result": "Source review found fixed network destinations, server-only key headers, hashed/fixed artifact paths, explicit Gradio sanitization, default escaped Streamlit Markdown and narrow bleach export allowlists; no surviving injection or credential disclosure candidate. No dynamic browser testing performed."
+      }
+    ],
+    "result_fingerprints": [],
+    "unresolved": [],
+    "planned_owner": "hunt_render"
+  },
+  {
+    "coverage_id": "docflow%2Fconversion.py%23model%20output::docflow%2Fconversion.py%23bleach.clean::output::CLIENT-SIDE.md%23DOM-based%20XSS",
+    "canonical_refs": {
+      "surface": "docflow/conversion.py#model output",
+      "boundary": "docflow/conversion.py#bleach.clean",
+      "subsystem": "output",
+      "attack_class": "CLIENT-SIDE.md#DOM-based XSS"
+    },
+    "surface": "docflow/conversion.py#model output",
+    "boundary": "docflow/conversion.py#bleach.clean",
+    "subsystem": "output",
+    "attack_class": "CLIENT-SIDE.md#DOM-based XSS",
+    "starting_paths": [
+      "docflow/conversion.py",
+      "streamlit_app.py",
+      "app.py",
+      "docflow/backends.py"
+    ],
+    "ordinary_attack_class_block": "ATTACK-CLASSES.md#Injection",
+    "selected_companion_blocks": [
+      "CLIENT-SIDE.md#Core discipline",
+      "CLIENT-SIDE.md#DOM-based XSS",
+      "CLIENT-SIDE.md#Universal moves",
+      "CLIENT-SIDE.md#Validation rules"
+    ],
+    "excluded_blocks": [
+      {
+        "block": "PROTOCOLS-RPC-AND-MESSAGING.md",
+        "reason": "No first-party custom framing/broker implementation."
+      },
+      {
+        "block": "MEMORY-SAFETY-AND-BINARY.md",
+        "reason": "Native decoder implementations are dependencies; first-party bounds reviewed under resource handling."
+      }
+    ],
+    "prior_status": "none",
+    "attempts": [],
+    "wave": 1,
+    "status": "covered",
+    "agent_id": "hunt_render",
+    "reviewed_paths": [
+      "docflow/conversion.py",
+      "streamlit_app.py",
+      "app.py",
+      "docflow/backends.py"
+    ],
+    "local_checks": [
+      {
+        "agent_id": "hunt_render",
+        "reviewed_paths": [
+          "docflow/conversion.py",
+          "streamlit_app.py",
+          "app.py",
+          "docflow/backends.py"
+        ],
+        "invariant": "Document output and credentials remain data rather than cross-principal execution or disclosure.",
+        "method": "source",
+        "artifact": null,
+        "result": "Source review found fixed network destinations, server-only key headers, hashed/fixed artifact paths, explicit Gradio sanitization, default escaped Streamlit Markdown and narrow bleach export allowlists; no surviving injection or credential disclosure candidate. No dynamic browser testing performed."
+      }
+    ],
+    "result_fingerprints": [],
+    "unresolved": [],
+    "planned_owner": "hunt_render"
+  },
+  {
+    "coverage_id": "docflow%2Fconversion.py%23page_images::docflow%2Fspace_ui.py%23prepare::parsing::ATTACK-CLASSES.md%23Business%20logic",
+    "canonical_refs": {
+      "surface": "docflow/conversion.py#page_images",
+      "boundary": "docflow/space_ui.py#prepare",
+      "subsystem": "parsing",
+      "attack_class": "ATTACK-CLASSES.md#Business logic"
+    },
+    "surface": "docflow/conversion.py#page_images",
+    "boundary": "docflow/space_ui.py#prepare",
+    "subsystem": "parsing",
+    "attack_class": "ATTACK-CLASSES.md#Business logic",
+    "starting_paths": [
+      "docflow/conversion.py",
+      "docflow/space_ui.py",
+      "app.py",
+      "runtime/server.py"
+    ],
+    "ordinary_attack_class_block": "ATTACK-CLASSES.md#Business logic",
+    "selected_companion_blocks": [],
+    "excluded_blocks": [
+      {
+        "block": "PROTOCOLS-RPC-AND-MESSAGING.md",
+        "reason": "No first-party custom framing/broker implementation."
+      },
+      {
+        "block": "MEMORY-SAFETY-AND-BINARY.md",
+        "reason": "Native decoder implementations are dependencies; first-party bounds reviewed under resource handling."
+      }
+    ],
+    "prior_status": "none",
+    "attempts": [],
+    "wave": 1,
+    "status": "candidate",
+    "agent_id": "hunt_resource",
+    "reviewed_paths": [
+      "app.py",
+      "docflow/conversion.py",
+      "docflow/space_ui.py",
+      "runtime/server.py",
+      "tests/test_document_limits.py"
+    ],
+    "local_checks": [
+      {
+        "agent_id": "hunt_resource",
+        "reviewed_paths": [
+          "docflow/conversion.py",
+          "docflow/space_ui.py",
+          "app.py",
+          "runtime/server.py"
+        ],
+        "invariant": "Preserve input-to-data/authority/resource boundary under lower-trust input.",
+        "method": "source",
+        "artifact": null,
+        "result": "Pre-remediation PDF range filtering followed rasterization; RGB expansion preceded thumbnail. Byte/frame/token/GPU limits are material controls. Independent source verifiers retained two needs_validation hypotheses without severity; parent implemented range-aware metadata preflight and pixel guards."
+      },
+      {
+        "agent_id": "verify_fix_1",
+        "reviewed_paths": [
+          "docflow/conversion.py",
+          "docflow/space_ui.py",
+          "tests/test_document_limits.py"
+        ],
+        "invariant": "Corrected source removes the pre-remediation path without asserting an unproved outage.",
+        "method": "source",
+        "artifact": null,
+        "result": "Fresh independent final verifier returned verified for corrected record and source change."
+      }
+    ],
+    "result_fingerprints": [
+      "docflow:page-selection-after-pdf-render"
+    ],
+    "unresolved": [],
+    "planned_owner": "hunt_resource",
+    "remediation_status": "mitigated_in_worktree",
+    "final_record_verdict": "rejected"
+  },
+  {
+    "coverage_id": "docflow%2Fconversion.py%23page_images::docflow%2Fspace_ui.py%23prepare::parsing::ATTACK-CLASSES.md%23Resource%20and%20file%20handling",
+    "canonical_refs": {
+      "surface": "docflow/conversion.py#page_images",
+      "boundary": "docflow/space_ui.py#prepare",
+      "subsystem": "parsing",
+      "attack_class": "ATTACK-CLASSES.md#Resource and file handling"
+    },
+    "surface": "docflow/conversion.py#page_images",
+    "boundary": "docflow/space_ui.py#prepare",
+    "subsystem": "parsing",
+    "attack_class": "ATTACK-CLASSES.md#Resource and file handling",
+    "starting_paths": [
+      "docflow/conversion.py",
+      "docflow/space_ui.py",
+      "app.py",
+      "runtime/server.py"
+    ],
+    "ordinary_attack_class_block": "ATTACK-CLASSES.md#Resource and file handling",
+    "selected_companion_blocks": [],
+    "excluded_blocks": [
+      {
+        "block": "PROTOCOLS-RPC-AND-MESSAGING.md",
+        "reason": "No first-party custom framing/broker implementation."
+      },
+      {
+        "block": "MEMORY-SAFETY-AND-BINARY.md",
+        "reason": "Native decoder implementations are dependencies; first-party bounds reviewed under resource handling."
+      }
+    ],
+    "prior_status": "none",
+    "attempts": [],
+    "wave": 1,
+    "status": "candidate",
+    "agent_id": "hunt_resource",
+    "reviewed_paths": [
+      ".dockerignore",
+      "app.py",
+      "docflow/conversion.py",
+      "docflow/image_limits.py",
+      "docflow/space_ui.py",
+      "runtime/Dockerfile",
+      "runtime/server.py",
+      "tests/test_document_limits.py"
+    ],
+    "local_checks": [
+      {
+        "agent_id": "hunt_resource",
+        "reviewed_paths": [
+          "docflow/conversion.py",
+          "docflow/space_ui.py",
+          "app.py",
+          "runtime/server.py"
+        ],
+        "invariant": "Preserve input-to-data/authority/resource boundary under lower-trust input.",
+        "method": "source",
+        "artifact": null,
+        "result": "Pre-remediation PDF range filtering followed rasterization; RGB expansion preceded thumbnail. Byte/frame/token/GPU limits are material controls. Independent source verifiers retained two needs_validation hypotheses without severity; parent implemented range-aware metadata preflight and pixel guards."
+      },
+      {
+        "agent_id": "verify_fix_2",
+        "reviewed_paths": [
+          "docflow/image_limits.py",
+          "docflow/conversion.py",
+          "runtime/server.py",
+          "runtime/Dockerfile",
+          ".dockerignore",
+          "tests/test_document_limits.py"
+        ],
+        "invariant": "Corrected source removes the pre-remediation path without asserting an unproved outage.",
+        "method": "source",
+        "artifact": null,
+        "result": "Fresh independent final verifier returned verified for corrected record and source change."
+      }
+    ],
+    "result_fingerprints": [
+      "docflow:decoded-image-allocation-before-budget"
+    ],
+    "unresolved": [],
+    "planned_owner": "hunt_resource",
+    "remediation_status": "mitigated_in_worktree",
+    "final_record_verdict": "rejected"
+  },
+  {
+    "coverage_id": "docflow%2Fconversion.py%23page_images::docflow%2Fspace_ui.py%23prepare::parsing::RESOURCE-EXHAUSTION-AND-AVAILABILITY.md%23Decompression%20and%20representation%20amplification",
+    "canonical_refs": {
+      "surface": "docflow/conversion.py#page_images",
+      "boundary": "docflow/space_ui.py#prepare",
+      "subsystem": "parsing",
+      "attack_class": "RESOURCE-EXHAUSTION-AND-AVAILABILITY.md#Decompression and representation amplification"
+    },
+    "surface": "docflow/conversion.py#page_images",
+    "boundary": "docflow/space_ui.py#prepare",
+    "subsystem": "parsing",
+    "attack_class": "RESOURCE-EXHAUSTION-AND-AVAILABILITY.md#Decompression and representation amplification",
+    "starting_paths": [
+      "docflow/conversion.py",
+      "docflow/space_ui.py",
+      "app.py",
+      "runtime/server.py"
+    ],
+    "ordinary_attack_class_block": "ATTACK-CLASSES.md#Resource and file handling",
+    "selected_companion_blocks": [
+      "RESOURCE-EXHAUSTION-AND-AVAILABILITY.md#Core discipline",
+      "RESOURCE-EXHAUSTION-AND-AVAILABILITY.md#Decompression and representation amplification",
+      "RESOURCE-EXHAUSTION-AND-AVAILABILITY.md#Universal moves",
+      "RESOURCE-EXHAUSTION-AND-AVAILABILITY.md#Validation rules"
+    ],
+    "excluded_blocks": [
+      {
+        "block": "PROTOCOLS-RPC-AND-MESSAGING.md",
+        "reason": "No first-party custom framing/broker implementation."
+      },
+      {
+        "block": "MEMORY-SAFETY-AND-BINARY.md",
+        "reason": "Native decoder implementations are dependencies; first-party bounds reviewed under resource handling."
+      }
+    ],
+    "prior_status": "none",
+    "attempts": [],
+    "wave": 1,
+    "status": "candidate",
+    "agent_id": "hunt_resource",
+    "reviewed_paths": [
+      ".dockerignore",
+      "app.py",
+      "docflow/conversion.py",
+      "docflow/image_limits.py",
+      "docflow/space_ui.py",
+      "runtime/Dockerfile",
+      "runtime/server.py",
+      "tests/test_document_limits.py"
+    ],
+    "local_checks": [
+      {
+        "agent_id": "hunt_resource",
+        "reviewed_paths": [
+          "docflow/conversion.py",
+          "docflow/space_ui.py",
+          "app.py",
+          "runtime/server.py"
+        ],
+        "invariant": "Preserve input-to-data/authority/resource boundary under lower-trust input.",
+        "method": "source",
+        "artifact": null,
+        "result": "Pre-remediation PDF range filtering followed rasterization; RGB expansion preceded thumbnail. Byte/frame/token/GPU limits are material controls. Independent source verifiers retained two needs_validation hypotheses without severity; parent implemented range-aware metadata preflight and pixel guards."
+      },
+      {
+        "agent_id": "verify_fix_2",
+        "reviewed_paths": [
+          "docflow/image_limits.py",
+          "docflow/conversion.py",
+          "runtime/server.py",
+          "runtime/Dockerfile",
+          ".dockerignore",
+          "tests/test_document_limits.py"
+        ],
+        "invariant": "Corrected source removes the pre-remediation path without asserting an unproved outage.",
+        "method": "source",
+        "artifact": null,
+        "result": "Fresh independent final verifier returned verified for corrected record and source change."
+      }
+    ],
+    "result_fingerprints": [
+      "docflow:decoded-image-allocation-before-budget"
+    ],
+    "unresolved": [],
+    "planned_owner": "hunt_resource",
+    "remediation_status": "mitigated_in_worktree",
+    "final_record_verdict": "rejected"
+  },
+  {
+    "coverage_id": "docflow%2Fconversion.py%23page_images::docflow%2Fspace_ui.py%23prepare::parsing::RESOURCE-EXHAUSTION-AND-AVAILABILITY.md%23Detached%20work%20after%20cancellation",
+    "canonical_refs": {
+      "surface": "docflow/conversion.py#page_images",
+      "boundary": "docflow/space_ui.py#prepare",
+      "subsystem": "parsing",
+      "attack_class": "RESOURCE-EXHAUSTION-AND-AVAILABILITY.md#Detached work after cancellation"
+    },
+    "surface": "docflow/conversion.py#page_images",
+    "boundary": "docflow/space_ui.py#prepare",
+    "subsystem": "parsing",
+    "attack_class": "RESOURCE-EXHAUSTION-AND-AVAILABILITY.md#Detached work after cancellation",
+    "starting_paths": [
+      "docflow/conversion.py",
+      "docflow/space_ui.py",
+      "app.py",
+      "runtime/server.py"
+    ],
+    "ordinary_attack_class_block": "ATTACK-CLASSES.md#Resource and file handling",
+    "selected_companion_blocks": [
+      "RESOURCE-EXHAUSTION-AND-AVAILABILITY.md#Core discipline",
+      "RESOURCE-EXHAUSTION-AND-AVAILABILITY.md#Detached work after cancellation",
+      "RESOURCE-EXHAUSTION-AND-AVAILABILITY.md#Universal moves",
+      "RESOURCE-EXHAUSTION-AND-AVAILABILITY.md#Validation rules"
+    ],
+    "excluded_blocks": [
+      {
+        "block": "PROTOCOLS-RPC-AND-MESSAGING.md",
+        "reason": "No first-party custom framing/broker implementation."
+      },
+      {
+        "block": "MEMORY-SAFETY-AND-BINARY.md",
+        "reason": "Native decoder implementations are dependencies; first-party bounds reviewed under resource handling."
+      }
+    ],
+    "prior_status": "none",
+    "attempts": [],
+    "wave": 1,
+    "status": "covered",
+    "agent_id": "hunt_resource",
+    "reviewed_paths": [
+      "docflow/conversion.py",
+      "docflow/space_ui.py",
+      "app.py",
+      "runtime/server.py"
+    ],
+    "local_checks": [
+      {
+        "agent_id": "hunt_resource",
+        "reviewed_paths": [
+          "docflow/conversion.py",
+          "docflow/space_ui.py",
+          "app.py",
+          "runtime/server.py"
+        ],
+        "invariant": "Preserve input-to-data/authority/resource boundary under lower-trust input.",
+        "method": "source",
+        "artifact": null,
+        "result": "Pre-remediation PDF range filtering followed rasterization; RGB expansion preceded thumbnail. Byte/frame/token/GPU limits are material controls. Independent source verifiers retained two needs_validation hypotheses without severity; parent implemented range-aware metadata preflight and pixel guards."
+      }
+    ],
+    "result_fingerprints": [],
+    "unresolved": [],
+    "planned_owner": "hunt_resource"
+  },
+  {
+    "coverage_id": "docflow%2Fconversion.py%23page_images::docflow%2Fspace_ui.py%23prepare::parsing::RESOURCE-EXHAUSTION-AND-AVAILABILITY.md%23Pre-authentication%20work%20imbalance",
+    "canonical_refs": {
+      "surface": "docflow/conversion.py#page_images",
+      "boundary": "docflow/space_ui.py#prepare",
+      "subsystem": "parsing",
+      "attack_class": "RESOURCE-EXHAUSTION-AND-AVAILABILITY.md#Pre-authentication work imbalance"
+    },
+    "surface": "docflow/conversion.py#page_images",
+    "boundary": "docflow/space_ui.py#prepare",
+    "subsystem": "parsing",
+    "attack_class": "RESOURCE-EXHAUSTION-AND-AVAILABILITY.md#Pre-authentication work imbalance",
+    "starting_paths": [
+      "docflow/conversion.py",
+      "docflow/space_ui.py",
+      "app.py",
+      "runtime/server.py"
+    ],
+    "ordinary_attack_class_block": "ATTACK-CLASSES.md#Resource and file handling",
+    "selected_companion_blocks": [
+      "RESOURCE-EXHAUSTION-AND-AVAILABILITY.md#Core discipline",
+      "RESOURCE-EXHAUSTION-AND-AVAILABILITY.md#Pre-authentication work imbalance",
+      "RESOURCE-EXHAUSTION-AND-AVAILABILITY.md#Universal moves",
+      "RESOURCE-EXHAUSTION-AND-AVAILABILITY.md#Validation rules"
+    ],
+    "excluded_blocks": [
+      {
+        "block": "PROTOCOLS-RPC-AND-MESSAGING.md",
+        "reason": "No first-party custom framing/broker implementation."
+      },
+      {
+        "block": "MEMORY-SAFETY-AND-BINARY.md",
+        "reason": "Native decoder implementations are dependencies; first-party bounds reviewed under resource handling."
+      }
+    ],
+    "prior_status": "none",
+    "attempts": [],
+    "wave": 1,
+    "status": "candidate",
+    "agent_id": "hunt_resource",
+    "reviewed_paths": [
+      "app.py",
+      "docflow/conversion.py",
+      "docflow/space_ui.py",
+      "runtime/server.py",
+      "tests/test_document_limits.py"
+    ],
+    "local_checks": [
+      {
+        "agent_id": "hunt_resource",
+        "reviewed_paths": [
+          "docflow/conversion.py",
+          "docflow/space_ui.py",
+          "app.py",
+          "runtime/server.py"
+        ],
+        "invariant": "Preserve input-to-data/authority/resource boundary under lower-trust input.",
+        "method": "source",
+        "artifact": null,
+        "result": "Pre-remediation PDF range filtering followed rasterization; RGB expansion preceded thumbnail. Byte/frame/token/GPU limits are material controls. Independent source verifiers retained two needs_validation hypotheses without severity; parent implemented range-aware metadata preflight and pixel guards."
+      },
+      {
+        "agent_id": "verify_fix_1",
+        "reviewed_paths": [
+          "docflow/conversion.py",
+          "docflow/space_ui.py",
+          "tests/test_document_limits.py"
+        ],
+        "invariant": "Corrected source removes the pre-remediation path without asserting an unproved outage.",
+        "method": "source",
+        "artifact": null,
+        "result": "Fresh independent final verifier returned verified for corrected record and source change."
+      }
+    ],
+    "result_fingerprints": [
+      "docflow:page-selection-after-pdf-render"
+    ],
+    "unresolved": [],
+    "planned_owner": "hunt_resource",
+    "remediation_status": "mitigated_in_worktree",
+    "final_record_verdict": "rejected"
+  },
+  {
+    "coverage_id": "docflow%2Fconversion.py%23page_images::docflow%2Fspace_ui.py%23prepare::parsing::RESOURCE-EXHAUSTION-AND-AVAILABILITY.md%23Unbounded%20buffering%20and%20cardinality",
+    "canonical_refs": {
+      "surface": "docflow/conversion.py#page_images",
+      "boundary": "docflow/space_ui.py#prepare",
+      "subsystem": "parsing",
+      "attack_class": "RESOURCE-EXHAUSTION-AND-AVAILABILITY.md#Unbounded buffering and cardinality"
+    },
+    "surface": "docflow/conversion.py#page_images",
+    "boundary": "docflow/space_ui.py#prepare",
+    "subsystem": "parsing",
+    "attack_class": "RESOURCE-EXHAUSTION-AND-AVAILABILITY.md#Unbounded buffering and cardinality",
+    "starting_paths": [
+      "docflow/conversion.py",
+      "docflow/space_ui.py",
+      "app.py",
+      "runtime/server.py"
+    ],
+    "ordinary_attack_class_block": "ATTACK-CLASSES.md#Resource and file handling",
+    "selected_companion_blocks": [
+      "RESOURCE-EXHAUSTION-AND-AVAILABILITY.md#Core discipline",
+      "RESOURCE-EXHAUSTION-AND-AVAILABILITY.md#Unbounded buffering and cardinality",
+      "RESOURCE-EXHAUSTION-AND-AVAILABILITY.md#Universal moves",
+      "RESOURCE-EXHAUSTION-AND-AVAILABILITY.md#Validation rules"
+    ],
+    "excluded_blocks": [
+      {
+        "block": "PROTOCOLS-RPC-AND-MESSAGING.md",
+        "reason": "No first-party custom framing/broker implementation."
+      },
+      {
+        "block": "MEMORY-SAFETY-AND-BINARY.md",
+        "reason": "Native decoder implementations are dependencies; first-party bounds reviewed under resource handling."
+      }
+    ],
+    "prior_status": "none",
+    "attempts": [],
+    "wave": 1,
+    "status": "covered",
+    "agent_id": "hunt_resource",
+    "reviewed_paths": [
+      "docflow/conversion.py",
+      "docflow/space_ui.py",
+      "app.py",
+      "runtime/server.py"
+    ],
+    "local_checks": [
+      {
+        "agent_id": "hunt_resource",
+        "reviewed_paths": [
+          "docflow/conversion.py",
+          "docflow/space_ui.py",
+          "app.py",
+          "runtime/server.py"
+        ],
+        "invariant": "Preserve input-to-data/authority/resource boundary under lower-trust input.",
+        "method": "source",
+        "artifact": null,
+        "result": "Pre-remediation PDF range filtering followed rasterization; RGB expansion preceded thumbnail. Byte/frame/token/GPU limits are material controls. Independent source verifiers retained two needs_validation hypotheses without severity; parent implemented range-aware metadata preflight and pixel guards."
+      }
+    ],
+    "result_fingerprints": [],
+    "unresolved": [],
+    "planned_owner": "hunt_resource"
+  },
+  {
+    "coverage_id": "docflow%2Fconversion.py%23page_images::docflow%2Fspace_ui.py%23prepare::parsing::RESOURCE-EXHAUSTION-AND-AVAILABILITY.md%23Worker%2C%20pool%2C%20and%20priority%20starvation",
+    "canonical_refs": {
+      "surface": "docflow/conversion.py#page_images",
+      "boundary": "docflow/space_ui.py#prepare",
+      "subsystem": "parsing",
+      "attack_class": "RESOURCE-EXHAUSTION-AND-AVAILABILITY.md#Worker, pool, and priority starvation"
+    },
+    "surface": "docflow/conversion.py#page_images",
+    "boundary": "docflow/space_ui.py#prepare",
+    "subsystem": "parsing",
+    "attack_class": "RESOURCE-EXHAUSTION-AND-AVAILABILITY.md#Worker, pool, and priority starvation",
+    "starting_paths": [
+      "docflow/conversion.py",
+      "docflow/space_ui.py",
+      "app.py",
+      "runtime/server.py"
+    ],
+    "ordinary_attack_class_block": "ATTACK-CLASSES.md#Resource and file handling",
+    "selected_companion_blocks": [
+      "RESOURCE-EXHAUSTION-AND-AVAILABILITY.md#Core discipline",
+      "RESOURCE-EXHAUSTION-AND-AVAILABILITY.md#Worker, pool, and priority starvation",
+      "RESOURCE-EXHAUSTION-AND-AVAILABILITY.md#Universal moves",
+      "RESOURCE-EXHAUSTION-AND-AVAILABILITY.md#Validation rules"
+    ],
+    "excluded_blocks": [
+      {
+        "block": "PROTOCOLS-RPC-AND-MESSAGING.md",
+        "reason": "No first-party custom framing/broker implementation."
+      },
+      {
+        "block": "MEMORY-SAFETY-AND-BINARY.md",
+        "reason": "Native decoder implementations are dependencies; first-party bounds reviewed under resource handling."
+      }
+    ],
+    "prior_status": "none",
+    "attempts": [],
+    "wave": 1,
+    "status": "covered",
+    "agent_id": "hunt_resource",
+    "reviewed_paths": [
+      "docflow/conversion.py",
+      "docflow/space_ui.py",
+      "app.py",
+      "runtime/server.py"
+    ],
+    "local_checks": [
+      {
+        "agent_id": "hunt_resource",
+        "reviewed_paths": [
+          "docflow/conversion.py",
+          "docflow/space_ui.py",
+          "app.py",
+          "runtime/server.py"
+        ],
+        "invariant": "Preserve input-to-data/authority/resource boundary under lower-trust input.",
+        "method": "source",
+        "artifact": null,
+        "result": "Pre-remediation PDF range filtering followed rasterization; RGB expansion preceded thumbnail. Byte/frame/token/GPU limits are material controls. Independent source verifiers retained two needs_validation hypotheses without severity; parent implemented range-aware metadata preflight and pixel guards."
+      }
+    ],
+    "result_fingerprints": [],
+    "unresolved": [],
+    "planned_owner": "hunt_resource"
+  },
+  {
+    "coverage_id": "runtime%2Fserver.py%23POST%20%2Fv1%2Fparse::scripts%2Fstart-offline.ps1%23loopback::local::ATTACK-CLASSES.md%23Access%20control",
+    "canonical_refs": {
+      "surface": "runtime/server.py#POST /v1/parse",
+      "boundary": "scripts/start-offline.ps1#loopback",
+      "subsystem": "local",
+      "attack_class": "ATTACK-CLASSES.md#Access control"
+    },
+    "surface": "runtime/server.py#POST /v1/parse",
+    "boundary": "scripts/start-offline.ps1#loopback",
+    "subsystem": "local",
+    "attack_class": "ATTACK-CLASSES.md#Access control",
+    "starting_paths": [
+      "runtime/server.py",
+      "runtime/Dockerfile",
+      "scripts/start-offline.ps1",
+      "launch.cmd",
+      "streamlit_app.py",
+      "docflow/backends.py",
+      "scripts/probe_online.py",
+      "runtime/probe_local.py"
+    ],
+    "ordinary_attack_class_block": "ATTACK-CLASSES.md#Access control",
+    "selected_companion_blocks": [],
+    "excluded_blocks": [
+      {
+        "block": "PROTOCOLS-RPC-AND-MESSAGING.md",
+        "reason": "No first-party custom framing/broker implementation."
+      },
+      {
+        "block": "MEMORY-SAFETY-AND-BINARY.md",
+        "reason": "Native decoder implementations are dependencies; first-party bounds reviewed under resource handling."
+      }
+    ],
+    "prior_status": "none",
+    "attempts": [],
+    "wave": 1,
+    "status": "covered",
+    "agent_id": "hunt_local",
+    "reviewed_paths": [
+      "runtime/server.py",
+      "runtime/Dockerfile",
+      "scripts/start-offline.ps1",
+      "launch.cmd",
+      "streamlit_app.py",
+      "docflow/backends.py",
+      "scripts/probe_online.py",
+      "runtime/probe_local.py"
+    ],
+    "local_checks": [
+      {
+        "agent_id": "hunt_local",
+        "reviewed_paths": [
+          "runtime/server.py",
+          "runtime/Dockerfile",
+          "scripts/start-offline.ps1",
+          "launch.cmd",
+          "streamlit_app.py",
+          "docflow/backends.py",
+          "scripts/probe_online.py",
+          "runtime/probe_local.py"
+        ],
+        "invariant": "Preserve input-to-data/authority/resource boundary under lower-trust input.",
+        "method": "source",
+        "artifact": null,
+        "result": "Maintained new worker and UI bind loopback, fixed byte-only inference paths, read-only model mount and server-only fixed HTTPS credential transport. Existing named-container effective settings unobserved."
+      }
+    ],
+    "result_fingerprints": [],
+    "unresolved": [],
+    "planned_owner": "hunt_local"
+  },
+  {
+    "coverage_id": "runtime%2Fserver.py%23POST%20%2Fv1%2Fparse::scripts%2Fstart-offline.ps1%23loopback::local::ATTACK-CLASSES.md%23Cryptography%20and%20secrets",
+    "canonical_refs": {
+      "surface": "runtime/server.py#POST /v1/parse",
+      "boundary": "scripts/start-offline.ps1#loopback",
+      "subsystem": "local",
+      "attack_class": "ATTACK-CLASSES.md#Cryptography and secrets"
+    },
+    "surface": "runtime/server.py#POST /v1/parse",
+    "boundary": "scripts/start-offline.ps1#loopback",
+    "subsystem": "local",
+    "attack_class": "ATTACK-CLASSES.md#Cryptography and secrets",
+    "starting_paths": [
+      "runtime/server.py",
+      "runtime/Dockerfile",
+      "scripts/start-offline.ps1",
+      "launch.cmd",
+      "streamlit_app.py",
+      "docflow/backends.py",
+      "scripts/probe_online.py",
+      "runtime/probe_local.py"
+    ],
+    "ordinary_attack_class_block": "ATTACK-CLASSES.md#Cryptography and secrets",
+    "selected_companion_blocks": [],
+    "excluded_blocks": [
+      {
+        "block": "PROTOCOLS-RPC-AND-MESSAGING.md",
+        "reason": "No first-party custom framing/broker implementation."
+      },
+      {
+        "block": "MEMORY-SAFETY-AND-BINARY.md",
+        "reason": "Native decoder implementations are dependencies; first-party bounds reviewed under resource handling."
+      }
+    ],
+    "prior_status": "none",
+    "attempts": [],
+    "wave": 1,
+    "status": "covered",
+    "agent_id": "hunt_local",
+    "reviewed_paths": [
+      "runtime/server.py",
+      "runtime/Dockerfile",
+      "scripts/start-offline.ps1",
+      "launch.cmd",
+      "streamlit_app.py",
+      "docflow/backends.py",
+      "scripts/probe_online.py",
+      "runtime/probe_local.py"
+    ],
+    "local_checks": [
+      {
+        "agent_id": "hunt_local",
+        "reviewed_paths": [
+          "runtime/server.py",
+          "runtime/Dockerfile",
+          "scripts/start-offline.ps1",
+          "launch.cmd",
+          "streamlit_app.py",
+          "docflow/backends.py",
+          "scripts/probe_online.py",
+          "runtime/probe_local.py"
+        ],
+        "invariant": "Preserve input-to-data/authority/resource boundary under lower-trust input.",
+        "method": "source",
+        "artifact": null,
+        "result": "Maintained new worker and UI bind loopback, fixed byte-only inference paths, read-only model mount and server-only fixed HTTPS credential transport. Existing named-container effective settings unobserved."
+      }
+    ],
+    "result_fingerprints": [],
+    "unresolved": [],
+    "planned_owner": "hunt_local"
+  },
+  {
+    "coverage_id": "runtime%2Fserver.py%23POST%20%2Fv1%2Fparse::scripts%2Fstart-offline.ps1%23loopback::local::ATTACK-CLASSES.md%23Resource%20and%20file%20handling",
+    "canonical_refs": {
+      "surface": "runtime/server.py#POST /v1/parse",
+      "boundary": "scripts/start-offline.ps1#loopback",
+      "subsystem": "local",
+      "attack_class": "ATTACK-CLASSES.md#Resource and file handling"
+    },
+    "surface": "runtime/server.py#POST /v1/parse",
+    "boundary": "scripts/start-offline.ps1#loopback",
+    "subsystem": "local",
+    "attack_class": "ATTACK-CLASSES.md#Resource and file handling",
+    "starting_paths": [
+      "runtime/server.py",
+      "runtime/Dockerfile",
+      "scripts/start-offline.ps1",
+      "launch.cmd",
+      "streamlit_app.py",
+      "docflow/backends.py",
+      "scripts/probe_online.py",
+      "runtime/probe_local.py"
+    ],
+    "ordinary_attack_class_block": "ATTACK-CLASSES.md#Resource and file handling",
+    "selected_companion_blocks": [],
+    "excluded_blocks": [
+      {
+        "block": "PROTOCOLS-RPC-AND-MESSAGING.md",
+        "reason": "No first-party custom framing/broker implementation."
+      },
+      {
+        "block": "MEMORY-SAFETY-AND-BINARY.md",
+        "reason": "Native decoder implementations are dependencies; first-party bounds reviewed under resource handling."
+      }
+    ],
+    "prior_status": "none",
+    "attempts": [],
+    "wave": 1,
+    "status": "covered",
+    "agent_id": "hunt_local",
+    "reviewed_paths": [
+      "runtime/server.py",
+      "runtime/Dockerfile",
+      "scripts/start-offline.ps1",
+      "launch.cmd",
+      "streamlit_app.py",
+      "docflow/backends.py",
+      "scripts/probe_online.py",
+      "runtime/probe_local.py"
+    ],
+    "local_checks": [
+      {
+        "agent_id": "hunt_local",
+        "reviewed_paths": [
+          "runtime/server.py",
+          "runtime/Dockerfile",
+          "scripts/start-offline.ps1",
+          "launch.cmd",
+          "streamlit_app.py",
+          "docflow/backends.py",
+          "scripts/probe_online.py",
+          "runtime/probe_local.py"
+        ],
+        "invariant": "Preserve input-to-data/authority/resource boundary under lower-trust input.",
+        "method": "source",
+        "artifact": null,
+        "result": "Maintained new worker and UI bind loopback, fixed byte-only inference paths, read-only model mount and server-only fixed HTTPS credential transport. Existing named-container effective settings unobserved."
+      }
+    ],
+    "result_fingerprints": [],
+    "unresolved": [],
+    "planned_owner": "hunt_local"
+  },
+  {
+    "coverage_id": "runtime%2Fserver.py%23POST%20%2Fv1%2Fparse::scripts%2Fstart-offline.ps1%23loopback::local::CLOUD-AND-DEPLOYMENT.md%23Secret%20exposure%20across%20workload%20boundaries",
+    "canonical_refs": {
+      "surface": "runtime/server.py#POST /v1/parse",
+      "boundary": "scripts/start-offline.ps1#loopback",
+      "subsystem": "local",
+      "attack_class": "CLOUD-AND-DEPLOYMENT.md#Secret exposure across workload boundaries"
+    },
+    "surface": "runtime/server.py#POST /v1/parse",
+    "boundary": "scripts/start-offline.ps1#loopback",
+    "subsystem": "local",
+    "attack_class": "CLOUD-AND-DEPLOYMENT.md#Secret exposure across workload boundaries",
+    "starting_paths": [
+      "runtime/server.py",
+      "runtime/Dockerfile",
+      "scripts/start-offline.ps1",
+      "launch.cmd",
+      "streamlit_app.py",
+      "docflow/backends.py",
+      "scripts/probe_online.py",
+      "runtime/probe_local.py"
+    ],
+    "ordinary_attack_class_block": "ATTACK-CLASSES.md#Access control",
+    "selected_companion_blocks": [
+      "CLOUD-AND-DEPLOYMENT.md#Core discipline",
+      "CLOUD-AND-DEPLOYMENT.md#Secret exposure across workload boundaries",
+      "CLOUD-AND-DEPLOYMENT.md#Universal moves",
+      "CLOUD-AND-DEPLOYMENT.md#Validation rules"
+    ],
+    "excluded_blocks": [
+      {
+        "block": "PROTOCOLS-RPC-AND-MESSAGING.md",
+        "reason": "No first-party custom framing/broker implementation."
+      },
+      {
+        "block": "MEMORY-SAFETY-AND-BINARY.md",
+        "reason": "Native decoder implementations are dependencies; first-party bounds reviewed under resource handling."
+      }
+    ],
+    "prior_status": "none",
+    "attempts": [],
+    "wave": 1,
+    "status": "covered",
+    "agent_id": "hunt_local",
+    "reviewed_paths": [
+      "runtime/server.py",
+      "runtime/Dockerfile",
+      "scripts/start-offline.ps1",
+      "launch.cmd",
+      "streamlit_app.py",
+      "docflow/backends.py",
+      "scripts/probe_online.py",
+      "runtime/probe_local.py"
+    ],
+    "local_checks": [
+      {
+        "agent_id": "hunt_local",
+        "reviewed_paths": [
+          "runtime/server.py",
+          "runtime/Dockerfile",
+          "scripts/start-offline.ps1",
+          "launch.cmd",
+          "streamlit_app.py",
+          "docflow/backends.py",
+          "scripts/probe_online.py",
+          "runtime/probe_local.py"
+        ],
+        "invariant": "Preserve input-to-data/authority/resource boundary under lower-trust input.",
+        "method": "source",
+        "artifact": null,
+        "result": "Maintained new worker and UI bind loopback, fixed byte-only inference paths, read-only model mount and server-only fixed HTTPS credential transport. Existing named-container effective settings unobserved."
+      }
+    ],
+    "result_fingerprints": [],
+    "unresolved": [],
+    "planned_owner": "hunt_local"
+  },
+  {
+    "coverage_id": "runtime%2Fserver.py%23POST%20%2Fv1%2Fparse::scripts%2Fstart-offline.ps1%23loopback::local::CLOUD-AND-DEPLOYMENT.md%23Unexpected%20service%20or%20management-plane%20reachability",
+    "canonical_refs": {
+      "surface": "runtime/server.py#POST /v1/parse",
+      "boundary": "scripts/start-offline.ps1#loopback",
+      "subsystem": "local",
+      "attack_class": "CLOUD-AND-DEPLOYMENT.md#Unexpected service or management-plane reachability"
+    },
+    "surface": "runtime/server.py#POST /v1/parse",
+    "boundary": "scripts/start-offline.ps1#loopback",
+    "subsystem": "local",
+    "attack_class": "CLOUD-AND-DEPLOYMENT.md#Unexpected service or management-plane reachability",
+    "starting_paths": [
+      "runtime/server.py",
+      "runtime/Dockerfile",
+      "scripts/start-offline.ps1",
+      "launch.cmd",
+      "streamlit_app.py",
+      "docflow/backends.py",
+      "scripts/probe_online.py",
+      "runtime/probe_local.py"
+    ],
+    "ordinary_attack_class_block": "ATTACK-CLASSES.md#Access control",
+    "selected_companion_blocks": [
+      "CLOUD-AND-DEPLOYMENT.md#Core discipline",
+      "CLOUD-AND-DEPLOYMENT.md#Unexpected service or management-plane reachability",
+      "CLOUD-AND-DEPLOYMENT.md#Universal moves",
+      "CLOUD-AND-DEPLOYMENT.md#Validation rules"
+    ],
+    "excluded_blocks": [
+      {
+        "block": "PROTOCOLS-RPC-AND-MESSAGING.md",
+        "reason": "No first-party custom framing/broker implementation."
+      },
+      {
+        "block": "MEMORY-SAFETY-AND-BINARY.md",
+        "reason": "Native decoder implementations are dependencies; first-party bounds reviewed under resource handling."
+      }
+    ],
+    "prior_status": "none",
+    "attempts": [],
+    "wave": 1,
+    "status": "blocked",
+    "agent_id": "hunt_local",
+    "reviewed_paths": [
+      "runtime/server.py",
+      "runtime/Dockerfile",
+      "scripts/start-offline.ps1",
+      "launch.cmd",
+      "streamlit_app.py",
+      "docflow/backends.py",
+      "scripts/probe_online.py",
+      "runtime/probe_local.py"
+    ],
+    "local_checks": [
+      {
+        "agent_id": "hunt_local",
+        "reviewed_paths": [
+          "runtime/server.py",
+          "runtime/Dockerfile",
+          "scripts/start-offline.ps1",
+          "launch.cmd",
+          "streamlit_app.py",
+          "docflow/backends.py",
+          "scripts/probe_online.py",
+          "runtime/probe_local.py"
+        ],
+        "invariant": "Preserve input-to-data/authority/resource boundary under lower-trust input.",
+        "method": "source",
+        "artifact": null,
+        "result": "Maintained new worker and UI bind loopback, fixed byte-only inference paths, read-only model mount and server-only fixed HTTPS credential transport. Existing named-container effective settings unobserved."
+      }
+    ],
+    "result_fingerprints": [],
+    "unresolved": [
+      "Framework/runtime/advisory facts unverified; no demonstrated violation."
+    ],
+    "planned_owner": "hunt_local"
+  },
+  {
+    "coverage_id": "runtime%2Fserver.py%23POST%20%2Fv1%2Fparse::scripts%2Fstart-offline.ps1%23loopback::local::DESKTOP-MOBILE-AND-LOCAL-IPC.md%23IPC%20peer-authentication%20gaps",
+    "canonical_refs": {
+      "surface": "runtime/server.py#POST /v1/parse",
+      "boundary": "scripts/start-offline.ps1#loopback",
+      "subsystem": "local",
+      "attack_class": "DESKTOP-MOBILE-AND-LOCAL-IPC.md#IPC peer-authentication gaps"
+    },
+    "surface": "runtime/server.py#POST /v1/parse",
+    "boundary": "scripts/start-offline.ps1#loopback",
+    "subsystem": "local",
+    "attack_class": "DESKTOP-MOBILE-AND-LOCAL-IPC.md#IPC peer-authentication gaps",
+    "starting_paths": [
+      "runtime/server.py",
+      "runtime/Dockerfile",
+      "scripts/start-offline.ps1",
+      "launch.cmd",
+      "streamlit_app.py",
+      "docflow/backends.py",
+      "scripts/probe_online.py",
+      "runtime/probe_local.py"
+    ],
+    "ordinary_attack_class_block": "ATTACK-CLASSES.md#Access control",
+    "selected_companion_blocks": [
+      "DESKTOP-MOBILE-AND-LOCAL-IPC.md#Core discipline",
+      "DESKTOP-MOBILE-AND-LOCAL-IPC.md#IPC peer-authentication gaps",
+      "DESKTOP-MOBILE-AND-LOCAL-IPC.md#Universal moves",
+      "DESKTOP-MOBILE-AND-LOCAL-IPC.md#Validation rules"
+    ],
+    "excluded_blocks": [
+      {
+        "block": "PROTOCOLS-RPC-AND-MESSAGING.md",
+        "reason": "No first-party custom framing/broker implementation."
+      },
+      {
+        "block": "MEMORY-SAFETY-AND-BINARY.md",
+        "reason": "Native decoder implementations are dependencies; first-party bounds reviewed under resource handling."
+      }
+    ],
+    "prior_status": "none",
+    "attempts": [],
+    "wave": 1,
+    "status": "covered",
+    "agent_id": "hunt_local",
+    "reviewed_paths": [
+      "runtime/server.py",
+      "runtime/Dockerfile",
+      "scripts/start-offline.ps1",
+      "launch.cmd",
+      "streamlit_app.py",
+      "docflow/backends.py",
+      "scripts/probe_online.py",
+      "runtime/probe_local.py"
+    ],
+    "local_checks": [
+      {
+        "agent_id": "hunt_local",
+        "reviewed_paths": [
+          "runtime/server.py",
+          "runtime/Dockerfile",
+          "scripts/start-offline.ps1",
+          "launch.cmd",
+          "streamlit_app.py",
+          "docflow/backends.py",
+          "scripts/probe_online.py",
+          "runtime/probe_local.py"
+        ],
+        "invariant": "Preserve input-to-data/authority/resource boundary under lower-trust input.",
+        "method": "source",
+        "artifact": null,
+        "result": "Maintained new worker and UI bind loopback, fixed byte-only inference paths, read-only model mount and server-only fixed HTTPS credential transport. Existing named-container effective settings unobserved."
+      }
+    ],
+    "result_fingerprints": [],
+    "unresolved": [],
+    "planned_owner": "hunt_local"
+  }
+]

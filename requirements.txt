@@ -1,0 +1,12 @@
+torch==2.13.0
+torchvision==0.28.0
+transformers==5.17.0
+opencv-python-headless
+huggingface-hub
+pillow>=12.0,<13
+numpy
+beautifulsoup4>=4.15.0
+bleach>=6.4.0
+markdown2>=2.5.5
+pypdfium2>=5.14.0
+httpx>=0.28.1

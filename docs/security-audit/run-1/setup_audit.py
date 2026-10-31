@@ -1,0 +1,43 @@
+import json,re,hashlib
+from pathlib import Path
+from urllib.parse import quote
+r=Path.cwd(); o=r/'docs/security-audit/run-1'; s=Path('C:/Users/ahmad/.agents/skills/security-audit')
+a='''# Architecture
+Review the dirty worktree at commit1993506958b162b97d76bda16939b5c1079109f4, including uncommitted Gradio files. Public Gradio app.py downloads a fixed NVIDIA model revision, loads trusted remote model Python, uses server-side gr.State and UUID session/job directories, validates uploads in preflight/prepare before its 120s concurrency1 GPU handler, then emits previews and exports. Framework file routing/state/cache behavior remains a boundary to verify from locally available source. Input decoding occurs outside GPU reservation.
+Local Windows launch.cmd binds Streamlit8472 to loopback and start-offline.ps1 publishes Docker worker8473 to loopback with read-only model mount. Existing container reuse does not re-establish its settings. Streamlit saved conversion_results is intentionally global for a single OS user. Worker serializes inference and reads at most100MiB. No product user accounts or tool-calling agent exist.
+Shared PDFium/Pillow conversion renders and resizes documents, imports pinned NVIDIA postprocessing, writes fixed artifact names/numeric page indices and content-hash caches. Gradio injects per-job output directories. Model output is untrusted; HTML export uses bleach allowlists, Gradio Markdown sanitizes explicitly, Streamlit uses default Markdown controls. The NVIDIA HTTPS URL is constant and credentials are read server-side. Backend modes do not fall back automatically.
+uv.lock describes Windows; requirements.txt describes Gradio; Docker resolves its own dependencies and copies server/probe only. Model provenance and dependency execution are trust boundaries. No CI/release workflow is in source. No independent comparable product baseline established beyond ordinary Gradio/Streamlit document workflows.
+Scope is all first-party app/library/worker/launcher/tests/manifests/docs. Do not read user documents, credentials, models, caches or index content. Native library internals and hosted control planes are not audited as first-party source. No prior compatible ledger was found in workspace audit root. Graph lookup returned current selected CodeGraph source but empty code-review-graph communities; exact source remains decisive.
+Four baseline reconnaissance assignments are complete. No required OS sandbox (network isolation, empty safe env, read-only tools/target, scratch-only writes, explicit CPU/memory/process/file/disk/time limits) or race-safe Windows artifact promotion is established. TARGET CODE EXECUTION IS FORBIDDEN. No network/live endpoints/provider control planes, installs, builds or tests. Prior functional live checks are not audit evidence. Source-only checks have artifact:null; runtime-dependent claims need_validation, never severity.
+'''
+(o/'architecture.md').write_text(a,encoding='utf-8')
+groups={
+'hunt_public':('app.py#events','app.py#gr.State','public',['app.py','docflow/space_ui.py','docflow/conversion.py','tests/test_space.py'],['Access control','Resource and file handling','Business logic','Feature abuse and data leakage'],{'DATA-ISOLATION-AND-LIFECYCLE.md':['Missing tenant or owner enforcement','Composite-key and namespace collision','Blob and signed-reference overreach','Retention and queued-work overrun']}),
+'hunt_resource':('docflow/conversion.py#page_images','docflow/space_ui.py#prepare','parsing',['docflow/conversion.py','docflow/space_ui.py','app.py','runtime/server.py'],['Resource and file handling','Business logic'],{'RESOURCE-EXHAUSTION-AND-AVAILABILITY.md':['Decompression and representation amplification','Unbounded buffering and cardinality','Pre-authentication work imbalance','Detached work after cancellation','Worker, pool, and priority starvation']}),
+'hunt_render':('docflow/conversion.py#model output','docflow/conversion.py#bleach.clean','output',['docflow/conversion.py','streamlit_app.py','app.py','docflow/backends.py'],['Injection','Cryptography and secrets'],{'CLIENT-SIDE.md':['DOM-based XSS'],'AI-AND-LLM.md':['Insecure output rendering']}),
+'hunt_local':('runtime/server.py#POST /v1/parse','scripts/start-offline.ps1#loopback','local',['runtime/server.py','runtime/Dockerfile','scripts/start-offline.ps1','launch.cmd','streamlit_app.py','docflow/backends.py','scripts/probe_online.py','runtime/probe_local.py'],['Access control','Resource and file handling','Cryptography and secrets'],{'DESKTOP-MOBILE-AND-LOCAL-IPC.md':['IPC peer-authentication gaps'],'CLOUD-AND-DEPLOYMENT.md':['Unexpected service or management-plane reachability','Secret exposure across workload boundaries']}),
+'hunt_supply':('app.py#snapshot_download','docflow/backends.py#MODEL_REVISION','build',['app.py','runtime/Dockerfile','requirements.txt','pyproject.toml','uv.lock','README.md','docs/user-guide.md','.gitignore'],['Obvious things'],{'SUPPLY-CHAIN-AND-RELEASE.md':['Dependency source and namespace confusion','Mutable and unbound build inputs','Build-context inclusion']})}
+def block(t,n):
+ ls=t.splitlines(True)
+ for i,l in enumerate(ls):
+  if l.startswith('**'+n+'**') or re.match(r'^## '+re.escape(n)+r'(?: \(|\n|$)',l):
+   j=i+1
+   while j<len(ls) and not re.match(r'^(?:## |\*\*)',ls[j]): j+=1
+   return ''.join(ls[i:j])
+ raise ValueError(n)
+units=[]
+for owner,(surface,boundary,subsystem,paths,ordinary,companions) in groups.items():
+ specs=[('ATTACK-CLASSES.md#'+n,n,[]) for n in ordinary]
+ for f,ns in companions.items():
+  for n in ns: specs.append((f+'#'+n,ordinary[0],[f+'#'+v for v in ['Core discipline',n,'Universal moves','Validation rules']]))
+ for ref,ordinary_name,cs in specs:
+  cr=dict(surface=surface,boundary=boundary,subsystem=subsystem,attack_class=ref)
+  units.append(dict(coverage_id='::'.join(quote(v,safe='-._~') for v in cr.values()),canonical_refs=cr,surface=surface,boundary=boundary,subsystem=subsystem,attack_class=ref,starting_paths=paths,ordinary_attack_class_block='ATTACK-CLASSES.md#'+ordinary_name,selected_companion_blocks=cs,excluded_blocks=[dict(block='PROTOCOLS-RPC-AND-MESSAGING.md',reason='No first-party custom framing/broker implementation.'),dict(block='MEMORY-SAFETY-AND-BINARY.md',reason='Native decoder implementations are dependencies; first-party bounds reviewed under resource handling.')],prior_status='none',attempts=[],wave=1,status='planned',agent_id=None,reviewed_paths=[],local_checks=[],result_fingerprints=[],unresolved=[],planned_owner=owner))
+units.sort(key=lambda u:u['coverage_id']); (o/'coverage-ledger.json').write_text(json.dumps(units,indent=2),encoding='utf-8')
+h=(s/'HUNTING.md').read_text(encoding='utf-8'); schema=(s/'report-schema.json').read_text(encoding='utf-8')
+for owner in groups:
+ ar=o/'agents'/owner; (ar/'scratch').mkdir(parents=True,exist_ok=True); (ar/'artifacts').mkdir(exist_ok=True)
+ us=[u for u in units if u['planned_owner']==owner]; refs=set(v for u in us for v in [u['ordinary_attack_class_block'],*u['selected_companion_blocks']]); exact='\n'.join(block((s/f).read_text(encoding='utf-8'),n) for f,n in (v.split('#',1) for v in sorted(refs)))
+ prompt='Find source-grounded security invariant failures in your assigned units. Return exactly one JSON object matching the structured-result contract below.\n'+a+'\nASSIGNED UNITS\n'+json.dumps(us,indent=2)+'\nEXACT SELECTED BLOCKS\n'+exact+'\nExcluded: other units are peer-owned; no prior confirmations. Selected companions exclude remaining classes because no corresponding implementation exists in this scope; return uncovered if you identify one.\n'+h[h.index('#### Core hunting method'):h.index('## Parent consolidation')]+'\n'+schema+'\nAgent id='+owner+'; scratch='+str(ar/'scratch')+'; artifacts='+str(ar/'artifacts')+' (parent owned). Promotion allowlist empty, per-file and cumulative0bytes. Source-only; no execution, network or writes. No sandbox established. Use source checks artifact:null and proposed_verdict needs_validation for runtime-blocked candidates. Read actual source and strongest visible controls.\n'
+ (o/(owner+'-prompt.md')).write_text(prompt,encoding='utf-8')
+m=json.loads((o/'run-metadata.json').read_text(encoding='utf-8-sig')); m.update(selected_companion_files=sorted({v.split('#')[0] for u in units for v in u['selected_companion_blocks']}),seeded_unit_count=len(units),estimated_agent_calls=20,source_hashes={p:hashlib.sha256((r/p).read_bytes()).hexdigest() for p in sorted({p for u in units for p in u['starting_paths']})}); (o/'run-metadata.json').write_text(json.dumps(m,indent=2),encoding='utf-8'); print('Seeded units',len(units))

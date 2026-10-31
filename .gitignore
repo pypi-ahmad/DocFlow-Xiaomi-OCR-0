@@ -1,0 +1,14 @@
+.venv*/
+.models/
+__pycache__/
+.pytest_cache/
+.ruff_cache/
+conversion_results/
+.codegraph/
+.code-review-graph/
+.env
+.env.*
+output/
+.claude/
+.grok/
+docs/security-audit/run-1/agents/**/scratch/

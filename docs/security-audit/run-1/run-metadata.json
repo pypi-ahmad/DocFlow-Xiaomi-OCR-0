@@ -1,0 +1,110 @@
+{
+  "profile": "standard",
+  "estimated_agent_calls": 20,
+  "shared_file_owners": {
+    "parent": "root"
+  },
+  "budget": null,
+  "scope_paths": [
+    "app.py",
+    "streamlit_app.py",
+    "docflow",
+    "runtime",
+    "scripts",
+    "tests",
+    "launch.cmd",
+    "pyproject.toml",
+    "uv.lock",
+    "requirements.txt",
+    "README.md",
+    "docs"
+  ],
+  "run_status": "complete",
+  "execution_limit": "Source-only security findings; isolated bounded implementation checks with dummy data and no retained execution evidence.",
+  "repo": "DocFlow-NIM",
+  "execution_policy": "sandboxed-source-and-local-only",
+  "target": "D:\\Workspace\\Github\\DocFlow NIM",
+  "run_id": "run-1",
+  "source_ref": {
+    "commit": "1993506958b162b97d76bda16939b5c1079109f4",
+    "dirty": true
+  },
+  "selected_companion_files": [
+    "AI-AND-LLM.md",
+    "CLIENT-SIDE.md",
+    "CLOUD-AND-DEPLOYMENT.md",
+    "DATA-ISOLATION-AND-LIFECYCLE.md",
+    "DESKTOP-MOBILE-AND-LOCAL-IPC.md",
+    "RESOURCE-EXHAUSTION-AND-AVAILABILITY.md",
+    "SUPPLY-CHAIN-AND-RELEASE.md"
+  ],
+  "prior_run_paths": [],
+  "seeded_unit_count": 29,
+  "source_hashes": {
+    ".dockerignore": "6b8643707c677638bb9551ef8c7dadbd3262899f10f8f73b60d4c797658184c5",
+    ".gitignore": "a95f573fb356bdccf49ea97c4ef2a7a226806e66c56634dc6cc11c1058be40d1",
+    "README.md": "9fb9753baa91566491311211c40f39dd8f85d590d7e17c499a3fd66c6d085105",
+    "app.py": "ce291edc5720eb04dc256c45d637e36f51f2c2929d22bba2c918e3b5c56a00bf",
+    "docflow/backends.py": "9b50334162f68d3a9dd398b6c5d6157eae5f5ea06fd9229f45086f42bef49167",
+    "docflow/conversion.py": "dd1928878f752b1a8d9855d48aa21d1669f3c6a4d450262147ebc1acabc6ae46",
+    "docflow/image_limits.py": "7db64ffec6262506b9cbdb3d3e4285772a35e70792715ef111d4525427178f21",
+    "docflow/space_ui.py": "d62eb21fdb275d5238027e75a788d67398534d0db807e745dab61160bc6d3ceb",
+    "docs/user-guide.md": "23db94f67b08acf3a037596fcf81650185839bc6034b9741e1465d886b259125",
+    "launch.cmd": "540bec48cbb8e2381d780ceaf522498136519ac8d79b3ac738cc3db233e65b48",
+    "pyproject.toml": "c3eba8aab4a43d7b67f2056f72ba5bc1cf18a659d0b716aa685e7e515727c600",
+    "requirements.txt": "de4f028a5c325c608acab1fb1ce7e93a537228e16ef154d5a777b9e3e922c2b1",
+    "runtime/Dockerfile": "e7ad89bf5f1112fc6cfe46ac1804a5410c566741d2e8ff87de63b6ea500408c7",
+    "runtime/probe_local.py": "c2b3d4db1e0f6b192ee5fa08ab35863f8440c87ad6fe198020a2a920c1b4206f",
+    "runtime/server.py": "f4239fc84aba4a5d8103584699b958105f22e72dc79f72f4530694cbc14ef059",
+    "scripts/probe_online.py": "8c495e72f03704459c49b9fdfd7d436b2dadecfb81f5f619525831ba5ed2114e",
+    "scripts/start-offline.ps1": "aad4388cbe54372d6beaebb05295587d51f9cb4e2c9d942ae7c81c6fe3187b91",
+    "streamlit_app.py": "1f67e354abc7a6b212415018a99d75108fd45dee171091dbbe532d724fbdc7ea",
+    "tests/test_document_limits.py": "b68da14fd41435e67f82185be725a72e9529aa7d69e0915252f87fba36e2607f",
+    "tests/test_space.py": "a9eff742b4d2502f925abf9f002d55ef74553298ff22c6dc5396464770bb16e4",
+    "uv.lock": "4080e260e171639c9f05dc05bc9158a2ed102d03fb2465dd3813cd174c705444"
+  },
+  "incomplete_reason": null,
+  "completed_phase": "All six phases completed with declared blocked coverage areas; both validators passed.",
+  "agent_invocations": 15,
+  "prior_run_note": "No prior compatible ledger found in workspace audit root.",
+  "validator_errors": {},
+  "sandbox_status": "Eight bounded implementation checks passed in isolated cached Linux container; detailed limits in REPORT.md.",
+  "promotion_status": "No execution artifacts promoted or used as local ledger evidence.",
+  "application_source_unchanged": false,
+  "resumed_for": "User requested all security issues fixed; application changes now authorized after evidence review.",
+  "pre_remediation_source_hashes": {
+    ".gitignore": "a95f573fb356bdccf49ea97c4ef2a7a226806e66c56634dc6cc11c1058be40d1",
+    "README.md": "82dc2fb39ed04ec3a3dc3d6114b99f6c004ad6982a30a81067ef890d3c67854d",
+    "app.py": "ce291edc5720eb04dc256c45d637e36f51f2c2929d22bba2c918e3b5c56a00bf",
+    "docflow/backends.py": "9b50334162f68d3a9dd398b6c5d6157eae5f5ea06fd9229f45086f42bef49167",
+    "docflow/conversion.py": "0d8fb258dcc3f5e3e6c35e680f2340dba960958ddf943e2bef3dfb0118980d96",
+    "docflow/space_ui.py": "191ccd4df5bdeff0a54ca8be6e80adc924186f77c2c3370618343e280e71a462",
+    "docs/user-guide.md": "be03d2615dc125f92878ece8fbd030939e02b330c47fa6e0180a9afbea06bf26",
+    "launch.cmd": "540bec48cbb8e2381d780ceaf522498136519ac8d79b3ac738cc3db233e65b48",
+    "pyproject.toml": "c3eba8aab4a43d7b67f2056f72ba5bc1cf18a659d0b716aa685e7e515727c600",
+    "requirements.txt": "de4f028a5c325c608acab1fb1ce7e93a537228e16ef154d5a777b9e3e922c2b1",
+    "runtime/Dockerfile": "7ce15760525a585d356561ec31117c24c9b10ef8c472f382cd75c3521d252b3e",
+    "runtime/probe_local.py": "c2b3d4db1e0f6b192ee5fa08ab35863f8440c87ad6fe198020a2a920c1b4206f",
+    "runtime/server.py": "9a68369c0af03fb07b89db3a341be7b3b611763a8fa11ef9c045bc24bb27a078",
+    "scripts/probe_online.py": "8c495e72f03704459c49b9fdfd7d436b2dadecfb81f5f619525831ba5ed2114e",
+    "scripts/start-offline.ps1": "aad4388cbe54372d6beaebb05295587d51f9cb4e2c9d942ae7c81c6fe3187b91",
+    "streamlit_app.py": "1f67e354abc7a6b212415018a99d75108fd45dee171091dbbe532d724fbdc7ea",
+    "tests/test_space.py": "a9eff742b4d2502f925abf9f002d55ef74553298ff22c6dc5396464770bb16e4",
+    "uv.lock": "4080e260e171639c9f05dc05bc9158a2ed102d03fb2465dd3813cd174c705444"
+  },
+  "source_changes_authorized_by": "User: fix all security audits",
+  "remote_changes_performed": false,
+  "coverage_counts": {
+    "blocked": 7,
+    "covered": 18,
+    "candidate": 4
+  },
+  "final_unadjudicated_candidates": [],
+  "retained_record_verdicts": {
+    "rejected": 2
+  },
+  "validator_results": {
+    "findings": "pass: 2 records",
+    "coverage": "pass: 29 units"
+  }
+}

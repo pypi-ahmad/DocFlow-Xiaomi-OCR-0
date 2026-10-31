@@ -1,0 +1,48 @@
+{
+  "candidate_validation": [
+    {
+      "agent": "verify_candidate_1",
+      "decision": "needs_validation",
+      "fingerprint": "docflow:page-selection-after-pdf-render"
+    },
+    {
+      "agent": "verify_candidate_2",
+      "decision": "needs_validation",
+      "fingerprint": "docflow:decoded-image-allocation-before-budget"
+    }
+  ],
+  "fresh_final_source_verification": [
+    {
+      "agent": "verify_fix_1",
+      "decision": "verified",
+      "fingerprint": "docflow:page-selection-after-pdf-render"
+    },
+    {
+      "agent": "verify_fix_2",
+      "decision": "verified",
+      "fingerprint": "docflow:decoded-image-allocation-before-budget"
+    }
+  ],
+  "implementation_checks": {
+    "focused_tests": 6,
+    "result": "pass",
+    "pdfium": "mocked",
+    "image_fixture": "real small TIFF using cached Pillow",
+    "unrelated_missing_deps": "bleach and markdown2 stubbed; sanitizer semantics not tested",
+    "retained_execution_artifacts": [],
+    "existing_fixture_functions": 2,
+    "total_checks_passed": 8
+  },
+  "post_wave_critic": {
+    "agent": "critic_post_wave",
+    "missing_units": [],
+    "reassign_ids": [],
+    "stop": true
+  },
+  "final_clean_critic": {
+    "agent": "critic_final_clean",
+    "missing_units": [],
+    "reassign_ids": [],
+    "stop": true
+  }
+}
