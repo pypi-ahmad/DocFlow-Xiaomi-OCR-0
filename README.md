@@ -11,6 +11,8 @@ short_description: Xiaomi OCR with PP-DocLayoutV3 annotations
 
 Separate native Windows Streamlit and Hugging Face Gradio apps. Both use Xiaomi-OCR-0 recognition and PaddlePaddle/PP-DocLayoutV3_safetensors layout detection.
 
+GitHub repository: [pypi-ahmad/DocFlow-Xiaomi-OCR-0](https://github.com/pypi-ahmad/DocFlow-Xiaomi-OCR-0).
+
 Read [how the models work](docs/models.md) for their official references and how DocFlow combines them.
 
 ## Native Windows setup
